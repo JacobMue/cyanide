@@ -10,6 +10,7 @@ Loading...
 header('Location:front/index.html');
 
 //not working
+//kuma!!
 ?>
 </body>
 </html>
