@@ -9,6 +9,7 @@ Loading...
 
 header('Location:front/index.html');
 
+//not working
 ?>
 </body>
 </html>
