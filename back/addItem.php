@@ -15,15 +15,13 @@
 	<tr><td>Item Price</td><td><input type="text" name="itemPrice" placeholder="in KSH"></td></tr>
 	<tr><td>Item Quantity</td><td><input type="text" name="itemQuantity" placeholder="the in Available stock "></td></tr>
 	<tr><td>Item Picture</td><td><input type="file" name="itemImage"></td></tr>
-	<tr><td><input type="submit" name="submit" value="Add Item"></td><td><input type="reset" value="Clear"></td></tr>
+	<tr><td><button type="submit" name="submit" class="btn btn-success">Add Item</button></td><td><button type="reset" class="btn btn-warning">Clear</button></td></tr>
 </table>
 
 </form>
 
 <?php
-
-include_once 'database.php';
-
+$con=mysqli_connect("localhost","root","","cyanide") or die("NO server and database");
 if ( isset( $_POST['submit'] ) ) {
 
 $category=$_POST['category'];
@@ -48,11 +46,11 @@ $Quantity=$_POST['itemQuantity'];
 
         $path=$location.$name;
         $addItem="INSERT INTO `cyanide`.`Product` (`ProductID`, `ProductName`, `Description`, `UnitPrice`, `UnitStock`, `CategoryName`, `Picture`) VALUES (NULL, '$ItemName', '$des', '$price', '$Quantity', '$category', '$path');";
-        mysql_query($addItem);
+        mysqli_query($con,$addItem);
 
     }
 }
-mysql_close();
+mysqli_close($con);
 
 //close issets
 }

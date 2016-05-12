@@ -2,57 +2,21 @@
 
 <form class="form-horizontal" name="addAdministrator" method="POST" action="Add_Admin.php" enctype="multipart/form-data">
 
-  <div class="control-group">
-  		<label class="control-label">First Name</label>
-  		<div class="controls">
-  			<input type="text" name="firstName" placeholder="Barack">
-  		</div>
-  </div>	
-  <div class="control-group">
-  		<label class="control-label">Last Name</label>
-  		<div class="controls">
-  			<input type="text" name="lastName" placeholder="Obama">
-  		</div>
-  </div>	
-  <div class="control-group">
-    <label class="control-label" for="inputEmail">Email</label>
-    <div class="controls">
-      <input type="text" id="inputEmail" placeholder="Email" name="email">
-    </div>
-  </div>
-  <div class="control-group">
-    <label class="control-label" for="inputPassword">Password</label>
-    <div class="controls">
-      <input type="password" id="inputPassword" placeholder="Password" name="password">
-    </div>
-  </div>
-  <div class="control-group">
-    <label class="control-label" for="inputPassword">Retype Password</label>
-    <div class="controls">
-      <input type="password" id="inputPassword" placeholder="Confirm Password" name="repassword">
-    </div>
-  </div>
-  <div class="control-group">
-    <div class="controls">
-      <label class="control-label">Telephone Number</label>
-       <div class="controls">
-        <input type="number" placeholder="Ignore +254" name="phone"> 
-      </div>
-    </div>
-  </div>
-  <div class="control-group">
-  		<label class="control-label">
-  			Pick a profile picture
-  		</label>
-  		<div class="controls">
-  			<input type="file" name="images">
-  		</div>
-		<button type="submit" name="Submit" class="btn">Add Administrator</button>
-  </div>
+<table class="table table-bordered">
+      <tr><td>First Name</td><td><input type="text" name="firstName" placeholder="Barack"></td></tr>
+      <tr><td>Last Name</td><td><input type="text" name="lastName" placeholder="Obama"></td></tr>
+      <tr><td>Email</td><td><input type="text" id="inputEmail" placeholder="Email" name="email"></td></tr>
+      <tr><td>Password</td><td><input type="password" id="inputPassword" placeholder="Password" name="password"></td></tr>
+      <tr><td>Confirm Password</td><td><input type="password" id="inputPassword" placeholder="Confirm Password" name="repassword"></td></tr>
+      <tr><td>TelePhone Number</td><td><input type="number" placeholder="Ignore +254" name="phone"> </td></tr>
+      <tr><td>Profile Picture</td><td><input type="file" name="images"></td></tr>
+      <tr><td><button type="submit" name="Submit" class="btn btn-primary">Add Administrator</button></td><td><button type="reset" class="btn btn-warning">Clear Information</button></td></tr>
+</table>
 </form>
 
+<button class="btn btn-danger">Delete an Administrator</button>
 <?php
-include_once 'database.php';
+$con=mysqli_connect("localhost","root","","cyanide") or die("NO server and database");
 if ( isset( $_POST['Submit'] ) ) {
 $fname=$_POST['firstName'];
 $lname=$_POST['lastName'];
@@ -60,12 +24,19 @@ $email=$_POST['email'];
 $fpass=$_POST['password'];
 $spass=$_POST['repassword'];
 $phone=$_POST['phone'];
+if(($fname=="") || ($lname=="") ||($email=="") ||($phone=="")){
+    echo "<p>Enter the credentials of the new administrator</p>";
+}else{
+
+
 $password="";
 
 if($fpass==$spass){
 	if($fpass!=null){
 		$password=md5($fpass);
 	}
+}else{
+    die("Passwords don't match");
 }
 
     $name = $_FILES['images']['name']; 
@@ -83,7 +54,7 @@ if($fpass==$spass){
 
         $path=$location.$name;
         $addAdmin="INSERT INTO `cyanide`.`Administrators` (`AdmID`, `FirstName`, `LastName`, `Email`, `Password`, `Phone`, `image`, `lastLogin`) VALUES (NULL,'$fname', '$lname', '$email', '$password', '$phone', '$path', null);";
-        mysql_query($addAdmin);
+        mysqli_query($con,$addAdmin);
 
         echo "<script>";
         echo "alert(' $fname $lname has been added as an Administrator ')";
@@ -95,10 +66,11 @@ if($fpass==$spass){
     }
 }else{
 		echo "<script>";
-        echo "alert(' $fname get a real image ')";
+        echo "alert(' $fname get a jpg or png image format')";
         echo "</script>";
 }
-mysql_close();
+}
+mysqli_close($con);
 }
 
 ?>

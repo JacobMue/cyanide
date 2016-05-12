@@ -3,7 +3,6 @@ session_start();
 if($_SESSION['firstName']==null){
 	header('Location:../front/index.php');
 }
-include_once 'variables.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
