@@ -1,0 +1,192 @@
+body{
+	width: 100%;
+	margin: 0px;
+}
+
+/*start of header css*/
+#adm_header{
+	background-color: #2196F3;
+}
+
+
+#header_navigation{
+	margin-top: 10px;
+}
+
+#header_logo img{
+	width:100px;
+}
+
+@media only screen and (max-width: 768px) {
+    #header_logo {
+    	display: none;
+    }
+}
+
+/*#header_user_image img{
+	width: 60px;
+	height: 50px;
+	border-radius: 100%;
+}*/
+
+#header_user_name p{
+	margin-bottom: 0px;
+	margin-top: 20px;
+}
+#header_logout{
+	margin-top: 20px;
+}
+
+
+
+/* end of header css*/
+
+
+/* Start of naviagtion drawer */
+#navigation_drawer{
+	background-color:#BBDEFB;
+	width:100%;
+	float: left;
+	padding: 0px;
+}
+#navigation_drawer ul{
+	display: block;
+	list-style: none;
+	text-decoration: none;
+	padding: 0px;
+}
+#navigation_drawer li{
+	width: 100%;
+	padding: 0px;
+}
+
+#navigation_drawer{
+	font-size: 20px;
+}
+#navigation_drawer span{
+	margin-right: 10px;
+}
+#navigation_drawer a{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	color: black;
+	list-style: none;
+	display: block;
+	font-size: 18px;
+	padding: 10px;
+	/*border: 1px solid #5E94D8;*/
+	text-decoration: none;
+	color: black;
+	-moz-transition:color 0.5s,padding-left 1s,font-weight 0.5s,background-color 0.5s;
+	-webkit-transition:color 0.5s,padding-left 1s,font-weight 0.5s,background-color 0.5s;
+	-o-transition:color 0.5s,padding-left 1s,font-weight 0.5s,background-color 0.5s;
+}
+
+#navigation_drawer a:hover{
+	padding-left: 30px;
+	color: white;
+	font-weight: bold;
+	background-color: #448AFF;
+	opacity: 0.8;
+
+}
+
+#navigation_drawer hr{
+	margin-top: 0px;
+	padding: 0px;
+	margin-bottom: 0px;
+}
+
+
+#navigation_drawer span1{
+	padding-left: 10px;
+}
+/*End of naviagtion drawer*/
+
+
+/*   --iframe css*/
+
+#contentViewFilter{
+	margin-top: 5px;
+	display: ;
+}
+#contentViewFilter #addButton{
+	float: left;
+	width: 10%;
+}
+#contentViewFilter form{
+	margin-left: 5%;
+	float: left;
+	width: 25%;
+}
+#contentViewFilter div{ 
+	float: left;
+	width: 60%;
+}
+#contentViewFilter #filter p{  
+	float: left;
+	width: 10%;
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+
+#contentView{
+	width: 100%;
+	height:600px;
+	border: 0px;
+	margin-top: 10px;
+	overflow: hidden;
+
+}
+
+
+/*  end of iframe css*/
+
+
+/* add item*/
+
+
+#addItemTable{
+	width: 60%;
+	padding:10px;
+	margin-left: 10%;
+	margin-top: 5%;
+}
+
+#addItemTable input{
+	width: 80%;
+}
+
+#addItemTable button{
+	text-align: center;
+	margin-left: 10%;
+}
+
+
+
+/*end of add item*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
