@@ -7,10 +7,8 @@
 Loading...
 <?php
 
-header('Location:front/index.html');
+header('Location:front/index.php');
 
-//not working
-//kuma!!
 ?>
 </body>
 </html>
