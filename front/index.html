@@ -4,6 +4,7 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php session_start(); ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -66,7 +67,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="login" >
 						<div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
 						    <div id="loginBox">                
-						        <form id="loginForm" method="POST" action="../back/index.html">
+						        <form id="loginForm" method="POST" action="index.php">
 						                <fieldset id="body">
 						                	<fieldset>
 						                          <label for="email">Email Address</label>
@@ -81,6 +82,44 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						            	</fieldset>
 						            <span><a href="#">Forgot your password?</a></span>
 								</form>
+								<?php
+			mysql_connect("localhost","root","") or die("NO server");
+			mysql_select_db("cyanide");
+
+			if ( isset( $_POST['Submit'] ) ) {
+			$email=$_POST['email'];
+			$password=$_POST['password'];
+			$password=md5($password);
+			$query="SELECT * FROM Administrators WHERE `Email`='$email'";
+			$result=mysql_query($query);
+			$row=mysql_num_rows($result);
+
+			if($row==1){
+				while($re=mysql_fetch_assoc($result)){
+					$dbpass=$re['Password'];
+					$fname=$re['FirstName'];
+					$lname=$re['LastName'];
+					$image=$re['image'];
+				}
+				if($dbpass==$password){
+					$_SESSION['firstName']=$fname;
+					$_SESSION['lastName']=$lname;
+					$_SESSION['image']=$image;
+					header('Location:../back/index.php');
+				}else{
+					echo "<script>";
+					echo "alert('Wrong Password')";
+					echo"</script>";
+				}
+			}else{
+				echo "<script>";
+				echo "alert('Unknown Email Address ')";
+				echo"</script>";
+			}
+			mysql_close();
+			//close the isset
+			}
+		?>
 							</div>
 						</div>
 					</div>
