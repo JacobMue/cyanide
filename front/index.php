@@ -1,23 +1,14 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<?php session_start();  ?>
+<?php session_start(); ?>
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Botik Online Clothing Store</title>
+<title>BOTQ Solutions</title>
 <link href="../css/front/bootstrap.css" rel='stylesheet' type='text/css' />
-
 <!-- jQuery (necessary JavaScript plugins) -->
 <script type='text/javascript' src="../js/front/jquery-1.11.1.min.js"></script>
-
 <!-- Custom Theme files -->
 <link href="../css/front/style.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
-
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -26,7 +17,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
-
 <!-- start menu -->
 <link href="../css/front/megamenu.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="../js/front/megamenu.js"></script>
@@ -35,7 +25,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="../js/front/simpleCart.min.js"> </script>
 </head>
 <body>
-
 <!-- header_top -->
 <div class="top_bg">
 	<div class="container">
@@ -54,7 +43,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 </div>
-
 <!-- header -->
 <div class="header_bg">
 <div class="container">
@@ -62,7 +50,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="head-t">
 		<div class="logo">
 			<a href="index.html">
-				<img src="../images/logo.jpg" class="img-responsive" alt=""/>
+			<!-- <h2>InstaClothes</h2> -->
+			<img src="../images/logo.jpg" class="img-responsive" alt="Logo"/>
 			 </a>
 		</div>
 		<!-- start header_right -->
@@ -72,7 +61,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="login" >
 						<div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
 						    <div id="loginBox">                
-						        <form id="loginForm" method="POST" action="index.php">
+						        <form id="loginForm" method="POST" action="../back/index.php">
 						                <fieldset id="body">
 						                	<fieldset>
 						                          <label for="email">Email Address</label>
@@ -82,11 +71,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						                            <label for="password">Password</label>
 						                            <input type="password" name="password" id="password">
 						                     </fieldset>
-						                    <input type="submit" id="login" name="Submit"value="Sign in">
+						                    <input type="submit" id="login" value="Sign in">
+						                	<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
 						            	</fieldset>
 						            <span><a href="#">Forgot your password?</a></span>
 								</form>
-		<?php
+	<?php
 			$con=mysqli_connect("localhost","root","","cyanide") or die("NO server and database");
 			//mysqli_select_db("cyanide");
 
@@ -155,7 +145,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 		<!-- start header menu -->
 		<ul class="megamenu skyblue">
-			<li class="active grid"><a class="color1" href="index.html">Home</a></li>
+			<li class="active grid"><a class="color1" href="index.php">Home</a></li>
 			<li class="grid"><a class="color2" href="#">new arrivals</a>
 				<div class="megapanel">
 					<div class="row">
@@ -247,7 +237,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
     				</div>
 				</li>
-			<li><a class="color4" href="#">TUXEDO</a>
+			<li><a class="color8" href="#">MALE</a>
 				<div class="megapanel">
 					<div class="row">
 						<div class="col1">
@@ -338,282 +328,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
     				</div>
 				</li>				
-				<li><a class="color5" href="#">SWEATER</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Clothing</h4>
-								<ul>
-									<li><a href="women.html">new arrivals</a></li>
-									<li><a href="women.html">men</a></li>
-									<li><a href="women.html">women</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">kids</a></li>
-									<li><a href="women.html">brands</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>kids</h4>
-								<ul>
-									<li><a href="women.html">Pools&Tees</a></li>
-									<li><a href="women.html">shirts</a></li>
-									<li><a href="women.html">shorts</a></li>
-									<li><a href="women.html">twinsets</a></li>
-									<li><a href="women.html">kurts</a></li>
-									<li><a href="women.html">jackets</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Bags</h4>
-								<ul>
-									<li><a href="women.html">Handbag</a></li>
-									<li><a href="women.html">Slingbags</a></li>
-									<li><a href="women.html">Clutches</a></li>
-									<li><a href="women.html">Totes</a></li>
-									<li><a href="women.html">Wallets</a></li>
-									<li><a href="women.html">Laptopbags</a></li>
-								</ul>	
-							</div>												
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>account</h4>
-								<ul>
-									<li><a href="#">login</a></li>
-									<li><a href="register.html">create an account</a></li>
-									<li><a href="women.html">create wishlist</a></li>
-									<li><a href="women.html">my shopping bag</a></li>
-									<li><a href="women.html">brands</a></li>
-									<li><a href="women.html">create wishlist</a></li>
-								</ul>	
-							</div>						
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Accessories</h4>
-								<ul>
-									<li><a href="women.html">Belts</a></li>
-									<li><a href="women.html">Pens</a></li>
-									<li><a href="women.html">Eyeglasses</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">Watches</a></li>
-									<li><a href="women.html">Jewellery</a></li>
-								</ul>	
-							</div>
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Footwear</h4>
-								<ul>
-									<li><a href="women.html">new arrivals</a></li>
-									<li><a href="women.html">men</a></li>
-									<li><a href="women.html">women</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">kids</a></li>
-									<li><a href="women.html">style videos</a></li>
-								</ul>	
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col2"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-					</div>
-    				</div>
-				</li>
-				<li><a class="color6" href="#">SHOES</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Clothing</h4>
-								<ul>
-									<li><a href="women.html">new arrivals</a></li>
-									<li><a href="women.html">men</a></li>
-									<li><a href="women.html">women</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">kids</a></li>
-									<li><a href="women.html">brands</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>kids</h4>
-								<ul>
-									<li><a href="women.html">Pools&Tees</a></li>
-									<li><a href="women.html">shirts</a></li>
-									<li><a href="women.html">shorts</a></li>
-									<li><a href="women.html">twinsets</a></li>
-									<li><a href="women.html">kurts</a></li>
-									<li><a href="women.html">jackets</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Bags</h4>
-								<ul>
-									<li><a href="women.html">Handbag</a></li>
-									<li><a href="women.html">Slingbags</a></li>
-									<li><a href="women.html">Clutches</a></li>
-									<li><a href="women.html">Totes</a></li>
-									<li><a href="women.html">Wallets</a></li>
-									<li><a href="women.html">Laptopbags</a></li>
-								</ul>	
-							</div>												
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>account</h4>
-								<ul>
-									<li><a href="#">login</a></li>
-									<li><a href="register.html">create an account</a></li>
-									<li><a href="women.html">create wishlist</a></li>
-									<li><a href="women.html">my shopping bag</a></li>
-									<li><a href="women.html">brands</a></li>
-									<li><a href="women.html">create wishlist</a></li>
-								</ul>	
-							</div>						
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Accessories</h4>
-								<ul>
-									<li><a href="women.html">Belts</a></li>
-									<li><a href="women.html">Pens</a></li>
-									<li><a href="women.html">Eyeglasses</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">Watches</a></li>
-									<li><a href="women.html">Jewellery</a></li>
-								</ul>	
-							</div>
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Footwear</h4>
-								<ul>
-									<li><a href="women.html">new arrivals</a></li>
-									<li><a href="women.html">men</a></li>
-									<li><a href="women.html">women</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">kids</a></li>
-									<li><a href="women.html">style videos</a></li>
-								</ul>	
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col2"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-					</div>
-    				</div>
-				</li>				
+				
 			
-				<li><a class="color7" href="#">GLASSES</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Clothing</h4>
-								<ul>
-									<li><a href="women.html">new arrivals</a></li>
-									<li><a href="women.html">men</a></li>
-									<li><a href="women.html">women</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">kids</a></li>
-									<li><a href="women.html">brands</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>kids</h4>
-								<ul>
-									<li><a href="women.html">Pools&Tees</a></li>
-									<li><a href="women.html">shirts</a></li>
-									<li><a href="women.html">shorts</a></li>
-									<li><a href="women.html">twinsets</a></li>
-									<li><a href="women.html">kurts</a></li>
-									<li><a href="women.html">jackets</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Bags</h4>
-								<ul>
-									<li><a href="women.html">Handbag</a></li>
-									<li><a href="women.html">Slingbags</a></li>
-									<li><a href="women.html">Clutches</a></li>
-									<li><a href="women.html">Totes</a></li>
-									<li><a href="women.html">Wallets</a></li>
-									<li><a href="women.html">Laptopbags</a></li>
-								</ul>	
-							</div>												
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>account</h4>
-								<ul>
-									<li><a href="#">login</a></li>
-									<li><a href="register.html">create an account</a></li>
-									<li><a href="women.html">create wishlist</a></li>
-									<li><a href="women.html">my shopping bag</a></li>
-									<li><a href="women.html">brands</a></li>
-									<li><a href="women.html">create wishlist</a></li>
-								</ul>	
-							</div>						
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Accessories</h4>
-								<ul>
-									<li><a href="women.html">Belts</a></li>
-									<li><a href="women.html">Pens</a></li>
-									<li><a href="women.html">Eyeglasses</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">Watches</a></li>
-									<li><a href="women.html">Jewellery</a></li>
-								</ul>	
-							</div>
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Footwear</h4>
-								<ul>
-									<li><a href="women.html">new arrivals</a></li>
-									<li><a href="women.html">men</a></li>
-									<li><a href="women.html">women</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">kids</a></li>
-									<li><a href="women.html">style videos</a></li>
-								</ul>	
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col2"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-					</div>
-    				</div>
-				</li>				
-			
-				<li><a class="color8" href="#">T-SHIRT</a>
+				<li><a class="color4" href="#">FEMALE</a>
 				<div class="megapanel">
 					<div class="row">
 						<div class="col1">
@@ -704,7 +421,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
     				</div>
 				</li>
-				<li><a class="color9" href="#">WATCHES</a>
+				<li><a class="color9" href="#">KIDS</a>
 				<div class="megapanel">
 					<div class="row">
 						<div class="col1">
@@ -836,9 +553,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			</div>
 			<div class="col-md-4 arriv-right1">
-				<img src="../images/4.jpg" class="img-responsive" alt="">
+				<img src="../images/dss.jpg" class="img-responsive" alt="">
 				<div class="arriv-info2">
-					<a href="details.html"><h3>Trekking Shoes<i class="ars"></i></h3></a>
+					<a href="details.html"><h3>DRESS SHIRTS<i class="ars"></i></h3></a>
 				</div>
 			</div>
 			<div class="clearfix"> </div>
@@ -847,7 +564,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-4 arriv-left2">
 				<img src="../images/5.jpg" class="img-responsive" alt="">
 				<div class="arriv-info2">
-					<a href="details.html"><h3>Casual Glasses<i class="ars"></i></h3></a>
+					<a href="details.html"><h3>DINNER DRESSES<i class="ars"></i></h3></a>
 				</div>
 			</div>
 			<div class="col-md-4 arriv-middle">
@@ -862,7 +579,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-4 arriv-right2">
 				<img src="../images/7.jpg" class="img-responsive" alt="">
 				<div class="arriv-info2">
-					<a href="details.html"><h3>Elegant Watches<i class="ars"></i></h3></a>
+					<a href="details.html"><h3>BABY OVERALLS<i class="ars"></i></h3></a>
 				</div>
 			</div>
 			<div class="clearfix"> </div>
@@ -875,33 +592,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="specia-top">
 			<ul class="grid_2">
 		<li>
-				<a href="details.html"><img src="../images/8.jpg" class="img-responsive" alt=""></a>
+				<a href="details.html"><img src="../images/mdress.jpg" class="img-responsive" alt=""></a>
 				<div class="special-info grid_1 simpleCart_shelfItem">
-					<h5>Lorem ipsum dolor</h5>
+					<h5>Dress shirt</h5>
 					<div class="item_add"><span class="item_price"><h6>ONLY $40.00</h6></span></div>
 					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
 				</div>
 		</li>
 		<li>
-				<a href="details.html"><img src="../images/9.jpg" class="img-responsive" alt=""></a>
+				<a href="details.html"><img src="../images/h.jpg" class="img-responsive" alt=""></a>
 				<div class="special-info grid_1 simpleCart_shelfItem">
-					<h5>Consectetur adipis</h5>
+					<h5>Hoodie</h5>
 					<div class="item_add"><span class="item_price"><h6>ONLY $60.00</h6></span></div>
 					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
 			</div>
 		</li>
 		<li>
-				<a href="details.html"><img src="../images/10.jpg" class="img-responsive" alt=""></a>
+				<a href="details.html"><img src="../images/j.jpg" class="img-responsive" alt=""></a>
 				<div class="special-info grid_1 simpleCart_shelfItem">
-					<h5>Commodo consequat</h5>
+					<h5>Jeans trousers</h5>
 					<div class="item_add"><span class="item_price"><h6>ONLY $14.00</h6></span></div>
 					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
 			</div>
 		</li>
 		<li>
-				<a href="details.html"><img src="../images/11.jpg" class="img-responsive" alt=""></a>
+				<a href="details.html"><img src="../images/rs.jpe" class="img-responsive" alt=""></a>
 				<div class="special-info grid_1 simpleCart_shelfItem">
-					<h5>Voluptate velit</h5>
+					<h5>Red Skirt</h5>
 					<div class="item_add"><span class="item_price"><h6>ONLY $37.00</h6></span></div>
 					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
 				</div>
@@ -922,8 +639,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<li>
 				<div class="social-ic">
 					<ul>
-						<li><a href="#"><i class="facebok"> </i></a></li>
-						<li><a href="#"><i class="twiter"> </i></a></li>
+						<li><a href="#"><i class="fa fa-facebok"> </i></a></li>
+						<li><a href="#"><i class="fa fa-twiter"> </i></a></li>
 						<li><a href="#"><i class="goog"> </i></a></li>
 						<li><a href="#"><i class="be"> </i></a></li>
 						<li><a href="#"><i class="pp"> </i></a></li>
@@ -989,13 +706,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			</div>
 			<div class="clearfix"> </div>
-				<li><i class="add"> </i>Jl. Haji Muhidin, Blok G no.69</li>
-				<li><i class="phone"> </i>025-2839341</li>
-				<li><a href="mailto:info@example.com"><i class="mail"> </i>info@sitename.com </a></li>
+				<li><i class="add"> </i>Michael Ondieki</li>
+				<li><i class="phone"> </i>0+254702381228</li>
+				<!-- <li><a href="mailto:info@example.com"><i class="mail"> </i>info@sitename.com </a></li> -->
 			
 		</div>
 		<div class="clearfix"> </div>
-			<p>Copyrights © 2015 Gretong. All rights reserved</p>
+			<p>Copyrights © 2016 BOTQ Solutions. All rights reserved</p>
 	</div>
 </div>
 </body>
