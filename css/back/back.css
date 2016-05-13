@@ -149,11 +149,12 @@ body{
 	width: 60%;
 	padding:10px;
 	margin-left: 10%;
-	margin-top: 5%;
+	margin-top: 3%;
 }
 
 #addItemTable input{
-	width: 80%;
+	width: 90%;
+	padding: 5px;
 }
 
 #addItemTable button{
@@ -165,6 +166,27 @@ body{
 
 /*end of add item*/
 
+
+/*  strat addAdmin table*/
+
+#addAdmin{
+	width: 80%;
+	padding:10px;
+	margin-left: 10%;
+	margin-top: 3%;
+	
+}
+
+#addAdmin input{
+	width: 100%;
+}
+#addAdmin button{
+	text-align: center;
+	margin-left: 10%;
+}
+
+
+/*end addAdmin table*/
 
 
 /**/

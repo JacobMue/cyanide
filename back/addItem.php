@@ -3,7 +3,7 @@
 <form action="addItem.php" method="POST" enctype="multipart/form-data" class="form-horizontal">
 
 <table class="table table-bordered" id="addItemTable">
-	<thead><h4 style="margin-left: 20%;margin-top: 5%;">Add a new Item</h4></thead>
+	<thead><h4 style="margin-left: 20%;margin-top: 2%;">Add a new Item</h4></thead>
 	<tr><td>Category</td><td><select name="category">
 			<option>Men</option>
 			<option>Women</option>

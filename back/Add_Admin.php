@@ -2,7 +2,8 @@
 
 <form class="form-horizontal" name="addAdministrator" method="POST" action="Add_Admin.php" enctype="multipart/form-data">
 
-<table class="table table-bordered">
+<table class="table table-bordered" id="addAdmin">
+      <thead><h4 style="margin-left: 20%;">Add an Administrator</h4></thead>
       <tr><td>First Name</td><td><input type="text" name="firstName" placeholder="Barack"></td></tr>
       <tr><td>Last Name</td><td><input type="text" name="lastName" placeholder="Obama"></td></tr>
       <tr><td>Email</td><td><input type="text" id="inputEmail" placeholder="Email" name="email"></td></tr>
@@ -14,7 +15,7 @@
 </table>
 </form>
 
-<button class="btn btn-danger">Delete an Administrator</button>
+<button class="btn btn-danger" style="float:right;">Delete an Administrator</button>
 <?php
 $con=mysqli_connect("localhost","root","","cyanide") or die("NO server and database");
 if ( isset( $_POST['Submit'] ) ) {
