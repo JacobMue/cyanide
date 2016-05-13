@@ -46,18 +46,18 @@ if($_SESSION['firstName']==null){
 	</div>
 </div>
 <!--End The header Part-->
-<div class="row">
+<div class="row" style="width:100%;">
 <!-- Start of the naviagtion drawer-->
 
 <div class="col-xs-12 col-sm-12 col-md-2" style="padding-right: 0px;">
 <div class="container" id="navigation_drawer">
     <ul class="nav nav-list">
 		<li><a href="dashboard.php" target="contentViewer"><span class="glyphicon glyphicon-dashboard"></span><span1>Dashboard</span1></a></li><hr>
-		<li><a href="men.php" target="contentViewer"><i class="fa fa-male" aria-hidden="true" onclick="hideFilter()"></i><span1>Men</span1></a></li><hr>
-		<li><a href="#"><i class="fa fa-female" aria-hidden="true"></i><span1>Women</span1></a></li><hr>	
-		<li><a href="#"><i class="fa fa-truck" aria-hidden="true"></i><span1>Kids</span1></a></li><hr>	
-		<li><a href="#"><i class="fa fa-area-chart" aria-hidden="true"></i><span1>Orders</span1></a></li><hr>
-		<li><a href="#"><i class="fa fa-users" aria-hidden="true"></i><span1>Customers</span1></a></li><hr>
+		<li><a href="DisplayProduct.php?category=Men" target="contentViewer"><i class="fa fa-male" aria-hidden="true"></i><span1>Men</span1></a></li><hr>
+		<li><a href="DisplayProduct.php?category=Women" target="contentViewer"><i class="fa fa-female" aria-hidden="true"></i><span1>Women</span1></a></li><hr>
+		<li><a href="DisplayProduct.php?category=Kids" target="contentViewer"><i class="fa fa-truck" aria-hidden="true"></i><span1>Kids</span1></a></li><hr>	
+		<li><a href="Orders.php" target="contentViewer"><i class="fa fa-area-chart" aria-hidden="true"></i><span1>Orders</span1></a></li><hr>
+		<li><a href="Customers.php" target="contentViewer"><i class="fa fa-users" aria-hidden="true"></i><span1>Customers</span1></a></li><hr>
 		<li><a href="Add_Admin.php" target="contentViewer"><i class="fa fa-user-plus" aria-hidden="true"></i><span1>Add Administrator</span1></a></li><hr>	
 		<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span><span1>Log Out</span1></a></li><hr>
 	</ul>
@@ -68,14 +68,14 @@ if($_SESSION['firstName']==null){
 <div class="col-xs-12 col-sm-12 col-md-10" style="padding-left: 0px;">
 	<div class="container-fluid">
 		<div id="contentViewFilter">
-			<a href="addItem.php" id="addButton" target="contentViewer">Add an Item</a>
-			<form class="form-search" method="POST" action="search.php">
+			<a href="addItem.php" id="addButton" target="contentViewer"><button class="btn btn-primary">Add an Item</button></a>
+			<form class="form-search" method="POST" action="SearchResults.php">
   				<input type="text" class="input-medium search-query" name="searchInput" placeholder="Search...">
   				<button type="submit" class="btn" formtarget="contentViewer">Search</button>
 			</form>
 			<div id="filter">
-				<p>View </p>
-				<a href="viewAll.php" target="contentViewer">All</a>
+				<p>View</p>
+				<a href="FilterResults.php" target="contentViewer"><button class="btn btn-default">All</button></a>
 				<a href="#" target="contentViewer">Most Bought</a>
 			</div>
 		</div>

@@ -10,11 +10,11 @@
 			<option>Kids</option>
 		</select></td>
 	</tr>
-	<tr><td>Item Name</td><td><input type="text" name="itemName" placeholder="Like V neck"></td></tr>
-	<tr><td>Item Description</td><td><input type="text" name="itemDes" placeholder="Like new Polo design v neck shirts"></td></tr>
-	<tr><td>Item Price</td><td><input type="text" name="itemPrice" placeholder="in KSH"></td></tr>
-	<tr><td>Item Quantity</td><td><input type="text" name="itemQuantity" placeholder="the in Available stock "></td></tr>
-	<tr><td>Item Picture</td><td><input type="file" name="itemImage"></td></tr>
+	<tr><td>Name</td><td><input type="text" name="itemName" placeholder="Like V neck"></td></tr>
+	<tr><td>Description</td><td><input type="text" name="itemDes" placeholder="Like new Polo design v neck shirts"></td></tr>
+	<tr><td>Price</td><td><input type="text" name="itemPrice" placeholder="in KSH"></td></tr>
+	<tr><td>Quantity</td><td><input type="text" name="itemQuantity" placeholder="the in Available stock "></td></tr>
+	<tr><td>Picture</td><td><input type="file" name="itemImage"></td></tr>
 	<tr><td><button type="submit" name="submit" class="btn btn-success">Add Item</button></td><td><button type="reset" class="btn btn-warning">Clear</button></td></tr>
 </table>
 

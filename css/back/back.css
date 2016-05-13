@@ -1,6 +1,6 @@
 body{
 	width: 100%;
-	margin: 0px;
+	margin: 0px auto;
 }
 
 /*start of header css*/
@@ -108,7 +108,6 @@ body{
 
 #contentViewFilter{
 	margin-top: 5px;
-	display: ;
 }
 #contentViewFilter #addButton{
 	float: left;
@@ -132,7 +131,7 @@ body{
 
 #contentView{
 	width: 100%;
-	height:600px;
+	height:500px;
 	border: 0px;
 	margin-top: 10px;
 	overflow: hidden;
@@ -179,6 +178,7 @@ body{
 }
 #ProductDisplay img{
 	width: 100%;
+	height: 125px;
 }
 #ProductDisplay button{
 	float: left;
