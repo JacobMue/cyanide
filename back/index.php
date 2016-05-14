@@ -58,6 +58,7 @@ if($_SESSION['firstName']==null){
 		<li><a href="DisplayProduct.php?category=Kids" target="contentViewer"><i class="fa fa-truck" aria-hidden="true"></i><span1>Kids</span1></a></li><hr>	
 		<li><a href="Orders.php" target="contentViewer"><i class="fa fa-area-chart" aria-hidden="true"></i><span1>Orders</span1></a></li><hr>
 		<li><a href="Customers.php" target="contentViewer"><i class="fa fa-users" aria-hidden="true"></i><span1>Customers</span1></a></li><hr>
+		<li><a href="Trash.php" target="contentViewer"><i class="fa fa-trash" aria-hidden="true"></i><span1>Recycle Bin</span1></a></li><hr>
 		<li><a href="Add_Admin.php" target="contentViewer"><i class="fa fa-user-plus" aria-hidden="true"></i><span1>Add Administrator</span1></a></li><hr>	
 		<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span><span1>Log Out</span1></a></li><hr>
 	</ul>
