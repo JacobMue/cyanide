@@ -61,7 +61,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="login" >
 						<div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
 						    <div id="loginBox">                
-						        <form id="loginForm" method="POST" action="../back/index.php">
+						        <form id="loginForm" method="POST" action="index.php">
 						                <fieldset id="body">
 						                	<fieldset>
 						                          <label for="email">Email Address</label>
@@ -71,8 +71,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						                            <label for="password">Password</label>
 						                            <input type="password" name="password" id="password">
 						                     </fieldset>
-						                    <input type="submit" id="login" value="Sign in">
-						                	<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+						                    <input type="submit" id="login" value="Sign in" name="Submit">
 						            	</fieldset>
 						            <span><a href="#">Forgot your password?</a></span>
 								</form>
