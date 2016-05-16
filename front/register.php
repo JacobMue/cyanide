@@ -1,18 +1,19 @@
-
-<?php session_start();  ?>
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>BOTQ SOLUTIONS</title>
+<title>Botik Online Clothing Store</title>
 <link href="../css/front/bootstrap.css" rel='stylesheet' type='text/css' />
-
 <!-- jQuery (necessary JavaScript plugins) -->
 <script type='text/javascript' src="../js/front/jquery-1.11.1.min.js"></script>
-
 <!-- Custom Theme files -->
 <link href="../css/front/style.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
-
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -21,16 +22,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
-
 <!-- start menu -->
 <link href="../css/front/megamenu.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="../js/front/megamenu.js"></script>
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 <script src="../js/front/menu_jquery.js"></script>
-<script src="../js/front/simpleCart.min.js"> </script>
 </head>
 <body>
-
 <!-- header_top -->
 <div class="top_bg">
 	<div class="container">
@@ -43,22 +41,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</ul>
 			</div>
 			<div class="top_left">
-				<h2><span></span> Call ME : +254 702 381 228</h2>
+				<h2><span></span> Call us : 032 2352 782</h2>
 			</div>
 				<div class="clearfix"> </div>
 		</div>
 	</div>
 </div>
-
 <!-- header -->
 <div class="header_bg">
 <div class="container">
 	<div class="header">
 	<div class="head-t">
 		<div class="logo">
-			<a href="index.php">
-				<img src="../images/logo.jpg" class="img-responsive" alt=""/>
-			 </a>
+			<a href="index.php"><img src="../images/logo.jpg" class="img-responsive" alt=""/> </a>
 		</div>
 		<!-- start header_right -->
 		<div class="header_right">
@@ -67,7 +62,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="login" >
 						<div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
 						    <div id="loginBox">                
-						        <form id="loginForm" method="POST" action="index.php">
+						        <form id="loginForm">
 						                <fieldset id="body">
 						                	<fieldset>
 						                          <label for="email">Email Address</label>
@@ -77,58 +72,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						                            <label for="password">Password</label>
 						                            <input type="password" name="password" id="password">
 						                     </fieldset>
-						                    <input type="submit" id="login" name="Submit"value="Sign in">
+						                    <input type="submit" id="login" value="Sign in">
+						                	<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
 						            	</fieldset>
 						            <span><a href="#">Forgot your password?</a></span>
 								</form>
-		<?php
-			$con=mysqli_connect("localhost","root","","cyanide") or die("NO server and database");
-			//mysqli_select_db("cyanide");
-
-			if ( isset( $_POST['Submit'] ) ) {
-			$email=$_POST['email'];
-			$password=$_POST['password'];
-			$password=md5($password);
-			$query="SELECT * FROM Administrators WHERE `Email`='$email'";
-			$result=mysqli_query($con,$query);
-			$row=mysqli_num_rows($result);
-
-			if($row==1){
-				while($re=mysqli_fetch_assoc($result)){
-					$dbpass=$re['Password'];
-					$fname=$re['FirstName'];
-					$lname=$re['LastName'];
-					$image=$re['image'];
-				}
-				if($dbpass==$password){
-					$_SESSION['firstName']=$fname;
-					$_SESSION['lastName']=$lname;
-					$_SESSION['image']=$image;
-					header('Location:../back/index.php');
-				}else{
-					echo "<script>";
-					echo "alert('Wrong Password')";
-					echo"</script>";
-				}
-			}else{
-				echo "<script>";
-				echo "alert('Unknown Email Address ')";
-				echo"</script>";
-			}
-			mysqli_close($con);
-			//close the isset
-			}
-		?>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="reg">
-					<a href="register.php">REGISTER</a>
+					<a href="register.html">REGISTER</a>
 				</div>
 			<div class="cart box_1">
 				<a href="checkout.html">
-					<h3> <span class="simpleCart_total">KES 0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="../images/bag.png" alt=""></h3>
+					<h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="../images/bag.png" alt=""></h3>
 				</a>	
 				<p><a href="javascript:;" class="simpleCart_empty">(empty card)</a></p>
 				<div class="clearfix"> </div>
@@ -149,8 +107,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="clearfix"> </div>
 	</div>
 		<!-- start header menu -->
-		<ul class="megamenu skyblue">
-			<li class="active grid"><a class="color1" href="index.php">Home</a></li>
+			<ul class="megamenu skyblue">
+			<li class="active grid"><a class="color1" href="index.html">Home</a></li>
 			<li class="grid"><a class="color2" href="#">new arrivals</a>
 				<div class="megapanel">
 					<div class="row">
@@ -242,7 +200,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
     				</div>
 				</li>
-			<li><a class="color8" href="#">MALE</a>
+			<li><a class="color4" href="#">TUXEDO</a>
 				<div class="megapanel">
 					<div class="row">
 						<div class="col1">
@@ -333,7 +291,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
     				</div>
 				</li>				
-				<li><a class="color4" href="#">FEMALE</a>
+				<li><a class="color5" href="#">SWEATER</a>
 				<div class="megapanel">
 					<div class="row">
 						<div class="col1">
@@ -424,7 +382,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
     				</div>
 				</li>
-				<li><a class="color3" href="#">KIDS</a>
+				<li><a class="color6" href="#">SHOES</a>
 				<div class="megapanel">
 					<div class="row">
 						<div class="col1">
@@ -516,122 +474,413 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     				</div>
 				</li>				
 			
-				
+				<li><a class="color7" href="#">GLASSES</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Clothing</h4>
+								<ul>
+									<li><a href="women.html">new arrivals</a></li>
+									<li><a href="women.html">men</a></li>
+									<li><a href="women.html">women</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">brands</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>kids</h4>
+								<ul>
+									<li><a href="women.html">Pools&Tees</a></li>
+									<li><a href="women.html">shirts</a></li>
+									<li><a href="women.html">shorts</a></li>
+									<li><a href="women.html">twinsets</a></li>
+									<li><a href="women.html">kurts</a></li>
+									<li><a href="women.html">jackets</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Bags</h4>
+								<ul>
+									<li><a href="women.html">Handbag</a></li>
+									<li><a href="women.html">Slingbags</a></li>
+									<li><a href="women.html">Clutches</a></li>
+									<li><a href="women.html">Totes</a></li>
+									<li><a href="women.html">Wallets</a></li>
+									<li><a href="women.html">Laptopbags</a></li>
+								</ul>	
+							</div>												
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>account</h4>
+								<ul>
+									<li><a href="#">login</a></li>
+									<li><a href="register.html">create an account</a></li>
+									<li><a href="women.html">create wishlist</a></li>
+									<li><a href="women.html">my shopping bag</a></li>
+									<li><a href="women.html">brands</a></li>
+									<li><a href="women.html">create wishlist</a></li>
+								</ul>	
+							</div>						
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Accessories</h4>
+								<ul>
+									<li><a href="women.html">Belts</a></li>
+									<li><a href="women.html">Pens</a></li>
+									<li><a href="women.html">Eyeglasses</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">Watches</a></li>
+									<li><a href="women.html">Jewellery</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Footwear</h4>
+								<ul>
+									<li><a href="women.html">new arrivals</a></li>
+									<li><a href="women.html">men</a></li>
+									<li><a href="women.html">women</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">style videos</a></li>
+								</ul>	
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+					</div>
+    				</div>
+				</li>				
+			
+				<li><a class="color8" href="#">T-SHIRT</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Clothing</h4>
+								<ul>
+									<li><a href="women.html">new arrivals</a></li>
+									<li><a href="women.html">men</a></li>
+									<li><a href="women.html">women</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">brands</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>kids</h4>
+								<ul>
+									<li><a href="women.html">trends</a></li>
+									<li><a href="women.html">sale</a></li>
+									<li><a href="women.html">style videos</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">style videos</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Bags</h4>
+								<ul>
+									<li><a href="women.html">trends</a></li>
+									<li><a href="women.html">sale</a></li>
+									<li><a href="women.html">style videos</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">style videos</a></li>
+								</ul>	
+							</div>												
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>account</h4>
+								<ul>
+									<li><a href="#">login</a></li>
+									<li><a href="register.html">create an account</a></li>
+									<li><a href="women.html">create wishlist</a></li>
+									<li><a href="women.html">my shopping bag</a></li>
+									<li><a href="women.html">brands</a></li>
+									<li><a href="women.html">create wishlist</a></li>
+								</ul>	
+							</div>						
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Accessories</h4>
+								<ul>
+									<li><a href="women.html">trends</a></li>
+									<li><a href="women.html">sale</a></li>
+									<li><a href="women.html">style videos</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">style videos</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Footwear</h4>
+								<ul>
+									<li><a href="women.html">new arrivals</a></li>
+									<li><a href="women.html">men</a></li>
+									<li><a href="women.html">women</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">style videos</a></li>
+								</ul>	
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+					</div>
+    				</div>
+				</li>
+				<li><a class="color9" href="#">WATCHES</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Clothing</h4>
+								<ul>
+									<li><a href="women.html">new arrivals</a></li>
+									<li><a href="women.html">men</a></li>
+									<li><a href="women.html">women</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">brands</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>kids</h4>
+								<ul>
+									<li><a href="women.html">trends</a></li>
+									<li><a href="women.html">sale</a></li>
+									<li><a href="women.html">style videos</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">style videos</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Bags</h4>
+								<ul>
+									<li><a href="women.html">trends</a></li>
+									<li><a href="women.html">sale</a></li>
+									<li><a href="women.html">style videos</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">style videos</a></li>
+								</ul>	
+							</div>												
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>account</h4>
+								<ul>
+									<li><a href="#">login</a></li>
+									<li><a href="register.html">create an account</a></li>
+									<li><a href="women.html">create wishlist</a></li>
+									<li><a href="women.html">my shopping bag</a></li>
+									<li><a href="women.html">brands</a></li>
+									<li><a href="women.html">create wishlist</a></li>
+								</ul>	
+							</div>						
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Accessories</h4>
+								<ul>
+									<li><a href="women.html">trends</a></li>
+									<li><a href="women.html">sale</a></li>
+									<li><a href="women.html">style videos</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">style videos</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Footwear</h4>
+								<ul>
+									<li><a href="women.html">new arrivals</a></li>
+									<li><a href="women.html">men</a></li>
+									<li><a href="women.html">women</a></li>
+									<li><a href="women.html">accessories</a></li>
+									<li><a href="women.html">kids</a></li>
+									<li><a href="women.html">style videos</a></li>
+								</ul>	
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+					</div>
+    				</div>
+				</li>
 		 </ul> 
 	</div>
 </div>
 </div>
-<div class="arriv">
-	<div class="container">
-		<div class="arriv-top">
-			<div class="col-md-6 arriv-left">
-				<img src="../images/1.jpg" class="img-responsive" alt="">
-				<div class="arriv-info">
-					<h3>NEW ARRIVALS</h3>
-					<p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
-					<div class="crt-btn">
-						<a href="details.html">TAKE A LOOK</a>
+<!-- content -->
+<div class="container">
+<div class="main">
+	<!-- start registration -->
+	<div class="registration">
+		<div class="registration_left">
+		<h2>new user? <span> create an account </span></h2>
+		<!-- [if IE] 
+		    < link rel='stylesheet' type='text/css' href='ie.css'/>  
+		 [endif] -->  
+		  
+		<!-- [if lt IE 7]>  
+		    < link rel='stylesheet' type='text/css' href='ie6.css'/>  
+		<! [endif] -->  
+		<script>
+			(function() {
+		
+			// Create input element for testing
+			var inputs = document.createElement('input');
+			
+			// Create the supports object
+			var supports = {};
+			
+			supports.autofocus   = 'autofocus' in inputs;
+			supports.required    = 'required' in inputs;
+			supports.placeholder = 'placeholder' in inputs;
+		
+			// Fallback for autofocus attribute
+			if(!supports.autofocus) {
+				
+			}
+			
+			// Fallback for required attribute
+			if(!supports.required) {
+				
+			}
+		
+			// Fallback for placeholder attribute
+			if(!supports.placeholder) {
+				
+			}
+			
+			// Change text inside send button on submit
+			var send = document.getElementById('register-submit');
+			if(send) {
+				send.onclick = function () {
+					this.innerHTML = '...Sending';
+				}
+			}
+		
+		})();
+		</script>
+		 <div class="registration_form">
+		 <!-- Form -->
+			<form id="registration_form" action="contact.php" method="post">
+				<div>
+					<label>
+						<input placeholder="first name:" type="text" tabindex="1" required autofocus>
+					</label>
+				</div>
+				<div>
+					<label>
+						<input placeholder="last name:" type="text" tabindex="2" required autofocus>
+					</label>
+				</div>
+				<div>
+					<label>
+						<input placeholder="email address:" type="email" tabindex="3" required>
+					</label>
+				</div>
+				<div class="sky-form">
+					<div class="sky_form1">
+						<ul>
+							<li><label class="radio left"><input type="radio" name="radio" checked=""><i></i>Male</label></li>
+							<li><label class="radio"><input type="radio" name="radio"><i></i>Female</label></li>
+							<div class="clearfix"></div>
+						</ul>
 					</div>
 				</div>
-			</div>
-			<div class="col-md-6 arriv-right">
-				<img src="../images/2.jpg" class="img-responsive" alt="">
-				<div class="arriv-info">
-					<h3>TUXEDO</h3>
-					<p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
-					<div class="crt-btn">
-						<a href="details.html">SHOP NOW</a>
-					</div>
+				<div>
+					<label>
+						<input placeholder="password" type="password" tabindex="4" required>
+					</label>
+				</div>						
+				<div>
+					<label>
+						<input placeholder="retype password" type="password" tabindex="4" required>
+					</label>
+				</div>	
+				<div>
+					<input type="submit" value="create an account" id="register-submit">
 				</div>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-		<div class="arriv-bottm">
-			<div class="col-md-8 arriv-left1">
-				<img src="../images/3.jpg" class="img-responsive" alt="">
-				<div class="arriv-info1">
-					<h3>SWEATER</h3>
-					<p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
-					<div class="crt-btn">
-						<a href="details.html">SHOP NOW</a>
-					</div>
+				<div class="sky-form">
+					<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>i agree to BotiKE.com &nbsp;<a class="terms" href="#"> terms of service</a> </label>
 				</div>
-			</div>
-			<div class="col-md-4 arriv-right1">
-				<img src="../images/4.jpg" class="img-responsive" alt="">
-				<div class="arriv-info2">
-					<a href="details.html"><h3>Dress shirts<i class="ars"></i></h3></a>
-				</div>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-		<div class="arriv-las">
-			<div class="col-md-4 arriv-left2">
-				<img src="../images/5.jpg" class="img-responsive" alt="">
-				<div class="arriv-info2">
-					<a href="details.html"><h3>Skirt Suits<i class="ars"></i></h3></a>
-				</div>
-			</div>
-			<div class="col-md-4 arriv-middle">
-				<img src="../images/6.jpg" class="img-responsive" alt="">
-				<div class="arriv-info3">
-					<h3>FRESH LOOK T-SHIRT</h3>
-					<div class="crt-btn">
-						<a href="details.html">SHOP NOW</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 arriv-right2">
-				<img src="../images/7.jpg" class="img-responsive" alt="">
-				<div class="arriv-info2">
-					<a href="details.html"><h3>Baby Overalls<i class="ars"></i></h3></a>
-				</div>
-			</div>
-			<div class="clearfix"> </div>
+			</form>
+			<!-- /Form -->
 		</div>
 	</div>
+	<!-- Exiting User -->
+	<!--<div class="registration_left">
+		<h2>existing user</h2>
+		 <div class="registration_form">-->
+		 <!-- Form -->
+			<!--<form id="registration_form" action="contact.php" method="post">
+				<div>
+					<label>
+						<input placeholder="email:" type="email" tabindex="3" required>
+					</label>
+				</div>
+				<div>
+					<label>
+						<input placeholder="password" type="password" tabindex="4" required>
+					</label>
+				</div>						
+				<div>
+					<input type="submit" value="sign in" id="register-submit">
+				</div>
+				<div class="forget">
+					<a href="#">forgot your password</a>
+				</div>
+			</form>-->
+			<!-- /Form -->
+			<!--</div>
+	</div>-->
+	<div class="clearfix"></div>
+	</div>
+	<!-- end registration -->
 </div>
-<div class="special">
-	<div class="container">
-		<h3>Special Offers</h3>
-		<div class="specia-top">
-			<ul class="grid_2">
-		<li>
-				<a href="details.html"><img src="../images/8.jpg" class="img-responsive" alt=""></a>
-				<div class="special-info grid_1 simpleCart_shelfItem">
-					<h5>Blazer</h5>
-					<div class="item_add"><span class="item_price"><h6>ONLY KES 4000.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-				</div>
-		</li>
-		<li>
-				<a href="details.html"><img src="../images/9.jpg" class="img-responsive" alt=""></a>
-				<div class="special-info grid_1 simpleCart_shelfItem">
-					<h5>Khaki</h5>
-					<div class="item_add"><span class="item_price"><h6>ONLY KES 6000.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-			</div>
-		</li>
-		<li>
-				<a href="details.html"><img src="../images/10.jpg" class="img-responsive" alt=""></a>
-				<div class="special-info grid_1 simpleCart_shelfItem">
-					<h5>Suit</h5>
-					<div class="item_add"><span class="item_price"><h6>ONLY KES 14000.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-			</div>
-		</li>
-		<li>
-				<a href="details.html"><img src="../images/11.jpg" class="img-responsive" alt=""></a>
-				<div class="special-info grid_1 simpleCart_shelfItem">
-					<h5>Skirt</h5>
-					<div class="item_add"><span class="item_price"><h6>ONLY KES 3700.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-				</div>
-		</li>
-		<div class="clearfix"> </div>
-	</ul>
-		</div>
-	</div>
 </div>
 <div class="foot-top">
 	<div class="container">
@@ -711,13 +960,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			</div>
 			<div class="clearfix"> </div>
-				<li><i class="add"> </i>Michael Omoyo Ondieki</li>
-				<li><i class="phone"> </i>+254702381228</li>
+				<li><i class="add"> </i>Jl. Haji Muhidin, Blok G no.69</li>
+				<li><i class="phone"> </i>025-2839341</li>
 				<li><a href="mailto:info@example.com"><i class="mail"> </i>info@sitename.com </a></li>
 			
 		</div>
 		<div class="clearfix"> </div>
-			<p>Copyrights © BOTQ Solutions. All rights reserved</p>
+			<p>Copyrights © 2015 Gretong. All rights reserved | Template by <a href="http://w3layouts.com/">W3layouts</a></p>
 	</div>
 </div>
 </body>
