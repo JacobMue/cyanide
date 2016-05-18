@@ -1,8 +1,8 @@
 <?php
 session_start();
-// if($_SESSION['firstName']==null){
-// 	header('Location:../front/index.php');
-// }
+if($_SESSION['firstName']==null){
+	header('Location:../front/index.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
