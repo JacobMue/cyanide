@@ -31,7 +31,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="grid images_3_of_2">
 						<ul id="etalage">
 							<li>
-								<a href="optionallink.html">
+								<a href="optionallink.php">
 									<img class="etalage_thumb_image" src="../images/d1.jpg" class="img-responsive" />
 									<img class="etalage_source_image" src="../images/d1.jpg" class="img-responsive" title="" />
 								</a>
@@ -75,7 +75,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 					</div>
 					<div class="btn_form">
-						<a href="checkout.html">buy</a>
+						<a href="checkout.php">buy</a>
 					</div>
 					<a href="#"><span>login to save in wishlist </span></a>
 					
@@ -129,7 +129,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="w_nav1">
 			<h4>All</h4>
 			<ul>
-				<li><a href="women.html">women</a></li>
+				<li><a href="women.php">women</a></li>
 				<li><a href="#">new arrivals</a></li>
 				<li><a href="#">trends</a></li>
 				<li><a href="#">boys</a></li>
@@ -279,7 +279,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<h4>CUSTOMER CARE</h4>
 				<li><a href="#">Help Center</a></li>
 				<li><a href="#">FAQ</a></li>
-				<li><a href="buy.html">How To Buy</a></li>
+				<li><a href="buy.php">How To Buy</a></li>
 				<li><a href="#">Delivery</a></li>
 		</div>
 		<div class="col-md-2 abt">
@@ -287,14 +287,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<li><a href="#">Our Stories</a></li>
 				<li><a href="#">Press</a></li>
 				<li><a href="#">Career</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="contact.php">Contact</a></li>
 		</div>
 		<div class="col-md-2 myac">
 			<h4>MY ACCOUNT</h4>
-				<li><a href="register.html">Register</a></li>
+				<li><a href="register.php">Register</a></li>
 				<li><a href="#">My Cart</a></li>
 				<li><a href="#">Order History</a></li>
-				<li><a href="buy.html">Payment</a></li>
+				<li><a href="buy.php">Payment</a></li>
 		</div>
 		<div class="col-md-5 our-st">
 			<div class="our-left">

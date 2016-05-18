@@ -30,7 +30,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="w_nav1">
 			<h4>All</h4>
 			<ul>
-				<li><a href="women.html">women</a></li>
+				<li><a href="women.php">women</a></li>
 				<li><a href="#">new arrivals</a></li>
 				<li><a href="#">trends</a></li>
 				<li><a href="#">boys</a></li>
@@ -146,10 +146,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!-- grids_of_4 -->
 		<div class="grids_of_4">
 		  <div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
+				<div class="content_box"><a href="details.php">
 			   	   	 <img src="../images/w1.jpg" class="img-responsive" alt=""/>
 				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
+				    <h4><a href="details.php"> Duis autem</a></h4>
 				     <p>It is a long established fact that</p>
 					 <div class="grid_1 simpleCart_shelfItem">
 				    
@@ -159,10 +159,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			   	</div>
 			</div>
 			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
+				<div class="content_box"><a href="details.php">
 			   	   	 <img src="../images/w2.jpg" class="img-responsive" alt=""/>
 				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
+				    <h4><a href="details.php"> Duis autem</a></h4>
 				     <p>It is a long established fact that</p>
 					 <div class="grid_1 simpleCart_shelfItem">
 				    
@@ -172,10 +172,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			   	</div>
 			</div>
 			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
+				<div class="content_box"><a href="details.php">
 			   	   	 <img src="../images/w3.jpg" class="img-responsive" alt=""/>
 				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
+				    <h4><a href="details.php"> Duis autem</a></h4>
 				     <p>It is a long established fact that</p>
 					 <div class="grid_1 simpleCart_shelfItem">
 				    
@@ -185,10 +185,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			   	</div>
 			</div>
 			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
+				<div class="content_box"><a href="details.php">
 			   	   	 <img src="../images/w4.jpg" class="img-responsive" alt=""/>
 				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
+				    <h4><a href="details.php"> Duis autem</a></h4>
 				     <p>It is a long established fact that</p>
 					 <div class="grid_1 simpleCart_shelfItem">
 				    
@@ -203,10 +203,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		
 		<div class="grids_of_4">
 		 <div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
+				<div class="content_box"><a href="details.php">
 			   	   	 <img src="../images/w5.jpg" class="img-responsive" alt=""/>
 				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
+				    <h4><a href="details.php"> Duis autem</a></h4>
 				     <p>It is a long established fact that</p>
 					 <div class="grid_1 simpleCart_shelfItem">
 				    
@@ -216,10 +216,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			   	</div>
 			</div>
 			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
+				<div class="content_box"><a href="details.php">
 			   	   	 <img src="../images/w6.jpg" class="img-responsive" alt=""/>
 				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
+				    <h4><a href="details.php"> Duis autem</a></h4>
 				     <p>It is a long established fact that</p>
 					 <div class="grid_1 simpleCart_shelfItem">
 				    
@@ -229,10 +229,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			   	</div>
 			</div>
 			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
+				<div class="content_box"><a href="details.php">
 			   	   	 <img src="../images/w7.jpg" class="img-responsive" alt=""/>
 				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
+				    <h4><a href="details.php"> Duis autem</a></h4>
 				     <p>It is a long established fact that</p>
 					 <div class="grid_1 simpleCart_shelfItem">
 				    
@@ -242,10 +242,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			   	</div>
 			</div>
 			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
+				<div class="content_box"><a href="details.php">
 			   	   	 <img src="../images/w8.jpg" class="img-responsive" alt=""/>
 				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
+				    <h4><a href="details.php"> Duis autem</a></h4>
 				     <p>It is a long established fact that</p>
 					 <div class="grid_1 simpleCart_shelfItem">
 				    
@@ -258,10 +258,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 		<div class="grids_of_4">
 		  <div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
+				<div class="content_box"><a href="details.php">
 			   	   	 <img src="../images/w9.jpg" class="img-responsive" alt=""/>
 				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
+				    <h4><a href="details.php"> Duis autem</a></h4>
 				     <p>It is a long established fact that</p>
 					 <div class="grid_1 simpleCart_shelfItem">
 				    
@@ -271,10 +271,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			   	</div>
 			</div>
 			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
+				<div class="content_box"><a href="details.php">
 			   	   	 <img src="../images/w10.jpg" class="img-responsive" alt=""/>
 				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
+				    <h4><a href="details.php"> Duis autem</a></h4>
 				     <p>It is a long established fact that</p>
 					 <div class="grid_1 simpleCart_shelfItem">
 				    
@@ -284,10 +284,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			   	</div>
 			</div>
 			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
+				<div class="content_box"><a href="details.php">
 			   	   	 <img src="../images/w11.jpg" class="img-responsive" alt=""/>
 				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
+				    <h4><a href="details.php"> Duis autem</a></h4>
 				     <p>It is a long established fact that</p>
 					 <div class="grid_1 simpleCart_shelfItem">
 				    
@@ -297,10 +297,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			   	</div>
 			</div>
 			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
+				<div class="content_box"><a href="details.php">
 			   	   	 <img src="../images/w12.jpg" class="img-responsive" alt=""/>
 				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
+				    <h4><a href="details.php"> Duis autem</a></h4>
 				     <p>It is a long established fact that</p>
 					 <div class="grid_1 simpleCart_shelfItem">
 				    
@@ -366,7 +366,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<h4>CUSTOMER CARE</h4>
 				<li><a href="#">Help Center</a></li>
 				<li><a href="#">FAQ</a></li>
-				<li><a href="buy.html">How To Buy</a></li>
+				<li><a href="buy.php">How To Buy</a></li>
 				<li><a href="#">Delivery</a></li>
 		</div>
 		<div class="col-md-2 abt">
@@ -374,14 +374,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<li><a href="#">Our Stories</a></li>
 				<li><a href="#">Press</a></li>
 				<li><a href="#">Career</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="contact.php">Contact</a></li>
 		</div>
 		<div class="col-md-2 myac">
 			<h4>MY ACCOUNT</h4>
-				<li><a href="register.html">Register</a></li>
+				<li><a href="register.php">Register</a></li>
 				<li><a href="#">My Cart</a></li>
 				<li><a href="#">Order History</a></li>
-				<li><a href="buy.html">Payment</a></li>
+				<li><a href="buy.php">Payment</a></li>
 		</div>
 		<div class="col-md-5 our-st">
 			<div class="our-left">

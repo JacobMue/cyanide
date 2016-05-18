@@ -162,7 +162,7 @@
 			<h4>CUSTOMER CARE</h4>
 				<li><a href="#">Help Center</a></li>
 				<li><a href="#">FAQ</a></li>
-				<li><a href="buy.html">How To Buy</a></li>
+				<li><a href="buy.php">How To Buy</a></li>
 				<li><a href="#">Delivery</a></li>
 		</div>
 		<div class="col-md-2 abt">
@@ -177,7 +177,7 @@
 				<li><a href="register.php">Register</a></li>
 				<li><a href="#">My Cart</a></li>
 				<li><a href="#">Order History</a></li>
-				<li><a href="buy.html">Payment</a></li>
+				<li><a href="buy.php">Payment</a></li>
 		</div>
 		<div class="col-md-5 our-st">
 			<div class="our-left">
