@@ -21,8 +21,11 @@
 </form>
 
 <?php
-$con=mysqli_connect("localhost","root","","cyanide") or die("NO server and database");
+include_once("variables.php");
 if ( isset( $_POST['submit'] ) ) {
+
+echo "Item posted ";
+
 
 $category=$_POST['category'];
 $ItemName=$_POST['itemName'];
@@ -43,14 +46,21 @@ $Quantity=$_POST['itemQuantity'];
     if($extension=='jpg'||$extension=='png'){
     $location = '../images/';
     if(move_uploaded_file($temp_name, $location.$name)){
-
         $path=$location.$name;
-        $addItem="INSERT INTO `cyanide`.`Product` (`ProductID`, `ProductName`, `Description`, `UnitPrice`, `UnitStock`, `CategoryName`, `Picture`) VALUES (NULL, '$ItemName', '$des', '$price', '$Quantity', '$category', '$path');";
-        mysqli_query($con,$addItem);
+        $addItem="INSERT INTO $database.`Product` (`ProductID`, `ProductName`, `Description`, `UnitPrice`, `UnitStock`, `CategoryName`, `Picture`) VALUES (NULL, '$ItemName', '$des', '$price', '$Quantity', '$category', '$path');"; 
+        echo $addItem;
+        
+        mysql_query($addItem,$con);
+        
+        echo "this is the mYsel Error ".mysql_error($con);
+      
 
     }
+    else {
+        echo "Error in File Upload ";
+    }
 }
-mysqli_close($con);
+mysql_close($con);
 
 //close issets
 }

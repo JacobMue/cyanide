@@ -3,12 +3,6 @@ $category="";
 if(isset($_GET['category'])){
 	$category=$_GET['category'];
 }
-
-$con=mysqli_connect("localhost","root","","cyanide");
-if($con->connect_error){
-	echo $con->connect_error;
-}else{
-
 $sql="SELECT * FROM `product` WHERE `CategoryName`='$category'";
 $query=$con->query($sql);
 $row=mysqli_num_rows($query);
@@ -31,7 +25,7 @@ else{
 	}
 }
 $con->close();	
-}
+
 
 
 ?>

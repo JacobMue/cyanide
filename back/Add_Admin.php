@@ -17,7 +17,7 @@
 
 <button class="btn btn-danger" style="float:right;">Delete an Administrator</button>
 <?php
-$con=mysqli_connect("localhost","root","","cyanide") or die("NO server and database");
+include_once("variables.php");
 if ( isset( $_POST['Submit'] ) ) {
 $fname=$_POST['firstName'];
 $lname=$_POST['lastName'];
