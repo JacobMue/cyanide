@@ -13,7 +13,7 @@
 					<h3>NEW ARRIVALS</h3>
 					<p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
 					<div class="crt-btn">
-						<a href="details.html">TAKE A LOOK</a>
+						<a href="details.php">TAKE A LOOK</a>
 					</div>
 				</div>
 			</div>
@@ -23,7 +23,7 @@
 					<h3>TUXEDO</h3>
 					<p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
 					<div class="crt-btn">
-						<a href="details.html">SHOP NOW</a>
+						<a href="details.php">SHOP NOW</a>
 					</div>
 				</div>
 			</div>
@@ -36,14 +36,14 @@
 					<h3>SWEATER</h3>
 					<p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
 					<div class="crt-btn">
-						<a href="details.html">SHOP NOW</a>
+						<a href="details.php">SHOP NOW</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4 arriv-right1">
 				<img src="../images/4.jpg" class="img-responsive" alt="">
 				<div class="arriv-info2">
-					<a href="details.html"><h3>Dress shirts<i class="ars"></i></h3></a>
+					<a href="details.php"><h3>Dress shirts<i class="ars"></i></h3></a>
 				</div>
 			</div>
 			<div class="clearfix"> </div>
@@ -52,7 +52,7 @@
 			<div class="col-md-4 arriv-left2">
 				<img src="../images/5.jpg" class="img-responsive" alt="">
 				<div class="arriv-info2">
-					<a href="details.html"><h3>Skirt Suits<i class="ars"></i></h3></a>
+					<a href="details.php"><h3>Skirt Suits<i class="ars"></i></h3></a>
 				</div>
 			</div>
 			<div class="col-md-4 arriv-middle">
@@ -60,14 +60,14 @@
 				<div class="arriv-info3">
 					<h3>FRESH LOOK T-SHIRT</h3>
 					<div class="crt-btn">
-						<a href="details.html">SHOP NOW</a>
+						<a href="details.php">SHOP NOW</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4 arriv-right2">
 				<img src="../images/7.jpg" class="img-responsive" alt="">
 				<div class="arriv-info2">
-					<a href="details.html"><h3>Baby Overalls<i class="ars"></i></h3></a>
+					<a href="details.php"><h3>Baby Overalls<i class="ars"></i></h3></a>
 				</div>
 			</div>
 			<div class="clearfix"> </div>
@@ -80,7 +80,7 @@
 		<div class="specia-top">
 			<ul class="grid_2">
 		<li>
-				<a href="details.html"><img src="../images/8.jpg" class="img-responsive" alt=""></a>
+				<a href="details.php"><img src="../images/8.jpg" class="img-responsive" alt=""></a>
 				<div class="special-info grid_1 simpleCart_shelfItem">
 					<h5>Blazer</h5>
 					<div class="item_add"><span class="item_price"><h6>ONLY KES 4000.00</h6></span></div>
@@ -88,7 +88,7 @@
 				</div>
 		</li>
 		<li>
-				<a href="details.html"><img src="../images/9.jpg" class="img-responsive" alt=""></a>
+				<a href="details.php"><img src="../images/9.jpg" class="img-responsive" alt=""></a>
 				<div class="special-info grid_1 simpleCart_shelfItem">
 					<h5>Khaki</h5>
 					<div class="item_add"><span class="item_price"><h6>ONLY KES 6000.00</h6></span></div>
@@ -96,7 +96,7 @@
 			</div>
 		</li>
 		<li>
-				<a href="details.html"><img src="../images/10.jpg" class="img-responsive" alt=""></a>
+				<a href="details.php"><img src="../images/10.jpg" class="img-responsive" alt=""></a>
 				<div class="special-info grid_1 simpleCart_shelfItem">
 					<h5>Suit</h5>
 					<div class="item_add"><span class="item_price"><h6>ONLY KES 14000.00</h6></span></div>
@@ -104,7 +104,7 @@
 			</div>
 		</li>
 		<li>
-				<a href="details.html"><img src="../images/11.jpg" class="img-responsive" alt=""></a>
+				<a href="details.php"><img src="../images/11.jpg" class="img-responsive" alt=""></a>
 				<div class="special-info grid_1 simpleCart_shelfItem">
 					<h5>Skirt</h5>
 					<div class="item_add"><span class="item_price"><h6>ONLY KES 3700.00</h6></span></div>
@@ -170,11 +170,11 @@
 				<li><a href="#">Our Stories</a></li>
 				<li><a href="#">Press</a></li>
 				<li><a href="#">Career</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="contact.php">Contact</a></li>
 		</div>
 		<div class="col-md-2 myac">
 			<h4>MY ACCOUNT</h4>
-				<li><a href="register.html">Register</a></li>
+				<li><a href="register.php">Register</a></li>
 				<li><a href="#">My Cart</a></li>
 				<li><a href="#">Order History</a></li>
 				<li><a href="buy.html">Payment</a></li>
