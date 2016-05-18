@@ -3,7 +3,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>BOTQ SOLUTIONS</title>
+<title>BOTQ Online Clothing Store</title>
 <link href="../css/front/bootstrap.css" rel='stylesheet' type='text/css' />
 
 <!-- jQuery (necessary JavaScript plugins) -->

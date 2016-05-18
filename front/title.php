@@ -1,5 +1,5 @@
 <head>
-<title>Botik Online Clothing Store</title>
+<title>BOTQ Online Clothing Store</title>
 <link href="../css/front/bootstrap.css" rel='stylesheet' type='text/css' />
 
 <!-- jQuery (necessary JavaScript plugins) -->
