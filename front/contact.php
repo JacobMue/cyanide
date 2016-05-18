@@ -22,7 +22,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       				</div>
 				  <div class="contact-form">
 			 	  	 	<h2>Contact Us</h2>
-			 	 	    <form method="post" action="contact-post.php">
+			 	 	    <form method="post" action="contact-post.html">
 					    	<div>
 						    	<span><label>Name</label></span>
 						    	<span><input name="userName" type="text" class="textbox"></span>
@@ -94,7 +94,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<h4>CUSTOMER CARE</h4>
 				<li><a href="#">Help Center</a></li>
 				<li><a href="#">FAQ</a></li>
-				<li><a href="buy.php">How To Buy</a></li>
+				<li><a href="buy.html">How To Buy</a></li>
 				<li><a href="#">Delivery</a></li>
 		</div>
 		<div class="col-md-2 abt">
@@ -102,14 +102,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<li><a href="#">Our Stories</a></li>
 				<li><a href="#">Press</a></li>
 				<li><a href="#">Career</a></li>
-				<li><a href="contact.php">Contact</a></li>
+				<li><a href="contact.html">Contact</a></li>
 		</div>
 		<div class="col-md-2 myac">
 			<h4>MY ACCOUNT</h4>
-				<li><a href="register.php">Register</a></li>
+				<li><a href="register.html">Register</a></li>
 				<li><a href="#">My Cart</a></li>
 				<li><a href="#">Order History</a></li>
-				<li><a href="buy.php">Payment</a></li>
+				<li><a href="buy.html">Payment</a></li>
 		</div>
 		<div class="col-md-5 our-st">
 			<div class="our-left">
