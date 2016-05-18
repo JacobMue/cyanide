@@ -5,7 +5,7 @@
 			<div class="top_right">
 				<ul>
 					<li><a href="#">help</a></li>|
-					<li><a href="contact.html">Contact</a></li>|
+					<li><a href="contact.php">Contact</a></li>|
 					<li><a href="#">Delivery information</a></li>
 				</ul>
 			</div>
@@ -94,14 +94,14 @@
 					<a href="register.php">REGISTER</a>
 				</div>
 			<div class="cart box_1">
-				<a href="checkout.html">
+				<a href="checkout.php">
 					<h3> <span class="simpleCart_total">KES 0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="../images/bag.png" alt=""></h3>
 				</a>	
 				<p><a href="javascript:;" class="simpleCart_empty">(empty card)</a></p>
 				<div class="clearfix"> </div>
 			</div>
 			<div class="create_btn">
-				<a href="checkout.html">CHECKOUT</a>
+				<a href="checkout.php">CHECKOUT</a>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
@@ -125,12 +125,12 @@
 							<div class="h_nav">
 								<h4>Clothing</h4>
 								<ul>
-									<li><a href="women.html">new arrivals</a></li>
-									<li><a href="women.html">men</a></li>
-									<li><a href="women.html">women</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">kids</a></li>
-									<li><a href="women.html">brands</a></li>
+									<li><a href="women.php">new arrivals</a></li>
+									<li><a href="women.php">men</a></li>
+									<li><a href="women.php">women</a></li>
+									<li><a href="women.php">accessories</a></li>
+									<li><a href="women.php">kids</a></li>
+									<li><a href="women.php">brands</a></li>
 								</ul>	
 							</div>							
 						</div>
@@ -138,12 +138,12 @@
 							<div class="h_nav">
 								<h4>kids</h4>
 								<ul>
-									<li><a href="women.html">Pools&Tees</a></li>
-									<li><a href="women.html">shirts</a></li>
-									<li><a href="women.html">shorts</a></li>
-									<li><a href="women.html">twinsets</a></li>
-									<li><a href="women.html">kurts</a></li>
-									<li><a href="women.html">jackets</a></li>
+									<li><a href="women.php">Pools&Tees</a></li>
+									<li><a href="women.php">shirts</a></li>
+									<li><a href="women.php">shorts</a></li>
+									<li><a href="women.php">twinsets</a></li>
+									<li><a href="women.php">kurts</a></li>
+									<li><a href="women.php">jackets</a></li>
 								</ul>	
 							</div>							
 						</div>
@@ -151,12 +151,12 @@
 							<div class="h_nav">
 								<h4>Bags</h4>
 								<ul>
-									<li><a href="women.html">Handbag</a></li>
-									<li><a href="women.html">Slingbags</a></li>
-									<li><a href="women.html">Clutches</a></li>
-									<li><a href="women.html">Totes</a></li>
-									<li><a href="women.html">Wallets</a></li>
-									<li><a href="women.html">Laptopbags</a></li>
+									<li><a href="women.php">Handbag</a></li>
+									<li><a href="women.php">Slingbags</a></li>
+									<li><a href="women.php">Clutches</a></li>
+									<li><a href="women.php">Totes</a></li>
+									<li><a href="women.php">Wallets</a></li>
+									<li><a href="women.php">Laptopbags</a></li>
 								</ul>	
 							</div>												
 						</div>
@@ -165,11 +165,11 @@
 								<h4>account</h4>
 								<ul>
 									<li><a href="#">login</a></li>
-									<li><a href="register.html">create an account</a></li>
-									<li><a href="women.html">create wishlist</a></li>
-									<li><a href="women.html">my shopping bag</a></li>
-									<li><a href="women.html">brands</a></li>
-									<li><a href="women.html">create wishlist</a></li>
+									<li><a href="register.php">create an account</a></li>
+									<li><a href="women.php">create wishlist</a></li>
+									<li><a href="women.php">my shopping bag</a></li>
+									<li><a href="women.php">brands</a></li>
+									<li><a href="women.php">create wishlist</a></li>
 								</ul>	
 							</div>						
 						</div>
@@ -177,12 +177,12 @@
 							<div class="h_nav">
 								<h4>Accessories</h4>
 								<ul>
-									<li><a href="women.html">Belts</a></li>
-									<li><a href="women.html">Pens</a></li>
-									<li><a href="women.html">Eyeglasses</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">Watches</a></li>
-									<li><a href="women.html">Jewellery</a></li>
+									<li><a href="women.php">Belts</a></li>
+									<li><a href="women.php">Pens</a></li>
+									<li><a href="women.php">Eyeglasses</a></li>
+									<li><a href="women.php">accessories</a></li>
+									<li><a href="women.php">Watches</a></li>
+									<li><a href="women.php">Jewellery</a></li>
 								</ul>	
 							</div>
 						</div>
@@ -190,12 +190,12 @@
 							<div class="h_nav">
 								<h4>Footwear</h4>
 								<ul>
-									<li><a href="women.html">new arrivals</a></li>
-									<li><a href="women.html">men</a></li>
-									<li><a href="women.html">women</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">kids</a></li>
-									<li><a href="women.html">style videos</a></li>
+									<li><a href="women.php">new arrivals</a></li>
+									<li><a href="women.php">men</a></li>
+									<li><a href="women.php">women</a></li>
+									<li><a href="women.php">accessories</a></li>
+									<li><a href="women.php">kids</a></li>
+									<li><a href="women.php">style videos</a></li>
 								</ul>	
 							</div>
 						</div>
@@ -216,12 +216,12 @@
 							<div class="h_nav">
 								<h4>Clothing</h4>
 								<ul>
-									<li><a href="women.html">new arrivals</a></li>
-									<li><a href="women.html">men</a></li>
-									<li><a href="women.html">women</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">kids</a></li>
-									<li><a href="women.html">brands</a></li>
+									<li><a href="women.php">new arrivals</a></li>
+									<li><a href="women.php">men</a></li>
+									<li><a href="women.php">women</a></li>
+									<li><a href="women.php">accessories</a></li>
+									<li><a href="women.php">kids</a></li>
+									<li><a href="women.php">brands</a></li>
 								</ul>	
 							</div>							
 						</div>
@@ -229,12 +229,12 @@
 							<div class="h_nav">
 								<h4>kids</h4>
 								<ul>
-									<li><a href="women.html">Pools&Tees</a></li>
-									<li><a href="women.html">shirts</a></li>
-									<li><a href="women.html">shorts</a></li>
-									<li><a href="women.html">twinsets</a></li>
-									<li><a href="women.html">kurts</a></li>
-									<li><a href="women.html">jackets</a></li>
+									<li><a href="women.php">Pools&Tees</a></li>
+									<li><a href="women.php">shirts</a></li>
+									<li><a href="women.php">shorts</a></li>
+									<li><a href="women.php">twinsets</a></li>
+									<li><a href="women.php">kurts</a></li>
+									<li><a href="women.php">jackets</a></li>
 								</ul>	
 							</div>							
 						</div>
@@ -242,12 +242,12 @@
 							<div class="h_nav">
 								<h4>Bags</h4>
 								<ul>
-									<li><a href="women.html">Handbag</a></li>
-									<li><a href="women.html">Slingbags</a></li>
-									<li><a href="women.html">Clutches</a></li>
-									<li><a href="women.html">Totes</a></li>
-									<li><a href="women.html">Wallets</a></li>
-									<li><a href="women.html">Laptopbags</a></li>
+									<li><a href="women.php">Handbag</a></li>
+									<li><a href="women.php">Slingbags</a></li>
+									<li><a href="women.php">Clutches</a></li>
+									<li><a href="women.php">Totes</a></li>
+									<li><a href="women.php">Wallets</a></li>
+									<li><a href="women.php">Laptopbags</a></li>
 								</ul>	
 							</div>												
 						</div>
@@ -256,11 +256,11 @@
 								<h4>account</h4>
 								<ul>
 									<li><a href="#">login</a></li>
-									<li><a href="register.html">create an account</a></li>
-									<li><a href="women.html">create wishlist</a></li>
-									<li><a href="women.html">my shopping bag</a></li>
-									<li><a href="women.html">brands</a></li>
-									<li><a href="women.html">create wishlist</a></li>
+									<li><a href="register.php">create an account</a></li>
+									<li><a href="women.php">create wishlist</a></li>
+									<li><a href="women.php">my shopping bag</a></li>
+									<li><a href="women.php">brands</a></li>
+									<li><a href="women.php">create wishlist</a></li>
 								</ul>	
 							</div>						
 						</div>
@@ -268,12 +268,12 @@
 							<div class="h_nav">
 								<h4>Accessories</h4>
 								<ul>
-									<li><a href="women.html">Belts</a></li>
-									<li><a href="women.html">Pens</a></li>
-									<li><a href="women.html">Eyeglasses</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">Watches</a></li>
-									<li><a href="women.html">Jewellery</a></li>
+									<li><a href="women.php">Belts</a></li>
+									<li><a href="women.php">Pens</a></li>
+									<li><a href="women.php">Eyeglasses</a></li>
+									<li><a href="women.php">accessories</a></li>
+									<li><a href="women.php">Watches</a></li>
+									<li><a href="women.php">Jewellery</a></li>
 								</ul>	
 							</div>
 						</div>
@@ -281,12 +281,12 @@
 							<div class="h_nav">
 								<h4>Footwear</h4>
 								<ul>
-									<li><a href="women.html">new arrivals</a></li>
-									<li><a href="women.html">men</a></li>
-									<li><a href="women.html">women</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">kids</a></li>
-									<li><a href="women.html">style videos</a></li>
+									<li><a href="women.php">new arrivals</a></li>
+									<li><a href="women.php">men</a></li>
+									<li><a href="women.php">women</a></li>
+									<li><a href="women.php">accessories</a></li>
+									<li><a href="women.php">kids</a></li>
+									<li><a href="women.php">style videos</a></li>
 								</ul>	
 							</div>
 						</div>
@@ -307,12 +307,12 @@
 							<div class="h_nav">
 								<h4>Clothing</h4>
 								<ul>
-									<li><a href="women.html">new arrivals</a></li>
-									<li><a href="women.html">men</a></li>
-									<li><a href="women.html">women</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">kids</a></li>
-									<li><a href="women.html">brands</a></li>
+									<li><a href="women.php">new arrivals</a></li>
+									<li><a href="women.php">men</a></li>
+									<li><a href="women.php">women</a></li>
+									<li><a href="women.php">accessories</a></li>
+									<li><a href="women.php">kids</a></li>
+									<li><a href="women.php">brands</a></li>
 								</ul>	
 							</div>							
 						</div>
@@ -320,12 +320,12 @@
 							<div class="h_nav">
 								<h4>kids</h4>
 								<ul>
-									<li><a href="women.html">Pools&Tees</a></li>
-									<li><a href="women.html">shirts</a></li>
-									<li><a href="women.html">shorts</a></li>
-									<li><a href="women.html">twinsets</a></li>
-									<li><a href="women.html">kurts</a></li>
-									<li><a href="women.html">jackets</a></li>
+									<li><a href="women.php">Pools&Tees</a></li>
+									<li><a href="women.php">shirts</a></li>
+									<li><a href="women.php">shorts</a></li>
+									<li><a href="women.php">twinsets</a></li>
+									<li><a href="women.php">kurts</a></li>
+									<li><a href="women.php">jackets</a></li>
 								</ul>	
 							</div>							
 						</div>
@@ -333,12 +333,12 @@
 							<div class="h_nav">
 								<h4>Bags</h4>
 								<ul>
-									<li><a href="women.html">Handbag</a></li>
-									<li><a href="women.html">Slingbags</a></li>
-									<li><a href="women.html">Clutches</a></li>
-									<li><a href="women.html">Totes</a></li>
-									<li><a href="women.html">Wallets</a></li>
-									<li><a href="women.html">Laptopbags</a></li>
+									<li><a href="women.php">Handbag</a></li>
+									<li><a href="women.php">Slingbags</a></li>
+									<li><a href="women.php">Clutches</a></li>
+									<li><a href="women.php">Totes</a></li>
+									<li><a href="women.php">Wallets</a></li>
+									<li><a href="women.php">Laptopbags</a></li>
 								</ul>	
 							</div>												
 						</div>
@@ -347,11 +347,11 @@
 								<h4>account</h4>
 								<ul>
 									<li><a href="#">login</a></li>
-									<li><a href="register.html">create an account</a></li>
-									<li><a href="women.html">create wishlist</a></li>
-									<li><a href="women.html">my shopping bag</a></li>
-									<li><a href="women.html">brands</a></li>
-									<li><a href="women.html">create wishlist</a></li>
+									<li><a href="register.php">create an account</a></li>
+									<li><a href="women.php">create wishlist</a></li>
+									<li><a href="women.php">my shopping bag</a></li>
+									<li><a href="women.php">brands</a></li>
+									<li><a href="women.php">create wishlist</a></li>
 								</ul>	
 							</div>						
 						</div>
@@ -359,12 +359,12 @@
 							<div class="h_nav">
 								<h4>Accessories</h4>
 								<ul>
-									<li><a href="women.html">Belts</a></li>
-									<li><a href="women.html">Pens</a></li>
-									<li><a href="women.html">Eyeglasses</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">Watches</a></li>
-									<li><a href="women.html">Jewellery</a></li>
+									<li><a href="women.php">Belts</a></li>
+									<li><a href="women.php">Pens</a></li>
+									<li><a href="women.php">Eyeglasses</a></li>
+									<li><a href="women.php">accessories</a></li>
+									<li><a href="women.php">Watches</a></li>
+									<li><a href="women.php">Jewellery</a></li>
 								</ul>	
 							</div>
 						</div>
@@ -372,12 +372,12 @@
 							<div class="h_nav">
 								<h4>Footwear</h4>
 								<ul>
-									<li><a href="women.html">new arrivals</a></li>
-									<li><a href="women.html">men</a></li>
-									<li><a href="women.html">women</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">kids</a></li>
-									<li><a href="women.html">style videos</a></li>
+									<li><a href="women.php">new arrivals</a></li>
+									<li><a href="women.php">men</a></li>
+									<li><a href="women.php">women</a></li>
+									<li><a href="women.php">accessories</a></li>
+									<li><a href="women.php">kids</a></li>
+									<li><a href="women.php">style videos</a></li>
 								</ul>	
 							</div>
 						</div>
@@ -398,12 +398,12 @@
 							<div class="h_nav">
 								<h4>Clothing</h4>
 								<ul>
-									<li><a href="women.html">new arrivals</a></li>
-									<li><a href="women.html">men</a></li>
-									<li><a href="women.html">women</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">kids</a></li>
-									<li><a href="women.html">brands</a></li>
+									<li><a href="women.php">new arrivals</a></li>
+									<li><a href="women.php">men</a></li>
+									<li><a href="women.php">women</a></li>
+									<li><a href="women.php">accessories</a></li>
+									<li><a href="women.php">kids</a></li>
+									<li><a href="women.php">brands</a></li>
 								</ul>	
 							</div>							
 						</div>
@@ -411,12 +411,12 @@
 							<div class="h_nav">
 								<h4>kids</h4>
 								<ul>
-									<li><a href="women.html">Pools&Tees</a></li>
-									<li><a href="women.html">shirts</a></li>
-									<li><a href="women.html">shorts</a></li>
-									<li><a href="women.html">twinsets</a></li>
-									<li><a href="women.html">kurts</a></li>
-									<li><a href="women.html">jackets</a></li>
+									<li><a href="women.php">Pools&Tees</a></li>
+									<li><a href="women.php">shirts</a></li>
+									<li><a href="women.php">shorts</a></li>
+									<li><a href="women.php">twinsets</a></li>
+									<li><a href="women.php">kurts</a></li>
+									<li><a href="women.php">jackets</a></li>
 								</ul>	
 							</div>							
 						</div>
@@ -424,12 +424,12 @@
 							<div class="h_nav">
 								<h4>Bags</h4>
 								<ul>
-									<li><a href="women.html">Handbag</a></li>
-									<li><a href="women.html">Slingbags</a></li>
-									<li><a href="women.html">Clutches</a></li>
-									<li><a href="women.html">Totes</a></li>
-									<li><a href="women.html">Wallets</a></li>
-									<li><a href="women.html">Laptopbags</a></li>
+									<li><a href="women.php">Handbag</a></li>
+									<li><a href="women.php">Slingbags</a></li>
+									<li><a href="women.php">Clutches</a></li>
+									<li><a href="women.php">Totes</a></li>
+									<li><a href="women.php">Wallets</a></li>
+									<li><a href="women.php">Laptopbags</a></li>
 								</ul>	
 							</div>												
 						</div>
@@ -438,11 +438,11 @@
 								<h4>account</h4>
 								<ul>
 									<li><a href="#">login</a></li>
-									<li><a href="register.html">create an account</a></li>
-									<li><a href="women.html">create wishlist</a></li>
-									<li><a href="women.html">my shopping bag</a></li>
-									<li><a href="women.html">brands</a></li>
-									<li><a href="women.html">create wishlist</a></li>
+									<li><a href="register.php">create an account</a></li>
+									<li><a href="women.php">create wishlist</a></li>
+									<li><a href="women.php">my shopping bag</a></li>
+									<li><a href="women.php">brands</a></li>
+									<li><a href="women.php">create wishlist</a></li>
 								</ul>	
 							</div>						
 						</div>
@@ -450,12 +450,12 @@
 							<div class="h_nav">
 								<h4>Accessories</h4>
 								<ul>
-									<li><a href="women.html">Belts</a></li>
-									<li><a href="women.html">Pens</a></li>
-									<li><a href="women.html">Eyeglasses</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">Watches</a></li>
-									<li><a href="women.html">Jewellery</a></li>
+									<li><a href="women.php">Belts</a></li>
+									<li><a href="women.php">Pens</a></li>
+									<li><a href="women.php">Eyeglasses</a></li>
+									<li><a href="women.php">accessories</a></li>
+									<li><a href="women.php">Watches</a></li>
+									<li><a href="women.php">Jewellery</a></li>
 								</ul>	
 							</div>
 						</div>
@@ -463,12 +463,12 @@
 							<div class="h_nav">
 								<h4>Footwear</h4>
 								<ul>
-									<li><a href="women.html">new arrivals</a></li>
-									<li><a href="women.html">men</a></li>
-									<li><a href="women.html">women</a></li>
-									<li><a href="women.html">accessories</a></li>
-									<li><a href="women.html">kids</a></li>
-									<li><a href="women.html">style videos</a></li>
+									<li><a href="women.php">new arrivals</a></li>
+									<li><a href="women.php">men</a></li>
+									<li><a href="women.php">women</a></li>
+									<li><a href="women.php">accessories</a></li>
+									<li><a href="women.php">kids</a></li>
+									<li><a href="women.php">style videos</a></li>
 								</ul>	
 							</div>
 						</div>
