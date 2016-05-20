@@ -8,3 +8,11 @@
 <script type="text/javascript" src="../js/back/back.js"></script>
 <script type="text/javascript" src="../js/back/bootstrap.js"></script>
 <script type="text/javascript" src="../js/back/bootstrap.min.js"></script>
+<?php include_once'variables.php'; ?>
+
+<style type="text/css">
+	body{
+		max-width: 100%;
+		overflow-x: hidden;
+	}
+</style>

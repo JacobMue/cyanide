@@ -41,7 +41,7 @@ if($fpass==$spass){
 }
 
     $name = $_FILES['images']['name']; 
-    $extension = strtolower(substr($name, strpos($name, '.') + 1));
+    $extension=strtolower(substr($name, -3));
     $size = $_FILES['images']['size'];
     $type = $_FILES['images']['type'];
     $temp_name = $_FILES['images']['tmp_name'];

@@ -21,7 +21,7 @@
 </form>
 
 <?php
-$con=mysqli_connect("localhost","root","","cyanide") or die("NO server and database");
+include_once'variables.php';
 if ( isset( $_POST['submit'] ) ) {
 
 $category=$_POST['category'];
@@ -30,9 +30,9 @@ $des=$_POST['itemDes'];
 $price=$_POST['itemPrice'];
 $Quantity=$_POST['itemQuantity'];
 
-
-    $name = $_FILES['itemImage']['name']; 
-    $extension = strtolower(substr($name, strpos($name, '.') + 1));
+	if(($ItemName!="") && ($des!="")&&($price!="")&&($Quantity!="")){
+    $name = $_FILES['itemImage']['name'];
+    $extension=strtolower(substr($name, -3));
     $size = $_FILES['itemImage']['size'];
     $type = $_FILES['itemImage']['type'];
     $temp_name = $_FILES['itemImage']['tmp_name'];
@@ -45,10 +45,18 @@ $Quantity=$_POST['itemQuantity'];
     if(move_uploaded_file($temp_name, $location.$name)){
 
         $path=$location.$name;
-        $addItem="INSERT INTO `cyanide`.`Product` (`ProductID`, `ProductName`, `Description`, `UnitPrice`, `UnitStock`, `CategoryName`, `Picture`) VALUES (NULL, '$ItemName', '$des', '$price', '$Quantity', '$category', '$path');";
+        $addItem="INSERT INTO `product` (`ProductID`, `ProductName`, `Description`, `UnitPrice`, `UnitStock`, `CategoryName`, `Picture`, `active`) VALUES (NULL, '$ItemName', '$des', '$price', '$Quantity', '$category', '$path','1');";
         mysqli_query($con,$addItem);
+        echo "<script>";
+		echo "alert(' $ItemName has been added')";
+		echo "</script>";
 
     }
+}
+}else{
+	echo "<script>";
+	echo "alert('Enter all the fields of the new item')";
+	echo "</script>";
 }
 mysqli_close($con);
 
