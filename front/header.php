@@ -255,7 +255,7 @@
 							<div class="h_nav">
 								<h4>account</h4>
 								<ul>
-									<li><a href="#">login</a></li>
+									<li><a href="login.php">login</a></li>
 									<li><a href="register.php">create an account</a></li>
 									<li><a href="women.php">create wishlist</a></li>
 									<li><a href="women.php">my shopping bag</a></li>
@@ -346,7 +346,7 @@
 							<div class="h_nav">
 								<h4>account</h4>
 								<ul>
-									<li><a href="#">login</a></li>
+									<li><a href="login.php">login</a></li>
 									<li><a href="register.php">create an account</a></li>
 									<li><a href="women.php">create wishlist</a></li>
 									<li><a href="women.php">my shopping bag</a></li>
@@ -437,7 +437,7 @@
 							<div class="h_nav">
 								<h4>account</h4>
 								<ul>
-									<li><a href="#">login</a></li>
+									<li><a href="login.php">login</a></li>
 									<li><a href="register.php">create an account</a></li>
 									<li><a href="women.php">create wishlist</a></li>
 									<li><a href="women.php">my shopping bag</a></li>
