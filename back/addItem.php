@@ -16,26 +16,24 @@
 	<tr><td>Quantity</td><td><input type="text" name="itemQuantity" placeholder="the in Available stock "></td></tr>
 	<tr><td>Picture</td><td><input type="file" name="itemImage"></td></tr>
 	<tr><td><button type="submit" name="submit" class="btn btn-success">Add Item</button></td><td><button type="reset" class="btn btn-warning">Clear</button></td></tr>
+
 </table>
 
 </form>
-
 <?php
-include_once("variables.php");
+include_once'variables.php';
+
 if ( isset( $_POST['submit'] ) ) {
-
-echo "Item posted ";
-
-
+    
 $category=$_POST['category'];
 $ItemName=$_POST['itemName'];
 $des=$_POST['itemDes'];
 $price=$_POST['itemPrice'];
 $Quantity=$_POST['itemQuantity'];
 
-
-    $name = $_FILES['itemImage']['name']; 
-    $extension = strtolower(substr($name, strpos($name, '.') + 1));
+	if(($ItemName!="") && ($des!="")&&($price!="")&&($Quantity!="")){
+    $name = $_FILES['itemImage']['name'];
+    $extension=strtolower(substr($name, -3));
     $size = $_FILES['itemImage']['size'];
     $type = $_FILES['itemImage']['type'];
     $temp_name = $_FILES['itemImage']['tmp_name'];
@@ -47,21 +45,20 @@ $Quantity=$_POST['itemQuantity'];
     $location = '../images/';
     if(move_uploaded_file($temp_name, $location.$name)){
         $path=$location.$name;
-        $addItem="INSERT INTO $database.`Product` (`ProductID`, `ProductName`, `Description`, `UnitPrice`, `UnitStock`, `CategoryName`, `Picture`) VALUES (NULL, '$ItemName', '$des', '$price', '$Quantity', '$category', '$path');"; 
-        echo $addItem;
-        
-        mysql_query($addItem,$con);
-        
-        echo "this is the mYsel Error ".mysql_error($con);
-      
+        $addItem="INSERT INTO `product` (`ProductID`, `ProductName`, `Description`, `UnitPrice`, `UnitStock`, `CategoryName`, `Picture`, `active`) VALUES (NULL, '$ItemName', '$des', '$price', '$Quantity', '$category', '$path','1');";
+        mysqli_query($con,$addItem);
+        echo "<script>";
+		echo "alert(' $ItemName has been added')";
+		echo "</script>";
 
-    }
-    else {
-        echo "Error in File Upload ";
     }
 }
-mysql_close($con);
-
+}else{
+	echo "<script>";
+	echo "alert('Enter all the fields of the new item')";
+	echo "</script>";
+}
+mysqli_close($con);
 //close issets
 }
 
