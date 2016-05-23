@@ -6,42 +6,73 @@ if(isset($_GET['id'])){
 	$productID=$_GET['id'];
 }
 
+$name="";
+$Description="";
+$price="";
+$stock="";
+$Category="";
+$picture="";
+$active="";
+if($productID!=""){
 
+$sql="SELECT * FROM `product` WHERE `ProductID`='$productID';";
+$query=mysqli_query($con,$sql);
+$row=mysqli_num_rows($query);
+
+if($row==1){
+
+	while ($rs=mysqli_fetch_assoc($query)) {
+		$name=$rs['ProductName'];
+		$Description=$rs['Description'];
+		$price=$rs['UnitPrice'];
+		$stock=$rs['UnitStock'];
+		$Category=$rs['CategoryName'];
+		$picture=$rs['Picture'];
+		$active=$rs=['active'];
+	}
+
+}else{
+	echo "Database under service Try Again Later";
+}
+
+}else{
+	echo "<script>";
+	echo "alert('No item selected')";
+	echo "</script>";
+}
 
 
 
 ?>
 
-
-<h4 style="text-align:center;margin-bottom:5px;">Modifying product  click to <a href="ViewProduct.php?id={$productID}"><button class="btn btn-info">View</button></a></h4>
+<h4 style="text-align:center;margin-bottom:5px;"><a href="DisplayProduct.php?category=<?php echo $Category;?>" style="padding-right:50px;"><button class="btn btn-info"><i class="fa fa-arrow-left"></i> Back</button></a>Modifying product  click to <a href="ViewProduct.php?id=<?php echo $productID; ?>"><button class="btn btn-info">View</button></a>
+<a href="deactivate.php?id=<?=$productID;?>" style="float:right;"><button class="btn btn-danger">Remove Product</button></a></h4>
+<form method="POST" action="modifycode.php?id=<?=$productID;?>" enctype="multipart/form-data">
 <div class="row">
 	<div class="col-xs-12 col-sm-6 col-md-6">
 		<table class="table">
-			<tr><td>Name</td><td>High Boots</td></tr>
-			<tr><td>Category</td><td>Men</td></tr>
-			<tr><td>Price per Item </td><td>4500</td></tr>
-			<tr><td>Unit in Stock</td><td>5</td></tr>
-			<tr><td>Sold Item(s)</td><td>2</td></tr>
+			<tr><td>Name</td><td><input type="text" name="newName" value="<?=$name;?>"></td></tr>
+			<tr><td>Category</td><td><?=$Category;?></td></tr>
+			<tr><td>Price per Item </td><td><input type="number" name="newPrice" placeholder="Ksh <?=$price;?> /=" value="<?=$price?>"></td></tr>
+			<tr><td>Unit in Stock</td><td><input type="number" name="newStock" placeholder="<?=$stock;?>" value="<?=$stock;?>"></td></tr>
 		</table>
 	</div>
 	<div class="col-xs-12 col-sm-6 col-md-6">
-		<img class="img-rounded" src="../images/3d_inspiration-1366x768.jpg" style="width:480px;">
+		<img class="img-rounded" src="<?=$picture;?>" style="width:480px;">
+		<input type="file" name="newImage" style="margin-top:-50px;font-size:25px;width:150px;">
 	</div>
 	
 </div>
 <div class="row">
 	<div class="col-xs-12">
 		<div class="panel panel-default">
-			<div class="panel-heading">Desccription of Item <a href=""></a></div>
-			<div class="panel-body">Remember, if you have a string which was read as a line from a text file using the fgets() function, you need to use substr($string, -3, 1) so that you get the actual character and not part of the CRLF (Carriage Return Line Feed).
-
-I don't think the person who asked the question needed this, but for me, I was having trouble getting that last character from a string from a text file so I'm sure others will come across similar problems.Remember, if you have a string which was read as a line from a text file using the fgets() function, you need to use substr($string, -3, 1) so that you get the actual character and not part of the CRLF (Carriage Return Line Feed).
-
-I don't think the person who asked the question needed this, but for me, I was having trouble getting that last character from a string from a text file so I'm sure others will come across similar problems.</div>
+			<div class="panel-heading">Description of Item <a href=""></a></div>
+			<div class="panel-body"><input style="width:100%;" type="text" name="newDes" value="<?=$Description;?>"></div>
+			<div class="panel-footer"><input type="submit" name="submit" value="Edit Product"></div>
 		</div>
 	</div>
 </div>
-		
+</form>
 
 
 

@@ -16,10 +16,10 @@
 	<tr><td>Quantity</td><td><input type="text" name="itemQuantity" placeholder="the in Available stock "></td></tr>
 	<tr><td>Picture</td><td><input type="file" name="itemImage"></td></tr>
 	<tr><td><button type="submit" name="submit" class="btn btn-success">Add Item</button></td><td><button type="reset" class="btn btn-warning">Clear</button></td></tr>
+
 </table>
 
 </form>
-
 <?php
 include_once'variables.php';
 if ( isset( $_POST['submit'] ) ) {

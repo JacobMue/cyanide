@@ -33,3 +33,16 @@ var xhttp = new XMLHttpRequest();
   xhttp.send();
 }
 
+
+function displayProductName(){
+	var product=document.getElementById('ProductDisplay');
+	var name=document.getElementById('hide');
+	name.style.display='block';
+}
+
+function closeProductName(){
+	var name=document.getElementById('hide');
+	name.style.display='none';
+
+}
+
