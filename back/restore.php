@@ -1,1 +1,2 @@
-restore.php
+<?php 
+ ?>
