@@ -15,5 +15,7 @@ else
 }
 
 
-$con=mysql_connect($server,$user,$password,$database) or die("NO server and database");
+$con=mysqli_connect($server,$user,$password,$database) or die("NO server and database");
+
+
 ?>
