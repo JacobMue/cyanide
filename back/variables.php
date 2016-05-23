@@ -1,6 +1,4 @@
 <?php
-
-
 $environment=$_SERVER['SERVER_NAME'];
 $server="localhost";
 if($environment=="localhost"){
@@ -21,15 +19,3 @@ $con=mysqli_connect($server,$user,$password,$database) or die("NO server and dat
 
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-

@@ -22,8 +22,9 @@
 </form>
 <?php
 include_once'variables.php';
-if ( isset( $_POST['submit'] ) ) {
 
+if ( isset( $_POST['submit'] ) ) {
+    
 $category=$_POST['category'];
 $ItemName=$_POST['itemName'];
 $des=$_POST['itemDes'];
@@ -43,7 +44,6 @@ $Quantity=$_POST['itemQuantity'];
     if($extension=='jpg'||$extension=='png'){
     $location = '../images/';
     if(move_uploaded_file($temp_name, $location.$name)){
-
         $path=$location.$name;
         $addItem="INSERT INTO `product` (`ProductID`, `ProductName`, `Description`, `UnitPrice`, `UnitStock`, `CategoryName`, `Picture`, `active`) VALUES (NULL, '$ItemName', '$des', '$price', '$Quantity', '$category', '$path','1');";
         mysqli_query($con,$addItem);
@@ -59,7 +59,6 @@ $Quantity=$_POST['itemQuantity'];
 	echo "</script>";
 }
 mysqli_close($con);
-
 //close issets
 }
 

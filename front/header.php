@@ -48,6 +48,7 @@
 						            	</fieldset>
 						            <span><a href="#">Forgot your password?</a></span>
 								</form>
+								
 		<?php
 			$con=mysqli_connect("localhost","root","","cyanide") or die("NO server and database");
 			//mysqli_select_db("cyanide");
@@ -164,7 +165,7 @@
 							<div class="h_nav">
 								<h4>account</h4>
 								<ul>
-									<li><a href="#">login</a></li>
+									<li><a href="login.php">login</a></li>
 									<li><a href="register.php">create an account</a></li>
 									<li><a href="women.php">create wishlist</a></li>
 									<li><a href="women.php">my shopping bag</a></li>
@@ -255,7 +256,7 @@
 							<div class="h_nav">
 								<h4>account</h4>
 								<ul>
-									<li><a href="#">login</a></li>
+									<li><a href="login.php">login</a></li>
 									<li><a href="register.php">create an account</a></li>
 									<li><a href="women.php">create wishlist</a></li>
 									<li><a href="women.php">my shopping bag</a></li>
@@ -346,7 +347,7 @@
 							<div class="h_nav">
 								<h4>account</h4>
 								<ul>
-									<li><a href="#">login</a></li>
+									<li><a href="login.php">login</a></li>
 									<li><a href="register.php">create an account</a></li>
 									<li><a href="women.php">create wishlist</a></li>
 									<li><a href="women.php">my shopping bag</a></li>
@@ -437,7 +438,7 @@
 							<div class="h_nav">
 								<h4>account</h4>
 								<ul>
-									<li><a href="#">login</a></li>
+									<li><a href="login.php">login</a></li>
 									<li><a href="register.php">create an account</a></li>
 									<li><a href="women.php">create wishlist</a></li>
 									<li><a href="women.php">my shopping bag</a></li>
