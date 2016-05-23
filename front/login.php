@@ -6,7 +6,8 @@
 		<h2>existing user</h2>
 		 <div class="registration_form">
 		 <!-- Form -->
-			<form id="registration_form" action="contact.php" method="post">
+         <!--experimenting-->
+			<form id="registration_form" action="index.php" method="post">
 				<div>
 					<label>
 						<input placeholder="email:" type="email" tabindex="3" required>
@@ -26,7 +27,7 @@
 			</form>
 			<!-- /Form -->
 			</div>
-    </div> 
-    <?php include 'footer.php';?>
+    </div>
+    
 </html>
 

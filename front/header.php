@@ -48,6 +48,7 @@
 						            	</fieldset>
 						            <span><a href="#">Forgot your password?</a></span>
 								</form>
+								
 		<?php
 			$con=mysqli_connect("localhost","root","","cyanide") or die("NO server and database");
 			//mysqli_select_db("cyanide");
