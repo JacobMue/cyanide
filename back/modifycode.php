@@ -35,6 +35,7 @@ if(isset($_POST['submit'])){
         $path=$location.$name;
         $sqlupdate="UPDATE `product` SET `ProductName` = '$newName', `Description` = '$newDes', `UnitPrice` = '$newPrice', `UnitStock` = '$newStock',`Picture` = '$path' WHERE `product`.`ProductID` = '$productID';";
         mysqli_query($con,$sqlupdate);
+        header("Location: ViewProduct.php?id=$productID");
         echo "<script>";
 		echo "alert(' $newName modified successfully')";
 		echo "</script>";

@@ -26,7 +26,8 @@ header("Location:DisplayProduct.php?category=$category");
 $sql="UPDATE `customer` SET `active`=0 WHERE `CustomerID`='$customerID'";
 mysqli_query($con,$sql);
 mysqli_close($con);
-header('Location:Customer.php');
+header('Location:Customers.php');
+echo $customerID;
 }else{
 die("Nothing selected");
 }

@@ -9,6 +9,10 @@ $queryProduct=mysqli_query($con,$sqlProduct);
 $rowProduct=mysqli_num_rows($queryProduct);
 
 $customerID="";
+$sqlCustomer="SELECT * FROM `Customer` WHERE `active`='0'";
+$query=mysqli_query($con,$sqlCustomer);
+$rowCustomer=mysqli_num_rows($query);
+
 
 
 ?>
@@ -38,9 +42,7 @@ $customerID="";
       	}
 	}
 	else{
-		echo "<script>";
-		echo "alert('No deactivated Products')";
-		echo "</script>";
+    echo "No Deactivated Products";
 	}
 
 ?>
@@ -57,9 +59,39 @@ $customerID="";
       </h4>
     </div>
     <div id="collapse2" class="panel-collapse collapse">
-      <div class="panel-body"><table class="table table-hover">
-	<tr><td>Id</td><td>Title</td><td>First Name</td><td>Last Name</td><td>Email</td><td>Telephone</td><td><a href="DeactivateCustomer.php"><button class="btn btn-danger"><i class="fa fa-ban"></i></button></a></td></tr>
-</table></div>
+      <div class="panel-body">
+      <?php
+if($rowCustomer!=0){
+
+
+echo '<table class="table table-bordered">';
+echo '<tr><td>Id</td><td>Title</td><td>First Name</td><td>Last Name</td><td>Email</td><td>Telephone</td></</tr>';
+
+
+  while($rs=mysqli_fetch_assoc($query)){
+    $id=$rs['CustomerID'];
+    $fname=$rs['FirstName'];
+    $lname=$rs['LastName'];
+    $email=$rs['Email'];
+    $phone=$rs['Telephone'];
+    $title=$rs['TitleID'];
+
+    echo "<tr><td>$id</td><td>$title</td><td>$fname</td><td>$lname</td><td>$email</td><td>$phone</td><td>
+    <a href='restore.php?pid=$id'><button class='btn btn-success'><i class='fa fa-plus'></i></button></a>
+    
+    <a href='permanent.php?pid=$id'><button class='btn btn-danger'><i class='fa fa-trash-o'></i></button></a>
+    </td></tr>";
+
+    
+  }
+
+}else{
+
+  echo "There are no Deactivated Customers";
+}
+
+echo "</table>";
+      ?></div>
     </div>
   </div>
   <div class="panel panel-default">
@@ -78,6 +110,7 @@ $customerID="";
 </div>
 
 
+<?php mysqli_close($con);?>
 
 
 
