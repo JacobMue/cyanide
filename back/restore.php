@@ -10,6 +10,7 @@ if(isset($_GET['id'])){
 $sql="UPDATE `product` SET `active` = '1' WHERE `product`.`ProductID` = '$productID';";
 $query=mysqli_query($con,$sql);
 mysqli_close($con);
+header('Location:Trash.php');
 
 
 ?>

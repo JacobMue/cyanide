@@ -10,6 +10,7 @@ $rowProduct=mysqli_num_rows($queryProduct);
 
 
 ?>
+
 <div class="panel-group" id="accordion">
   <div class="panel panel-default">
     <div class="panel-heading">

@@ -11,6 +11,7 @@ if(isset($_GET['id'])){
 $sql="DELETE FROM `product` WHERE `ProductID`='$productID';";
 $query=mysqli_query($con,$sql);
 mysqli_close($con);
+header('Location:Trash.php');
 
 
 ?>
