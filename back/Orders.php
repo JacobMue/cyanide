@@ -2,4 +2,6 @@
 
 echo date("d/m/y");
 echo date("h:i:sa");
+echo "now is :    ";
+
  ?>
