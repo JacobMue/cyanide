@@ -4,9 +4,11 @@ $productID="";
 $productName="";
 $productImage="";
 
-$sqlProduct="SELECT `ProductID`,`ProductName`,`Picture` FROM `product` WHERE `active`=0";
+$sqlProduct="SELECT `ProductID`,`ProductName`,`Picture` FROM `product` WHERE `active`=0 " ;
 $queryProduct=mysqli_query($con,$sqlProduct);
 $rowProduct=mysqli_num_rows($queryProduct);
+
+$customerID="";
 
 
 ?>
