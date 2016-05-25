@@ -23,7 +23,7 @@ echo '<tr><td>Id</td><td>Title</td><td>First Name</td><td>Last Name</td><td>Emai
 		$title=$rs['TitleID'];
 
 		echo "<tr><td>$id</td><td>$title</td><td>$fname</td><td>$lname</td><td>$email</td><td>$phone</td><td>
-		<a href='DeactivateCustomer.php?id={$id}'><button class='btn btn-danger'><i class='fa fa-ban'></i></button></a>
+		<a href='deactivate.php?pid=$id'><button class='btn btn-danger'><i class='fa fa-ban'></i></button></a>
 		</td></tr>";
 
 		
