@@ -42,7 +42,7 @@ $Quantity=$_POST['itemQuantity'];
     
     //moving file to specified location
     if($extension=='jpg'||$extension=='png'){
-    $location = '../images/';
+    $location = $base_url.'/images/';
     if(move_uploaded_file($temp_name, $location.$name)){
         $path=$location.$name;
         $addItem="INSERT INTO `product` (`ProductID`, `ProductName`, `Description`, `UnitPrice`, `UnitStock`, `CategoryName`, `Picture`, `active`) VALUES (NULL, '$ItemName', '$des', '$price', '$Quantity', '$category', '$path','1');";

@@ -50,7 +50,7 @@ if($fpass==$spass){
     
     //moving file to specified location
     if($extension=='jpg'||$extension=='png'){
-    $location = '../images/';
+    $location = $base_url.'/images/';
     if(move_uploaded_file($temp_name, $location.$name)){
 
         $path=$location.$name;
