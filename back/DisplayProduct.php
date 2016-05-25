@@ -14,9 +14,7 @@ $query=$con->query($sql);
 $row=mysqli_num_rows($query);
 
 if($row==0){
-	echo"<script>";
-	echo "alert('There are no products in this category');";
-	echo "</script>";
+	echo "There are no products in this category";
 }
 else{
 	while ($rs=mysqli_fetch_assoc($query)) {
