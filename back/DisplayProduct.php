@@ -14,6 +14,7 @@ if($row==0){
 else{
 	while ($rs=mysqli_fetch_assoc($query)) {
 		$image=$rs['Picture'];
+		$image = '../images/'.$image;
 		$id=$rs['ProductID'];
 		echo '<div id="ProductDisplay">';
 		echo "<img src='$image' class='img-rounded'>";
@@ -24,7 +25,6 @@ else{
 	}
 }
 mysqli_close($con);	
-
 ?>
 
 

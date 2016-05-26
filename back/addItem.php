@@ -45,7 +45,7 @@ $Quantity=$_POST['itemQuantity'];
     $location = '../images/';
     if(move_uploaded_file($temp_name, $location.$name)){
         $path=$location.$name;
-        $addItem="INSERT INTO `product` (`ProductID`, `ProductName`, `Description`, `UnitPrice`, `UnitStock`, `CategoryName`, `Picture`, `active`) VALUES (NULL, '$ItemName', '$des', '$price', '$Quantity', '$category', '$path','1');";
+        $addItem="INSERT INTO `product` (`ProductID`, `ProductName`, `Description`, `UnitPrice`, `UnitStock`, `CategoryName`, `Picture`, `active`) VALUES (NULL, '$ItemName', '$des', '$price', '$Quantity', '$category', '$name','1');";
         mysqli_query($con,$addItem);
         echo "<script>";
 		echo "alert(' $ItemName has been added')";

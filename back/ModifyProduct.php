@@ -28,6 +28,7 @@ if($row==1){
 		$stock=$rs['UnitStock'];
 		$Category=$rs['CategoryName'];
 		$picture=$rs['Picture'];
+		$picture='../images/'.$picture;
 		$active=$rs=['active'];
 	}
 
@@ -59,7 +60,7 @@ if($row==1){
 	</div>
 	<div class="col-xs-12 col-sm-6 col-md-6">
 		<img class="img-rounded" src="<?=$picture;?>" style="width:480px;">
-		<input type="file" name="newImage" style="margin-top:-50px;font-size:25px;width:150px;">
+		<input type="file" name="newImage" style="margin-top:-50px;font-size:25px;width:90px;">
 	</div>
 	
 </div>

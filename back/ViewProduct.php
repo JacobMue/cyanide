@@ -27,6 +27,7 @@ if($row==1){
 		$stock=$rs['UnitStock'];
 		$Category=$rs['CategoryName'];
 		$picture=$rs['Picture'];
+		$picture="../images/".$picture;
 	}
 
 }else{
