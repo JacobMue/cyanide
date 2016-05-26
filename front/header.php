@@ -121,11 +121,11 @@
 		<!-- the navbar  -->
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12" id="nav_container">
-						<a href="women.php">HOME</a>
+						<a href="index.php">HOME</a>
 						<a href="">NEW ARRIVALS</a>
-						<a href="">MEN</a>
-						<a href="">WOMEN</a>
-						<a href="">KIDS</a>
+						<a href="men.php">MEN</a>
+						<a href="women.php">WOMEN</a>
+						<a href="kids.php">KIDS</a>
 				</div>
 			</div>
 		<!-- the end of the navbar -->
