@@ -149,6 +149,7 @@ include_once'variables.php';
 			$productID=$rs['ProductID'];
 			$productName=$rs['ProductName'];
 			$productImg=$rs['Picture'];
+			$productImg = '../images/'.$productImg;
 			echo '<div class="viewProduct" style="text-align: center;width:23%;margin-right: 2%;margin-top: 10px;float: left;">';
 			echo  "<a id='linkImg' href='productDetails.php?id=$productID'>
 			<img src='$productImg' class='img img-rounded' width='200' height='140'></a>";

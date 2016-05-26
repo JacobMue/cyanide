@@ -54,7 +54,7 @@ if($fpass==$spass){
     if(move_uploaded_file($temp_name, $location.$name)){
 
         $path=$location.$name;
-        $addAdmin="INSERT INTO `cyanide`.`Administrators` (`AdmID`, `FirstName`, `LastName`, `Email`, `Password`, `Phone`, `image`, `lastLogin`) VALUES (NULL,'$fname', '$lname', '$email', '$password', '$phone', '$path', null);";
+        $addAdmin="INSERT INTO `cyanide`.`Administrators` (`AdmID`, `FirstName`, `LastName`, `Email`, `Password`, `Phone`, `image`, `lastLogin`) VALUES (NULL,'$fname', '$lname', '$email', '$password', '$phone', '$name', null);";
         mysqli_query($con,$addAdmin);
 
         echo "<script>";

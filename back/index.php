@@ -3,6 +3,7 @@ session_start();
 if($_SESSION['firstName']==null){
 	header('Location:../front/index.php');
 }
+$image = '../images/'.$_SESSION['image'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +34,7 @@ if($_SESSION['firstName']==null){
 			<h3>Administration Panel</h3>
 		</div>
 		<div class="col-xs-6 col-sm-2 col-md-1" id="header_user_image">
-			<img class="img-circle" width="80px" height="60px" src="<?php echo $_SESSION['image'];?>">
+			<img class="img-circle" width="80px" height="60px" src="<?php echo $image; ?>">
 			
 		</div>
 		<div class="col-xs-6 col-sm-2 col-md-1" id="header_user_name" style="padding: 0px;">
@@ -54,8 +55,8 @@ if($_SESSION['firstName']==null){
     <ul class="nav nav-list">
 		<li><a href="dashboard.php" target="contentViewer"><span class="glyphicon glyphicon-dashboard"></span><span1>Dashboard</span1></a></li><hr>
 		<li><a href="#" target="contentViewer"><i class="fa fa-list" aria-hidden="true"></i><span1>Categories</span1></a></li><hr>
-		<li><a href="#" target="contentViewer"><i class="fa fa-eye" aria-hidden="true"></i><span1>Pages</span1></a></li><hr>
-		<div id="pageList">
+		<li><a href="#" onclick="hidePages();"><i class="fa fa-eye" aria-hidden="true"></i><span1>Pages</span1></a></li><hr>
+		<div id="pageList" style="display:none;">
 			<a href="../front/index.php" target="blank">Homepage</a>
 			<a href="../front/viewProduct.php?category=Men" target="blank">Men</a>
 			<a href="../front/viewProduct.php?category=Women" target="blank">Women</a>

@@ -46,3 +46,12 @@ function closeProductName(){
 
 }
 
+
+function hidePages(){
+	var page=document.getElementById("pageList");
+	if(page.style.display=="none"){
+		page.style.display="";
+	}else if(page.style.display==""){
+		page.style.display="none";
+	}
+}
