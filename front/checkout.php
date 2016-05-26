@@ -48,7 +48,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				 <h3>OPTIONS</h3>
 				 <h4>COUPONS</h4>
 				 <a class="cpns" href="#">Apply Coupons</a>
-				 <p><a href="#">Log In</a> to use accounts - linked coupons</p>
+				 <p><a href="login.php">Log In</a> to use accounts - linked coupons</p>
 			 </div>
 			</div>
 		 <div class="col-md-9 cart-items">

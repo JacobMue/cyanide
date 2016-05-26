@@ -150,6 +150,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 	<!-- end registration -->
 </div>
+	<p>Already have an account? <a href="login.php">Log In</a> here.</p>
 </div>
 <div class="foot-top">
 	<div class="container">
