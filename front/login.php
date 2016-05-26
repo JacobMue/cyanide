@@ -3,11 +3,11 @@
     <?php include 'title.php';?>
    <!-- Exiting User -->
    <div class="registration_left">
-		<h2>existing user</h2>
+		<h2>Existing User</h2>
 		 <div class="registration_form">
 		 <!-- Form -->
          <!--experimenting-->
-			<form id="registration_form" action="index.php" method="post">
+			<form id="registration_form" action="db/users.php" method="post">
 				<div>
 					<label>
 						<input placeholder="email:" type="email" tabindex="3" required>
@@ -26,6 +26,19 @@
 				</div>
 			</form>
 			<!-- /Form -->
+			<!--Experimental code-->
+			<?php
+				include 'db/init.php';
+				
+				if (empty ($_POST)===false)
+				{
+					$username=$_POST['username'];
+					$password=$_POST['password'];
+					
+					echo $username;
+				}	
+			?>
+			<!-- End of experimenatl code-->
 			</div>
     </div>
     

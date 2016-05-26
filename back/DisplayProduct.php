@@ -4,13 +4,8 @@ if(isset($_GET['category'])){
 	$category=$_GET['category'];
 }
 
-$con=mysqli_connect("localhost","root","","cyanide");
-if($con->connect_error){
-	echo $con->connect_error;
-}else{
-
 $sql="SELECT * FROM `product` WHERE `CategoryName`='$category' AND `active`=1";
-$query=$con->query($sql);
+$query=mysqli_query($con,$sql);
 $row=mysqli_num_rows($query);
 
 if($row==0){
@@ -19,6 +14,7 @@ if($row==0){
 else{
 	while ($rs=mysqli_fetch_assoc($query)) {
 		$image=$rs['Picture'];
+		$image = '../images/'.$image;
 		$id=$rs['ProductID'];
 		echo '<div id="ProductDisplay">';
 		echo "<img src='$image' class='img-rounded'>";
@@ -28,10 +24,7 @@ else{
 
 	}
 }
-$con->close();	
-
-}
-
+mysqli_close($con);	
 ?>
 
 

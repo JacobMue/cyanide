@@ -53,6 +53,15 @@ if($_SESSION['firstName']==null){
 <div class="container" id="navigation_drawer">
     <ul class="nav nav-list">
 		<li><a href="dashboard.php" target="contentViewer"><span class="glyphicon glyphicon-dashboard"></span><span1>Dashboard</span1></a></li><hr>
+		<li><a href="#" target="contentViewer"><i class="fa fa-list" aria-hidden="true"></i><span1>Categories</span1></a></li><hr>
+		<li><a href="#" target="contentViewer"><i class="fa fa-eye" aria-hidden="true"></i><span1>Pages</span1></a></li><hr>
+		<div id="pageList">
+			<a href="../front/index.php" target="blank">Homepage</a>
+			<a href="../front/viewProduct.php?category=Men" target="blank">Men</a>
+			<a href="../front/viewProduct.php?category=Women" target="blank">Women</a>
+			<a href="../front/viewProduct.php?category=Kids" target="blank">Kids</a>
+		</div>
+
 		<li><a href="DisplayProduct.php?category=Men" target="contentViewer"><i class="fa fa-male" aria-hidden="true"></i><span1>Men</span1></a></li><hr>
 		<li><a href="DisplayProduct.php?category=Women" target="contentViewer"><i class="fa fa-female" aria-hidden="true"></i><span1>Women</span1></a></li><hr>
 		<li><a href="DisplayProduct.php?category=Kids" target="contentViewer"><i class="fa fa-truck" aria-hidden="true"></i><span1>Kids</span1></a></li><hr>	

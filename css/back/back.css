@@ -101,6 +101,25 @@ body{
 #navigation_drawer span1{
 	padding-left: 10px;
 }
+
+
+
+/*adding th eside toggle bar*/
+
+#navigation_drawer #pageList{
+	position: absolute;
+	width:200px;
+	background-color: red;
+	margin-left: 200px;
+
+}
+
+#navigation_drawer #pageList a{
+}
+
+#navigation_drawer #pageList {
+}
+
 /*End of naviagtion drawer*/
 
 

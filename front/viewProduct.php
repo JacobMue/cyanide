@@ -2,7 +2,22 @@
 <!DOCTYPE HTML>
 <html>
 <?php include 'header.php';?>
-<?php include 'title.php';?>
+<?php include 'title.php';
+include_once'variables.php';
+
+	$category="";
+	if(isset($_GET['category'])){
+		$category=$_GET['category'];
+	}
+	$productID="";
+	$productName="";
+	$productImg="";
+
+	$sqlProduct="SELECT * FROM `product` WHERE `CategoryName`='$category' AND `active`=1;";
+	$query=mysqli_query($con,$sqlProduct);
+	$row=mysqli_num_rows($query);
+
+?>
 					<div class="row">
 						<div class="col2"></div>
 						<div class="col1"></div>
@@ -116,7 +131,7 @@
 	<!-- start content -->
 	<div class="col-md-9 w_content">
 		<div class="women">
-			<a href="#"><h4>Viewing - <span>49 items</span> </h4></a>
+			<a href="#"><h4>Viewing - <span><?=$row;?> items</span> </h4></a>
 			<ul class="w_nav">
 						<li>Sort : </li>
 		     			<li><a class="active" href="#">popular</a></li> |
@@ -127,7 +142,26 @@
 		     </ul>
 		     <div class="clearfix"></div>	
 		</div>
-
+<?php 
+	
+	if($row!=0){
+		while($rs=mysqli_fetch_assoc($query)){
+			$productID=$rs['ProductID'];
+			$productName=$rs['ProductName'];
+			$productImg=$rs['Picture'];
+			echo '<div class="viewProduct" style="text-align: center;width:23%;margin-right: 2%;margin-top: 10px;float: left;">';
+			echo  "<a id='linkImg' href='productDetails.php?id=$productID'>
+			<img src='$productImg' class='img img-rounded' width='200' height='140'></a>";
+			echo "<a id='linkAnchor' href='productDetails.php?id=$productID'>$productName</a>";
+			echo "<a id='linkCart' href='cart.php'><button class='btn btn-info'>Add to Cart</button></a></div>";
+		}
+	}
+	else{
+		echo "No Products in this Category";
+	}
+	mysqli_close($con);
+?>
+<!-- 
 		<div class="viewProduct" style="
 	text-align: center;
 	width:23%;
@@ -137,54 +171,7 @@
 			<a id="linkImg" href="details.php"><img src="../images/1.jpg" class="img img-rounded" width="200" height="140"></a>
 			<a id="linkAnchor" href="details.php">The New Boots</a>
 			<a id="linkCart" href="cart.php"><button class="btn btn-info">Add to Cart</button></a>
-		</div><div class="viewProduct" style="
-	text-align: center;
-	width:23%;
-	margin-right: 2%;
-	margin-top: 10px;
-	float: left;">
-			<a id="linkImg" href="details.php"><img src="../images/1.jpg" class="img img-rounded" width="200" height="140"></a>
-			<a id="linkAnchor" href="details.php">The New Boots</a>
-			<a id="linkCart" href="cart.php"><button class="btn btn-info">Add to Cart</button></a>
-		</div><div class="viewProduct" style="
-	text-align: center;
-	width:23%;
-	margin-right: 2%;
-	margin-top: 10px;
-	float: left;">
-			<a id="linkImg" href="details.php"><img src="../images/1.jpg" class="img img-rounded" width="200" height="140"></a>
-			<a id="linkAnchor" href="details.php">The New Boots</a>
-			<a id="linkCart" href="cart.php"><button class="btn btn-info">Add to Cart</button></a>
-		</div>
-		<div class="viewProduct" style="
-	text-align: center;
-	width:23%;
-	margin-right: 2%;
-	margin-top: 10px;
-	float: left;">
-	<style type="text/css"></style>
-			<a id="linkImg" href="details.php"><img src="../images/1.jpg" class="img img-rounded" width="200" height="140"></a>
-			<a id="linkAnchor" href="details.php">The New Boots</a>
-			<a id="linkCart" href="cart.php"><button class="btn btn-info">Add to Cart</button></a>
-		</div><div class="viewProduct" style="
-	text-align: center;
-	width:23%;
-	margin-right: 2%;
-	margin-top: 10px;
-	float: left;">
-			<a id="linkImg" href="details.php"><img src="../images/1.jpg" class="img img-rounded" width="200" height="140"></a>
-			<a id="linkAnchor" href="details.php">The New Boots</a>
-			<a id="linkCart" href="cart.php"><button class="btn btn-info">Add to Cart</button></a>
-		</div><div class="viewProduct" style="
-	text-align: center;
-	width:23%;
-	margin-right: 2%;
-	margin-top: 10px;
-	float: left;">
-			<a id="linkImg" href="details.php"><img src="../images/1.jpg" class="img img-rounded" width="200" height="140"></a>
-			<a id="linkAnchor" href="details.php">The New Boots</a>
-			<a id="linkCart" href="cart.php"><button class="btn btn-info">Add to Cart</button></a>
-		</div>
+		</div> -->
 
 	<!-- end content -->
 	</div>

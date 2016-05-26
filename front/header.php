@@ -32,7 +32,7 @@
 			<div class="rgt-bottom">
 				<div class="log">
 					<div class="login" >
-						<div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
+						<div id="loginContainer"><a href="login.php" id="loginButton"><span>Login</span></a>
 						    <div id="loginBox">                
 						        <form id="loginForm" method="POST" action="index.php">
 						                <fieldset id="body">
@@ -121,11 +121,11 @@
 		<!-- the navbar  -->
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12" id="nav_container">
-						<a href="women.php">HOME</a>
+						<a href="index.php">HOME</a>
 						<a href="">NEW ARRIVALS</a>
-						<a href="">MEN</a>
-						<a href="">WOMEN</a>
-						<a href="">KIDS</a>
+						<a href="viewProduct.php?category=Men">MEN</a>
+						<a href="viewProduct.php?category=Women">WOMEN</a>
+						<a href="viewProduct.php?category=Kids">KIDS</a>
 				</div>
 			</div>
 		<!-- the end of the navbar -->

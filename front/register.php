@@ -1,9 +1,4 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE HTML>
 <html>
 <?php include 'header.php';?>
@@ -91,6 +86,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<input placeholder="email address:" type="email" tabindex="3" required>
 					</label>
 				</div>
+				<div>
+					<label>
+						<input placeholder="telephone:" type="text" tabindex="3" required>
+					</label>
+				</div>
 				<div class="sky-form">
 					<div class="sky_form1">
 						<ul>
@@ -150,6 +150,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 	<!-- end registration -->
 </div>
+	<p>Already have an account? <a href="login.php">Log In</a> here.</p>
 </div>
 <div class="foot-top">
 	<div class="container">
