@@ -32,7 +32,7 @@
 			<div class="rgt-bottom">
 				<div class="log">
 					<div class="login" >
-						<div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
+						<div id="loginContainer"><a href="login.php" id="loginButton"><span>Login</span></a>
 						    <div id="loginBox">                
 						        <form id="loginForm" method="POST" action="index.php">
 						                <fieldset id="body">
