@@ -104,7 +104,7 @@ echo "</table>";
     <div id="collapse3" class="panel-collapse collapse">
       <div class="panel-body">
         
-        <?php echo "Please Wait Loading ... " ?>
+        <?php echo "Please Wait Loading ... "; ?>
 
       </div>
     </div>

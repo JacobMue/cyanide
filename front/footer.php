@@ -1,3 +1,23 @@
+<div class="foot-top">
+	<div class="container">
+		<div class="col-md-8 s-c" style="margin-left:10%;">
+			<div class="stay">
+						<div class="stay-left">
+							<form>
+								<input type="text" placeholder="Enter your email to join our newsletter" required="">
+							</form>
+						</div>
+						<div class="btn-1">
+							<form>
+								<input type="submit" value="join">
+							</form>
+						</div>
+							<div class="clearfix"> </div>
+			</div>
+		</div>
+			<div class="clearfix"> </div>
+	</div>
+</div>
 <div class="footer">
 	<div class="container">
 		<div class="col-md-3 cust">
@@ -22,19 +42,6 @@
 				<li><a href="buy.php">Payment</a></li>
 		</div>
 		<div class="col-md-5 our-st">
-			<div class="our-left">
-				<h4>OUR STORES</h4>
-			</div>
-			<div class="our-left1">
-				<div class="cr_btn">
-					<a href="#">SOLO</a>
-				</div>
-			</div>
-			<div class="our-left1">
-				<div class="cr_btn1">
-					<a href="#">BOGOR</a>
-				</div>
-			</div>
 			<div class="clearfix"> </div>
 				<li><i class="add"> </i>Michael Omoyo Ondieki</li>
 				<li><i class="phone"> </i>+254702381228</li>
