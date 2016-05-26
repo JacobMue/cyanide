@@ -5,7 +5,7 @@ $base_url="";
 if($environment=="localhost"){
   $user="root";
   $password="";
-  $database="cyanide";  
+  $database="trial";  
   $base_url=$environment."/".$database;
 
 }

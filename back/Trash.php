@@ -34,8 +34,8 @@ $rowCustomer=mysqli_num_rows($query);
 			$ProductName=$rs['ProductName'];
 			$productImage=$rs['Picture'];
       	echo '<div id="ProductDisplay">';
-      	echo "<img class='img img-rounded' src='$productImage' onmouseleave='closeProductName()' onmouseenter='displayProductName()'>";
-      	echo "<h3 id='hide' style='margin-top:-36px;display:none;'>Okay</h3>";
+      	echo "<img class='img img-rounded' src='$productImage'>";
+      	echo "<h3 id='hide' style='margin-top:-36px;display:none;'></h3>";
       	echo "<a href='restore.php?id=$productID'><button class='btn btn-success'>Restore</button></a>";
       	echo "<a href='permanent.php?id=$productID'><button class='btn btn-danger'>Delete Permanently</button></a>";
         echo "</div>";
@@ -45,6 +45,7 @@ $rowCustomer=mysqli_num_rows($query);
     echo "No Deactivated Products";
 	}
 
+// onmouseleave='closeProductName()' onmouseenter='displayProductName()'
 ?>
      
 

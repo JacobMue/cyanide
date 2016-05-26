@@ -123,9 +123,9 @@
 				<div class="col-xs-12 col-sm-12 col-md-12" id="nav_container">
 						<a href="index.php">HOME</a>
 						<a href="">NEW ARRIVALS</a>
-						<a href="men.php">MEN</a>
-						<a href="women.php">WOMEN</a>
-						<a href="kids.php">KIDS</a>
+						<a href="viewProduct.php?category=Men">MEN</a>
+						<a href="viewProduct.php?category=Women">WOMEN</a>
+						<a href="viewProduct.php?category=Kids">KIDS</a>
 				</div>
 			</div>
 		<!-- the end of the navbar -->
