@@ -86,6 +86,11 @@
 						<input placeholder="email address:" type="email" tabindex="3" required>
 					</label>
 				</div>
+				<div>
+					<label>
+						<input placeholder="telephone:" type="text" tabindex="3" required>
+					</label>
+				</div>
 				<div class="sky-form">
 					<div class="sky_form1">
 						<ul>
