@@ -1,14 +1,30 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE HTML>
 <html>
-<?php include 'header.php';?>
-<?php include 'title.php';?>
-					<div class="row">
+<?php
+
+ include 'header.php';
+ include 'title.php';
+ include_once'variables.php';
+
+$productID="";
+$customerID=1;
+// if(isset($_GET['id'])){
+// 	$productID=$_GET['id'];
+// }
+
+$name="";
+$Description="";
+$price="";
+$stock="";
+$Category="";
+$picture="";
+$total=0;
+$delivery=0;
+$no_of_products="";
+$cartID="";
+
+				echo '	<div class="row">
 						<div class="col2"></div>
 						<div class="col1"></div>
 						<div class="col1"></div>
@@ -23,189 +39,111 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </div>
 <div class="container">
 	<div class="check">	 
-			 <div class="col-md-3 cart-total">
-			 <a class="continue" href="#">Continue to basket</a>
+			 
+		 <div class="col-md-9 cart-items">
+			 <h1>My Shopping Bag</h1>
+				
+';
+$sqlPro="SELECT * FROM `cart` WHERE `customerID`=1";
+$queryPro=mysqli_query($con,$sqlPro);
+if(mysqli_num_rows($queryPro)!=0){
+	while ($rs=mysqli_fetch_assoc($queryPro)) {
+		$cartID=$rs['CartID'];
+		$productID=$rs['ProductID'];
+		$no_of_products=$rs['No_Of_Product'];
+if($productID!=""){
+
+$sql="SELECT * FROM `product` WHERE `ProductID`='$productID';";
+$query=mysqli_query($con,$sql);
+$row=mysqli_num_rows($query);
+
+	while ($rs=mysqli_fetch_assoc($query)) {
+		$name=$rs['ProductName'];
+		$Description=$rs['Description'];
+		$stock=$rs['UnitStock'];
+		$Category=$rs['CategoryName'];
+		$picture=$rs['Picture'];
+		$price=$rs['UnitPrice'];
+		$total+=$price;
+		$picture="../images/".$picture;
+		echo '<div class="cart-header">
+				 <div class="close1"> </div>
+				 <div class="cart-sec simpleCart_shelfItem">
+						<div class="cart-item cyc">';
+					    echo "<img src='$picture' class='img-responsive'/>";
+						echo '</div>
+					   <div class="cart-item-info">';
+						echo "<h3><a href='#''>$name</a><a href='removeCart.php?id=$productID' style='float:right;
+    margin-right: 40px;' title='Remove Product'><buttton class='btn btn-danger'><i class='fa fa-trash-o'></i></button></a><span>Model No: md$productID</span></h3>
+						<ul class='qty'>
+							<li><p>Stock : $stock</p></li>
+							<li><p>Qty : <input type='number' name='newQty' value=$no_of_products min='1' max='$stock'</p></li>
+						</ul>";
+						
+							 echo '<div class="delivery">
+							 <span>Delivered in 2-3 bussiness days</span>
+							 <div class="clearfix"></div>
+				        </div>	
+					   </div>
+					   <div class="clearfix"></div>
+											
+				  </div>
+
+		</div>';
+	}
+
+}else{
+	echo "Database under service Try Again Later";
+}
+
+}
+}else{
+	echo "Your Bag is Empty";
+}
+
+
+if($total>10){
+	$delivery=$total*0.01;
+}
+
+$fTotal=$total-$delivery;
+echo "</div>";
+echo '<div class="col-md-3 cart-total">
 			 <div class="price-details">
 				 <h3>Price Details</h3>
-				 <span>Total</span>
-				 <span class="total1">6200.00</span>
-				 <span>Discount</span>
-				 <span class="total1">---</span>
-				 <span>Delivery Charges</span>
-				 <span class="total1">150.00</span>
-				 <div class="clearfix"></div>				 
+				 <span>Total</span>';
+				 echo "<span class='total1'>KES $total</span>";
+				 echo '<span>Discount</span>
+				 <span class="total1">KES 0.0</span>
+				 <span>Delivery Charges</span>';
+				 echo "<span class='total1'>KES $delivery</span>";
+				 echo '<div class="clearfix"></div>				 
 			 </div>	
 			 <ul class="total_price">
-			   <li class="last_price"> <h4>TOTAL</h4></li>	
-			   <li class="last_price"><span>6350.00</span></li>
+			   <li class="last_price"> <h4>TOTAL</h4></li>';
+			   echo "<li class='last_price'><span>KES  $fTotal</span></li>";
+			   echo'
 			   <div class="clearfix"> </div>
 			 </ul>
 			
 			 
 			 <div class="clearfix"></div>
-			 <a class="order" href="#">Place Order</a>
-			 <div class="total-item">
-				 <h3>OPTIONS</h3>
-				 <h4>COUPONS</h4>
-				 <a class="cpns" href="#">Apply Coupons</a>
-				 <p><a href="login.php">Log In</a> to use accounts - linked coupons</p>
-			 </div>
-			</div>
-		 <div class="col-md-9 cart-items">
-			 <h1>My Shopping Bag (2)</h1>
-				<script>$(document).ready(function(c) {
-					$('.close1').on('click', function(c){
-						$('.cart-header').fadeOut('slow', function(c){
-							$('.cart-header').remove();
-						});
-						});	  
-					});
-			   </script>
-			 <div class="cart-header">
-				 <div class="close1"> </div>
-				 <div class="cart-sec simpleCart_shelfItem">
-						<div class="cart-item cyc">
-							 <img src="images/8.jpg" class="img-responsive" alt=""/>
-						</div>
-					   <div class="cart-item-info">
-						<h3><a href="#">Mountain Hopper(XS R034)</a><span>Model No: 3578</span></h3>
-						<ul class="qty">
-							<li><p>Size : 5</p></li>
-							<li><p>Qty : 1</p></li>
-						</ul>
-						
-							 <div class="delivery">
-							 <p>Service Charges : Rs.100.00</p>
-							 <span>Delivered in 2-3 bussiness days</span>
-							 <div class="clearfix"></div>
-				        </div>	
-					   </div>
-					   <div class="clearfix"></div>
-											
-				  </div>
-			 </div>
-			 <script>$(document).ready(function(c) {
-					$('.close2').on('click', function(c){
-							$('.cart-header2').fadeOut('slow', function(c){
-						$('.cart-header2').remove();
-					});
-					});	  
-					});
-			 </script>
-			 <div class="cart-header2">
-				 <div class="close2"> </div>
-				  <div class="cart-sec simpleCart_shelfItem">
-						<div class="cart-item cyc">
-							 <img src="images/11.jpg" class="img-responsive" alt=""/>
-						</div>
-					   <div class="cart-item-info">
-						<h3><a href="#">Mountain Hopper(XS R034)</a><span>Model No: 3578</span></h3>
-						<ul class="qty">
-							<li><p>Size : 5</p></li>
-							<li><p>Qty : 1</p></li>
-						</ul>
-							 <div class="delivery">
-							 <p>Service Charges : Rs.100.00</p>
-							 <span>Delivered in 2-3 bussiness days</span>
-							 <div class="clearfix"></div>
-				        </div>	
-					   </div>
-					   <div class="clearfix"></div>
-											
-				  </div>
-			  </div>		
+			 <a class="order" href="placeOrder.php?id=$cartID">Place Order</a>
+			 <a class="order" href="wishlist.php?id=$cartID">Add to Wishlist</a>
+			 
+			</div>';
+
+
+?>
+			 		
 		 </div>
 		 
 		
 			<div class="clearfix"> </div>
 	 </div>
 	 </div>
-<div class="foot-top">
-	<div class="container">
-		<div class="col-md-6 s-c">
-			<li>
-				<div class="fooll">
-					<h5>follow us on</h5>
-				</div>
-			</li>
-			<li>
-				<div class="social-ic">
-					<ul>
-						<li><a href="#"><i class="facebok"> </i></a></li>
-						<li><a href="#"><i class="twiter"> </i></a></li>
-						<li><a href="#"><i class="goog"> </i></a></li>
-						<li><a href="#"><i class="be"> </i></a></li>
-						<li><a href="#"><i class="pp"> </i></a></li>
-							<div class="clearfix"></div>	
-					</ul>
-				</div>
-			</li>
-				<div class="clearfix"> </div>
-		</div>
-		<div class="col-md-6 s-c">
-			<div class="stay">
-						<div class="stay-left">
-							<form>
-								<input type="text" placeholder="Enter your email to join our newsletter" required="">
-							</form>
-						</div>
-						<div class="btn-1">
-							<form>
-								<input type="submit" value="join">
-							</form>
-						</div>
-							<div class="clearfix"> </div>
-			</div>
-		</div>
-			<div class="clearfix"> </div>
-	</div>
-</div>
-<div class="footer">
-	<div class="container">
-		<div class="col-md-3 cust">
-			<h4>CUSTOMER CARE</h4>
-				<li><a href="#">Help Center</a></li>
-				<li><a href="#">FAQ</a></li>
-				<li><a href="buy.php">How To Buy</a></li>
-				<li><a href="#">Delivery</a></li>
-		</div>
-		<div class="col-md-2 abt">
-			<h4>ABOUT US</h4>
-				<li><a href="#">Our Stories</a></li>
-				<li><a href="#">Press</a></li>
-				<li><a href="#">Career</a></li>
-				<li><a href="contact.php">Contact</a></li>
-		</div>
-		<div class="col-md-2 myac">
-			<h4>MY ACCOUNT</h4>
-				<li><a href="register.php">Register</a></li>
-				<li><a href="#">My Cart</a></li>
-				<li><a href="#">Order History</a></li>
-				<li><a href="buy.php">Payment</a></li>
-		</div>
-		<div class="col-md-5 our-st">
-			<div class="our-left">
-				<h4>OUR STORES</h4>
-			</div>
-			<div class="our-left1">
-				<div class="cr_btn">
-					<a href="#">SOLO</a>
-				</div>
-			</div>
-			<div class="our-left1">
-				<div class="cr_btn1">
-					<a href="#">BOGOR</a>
-				</div>
-			</div>
-			<div class="clearfix"> </div>
-				<li><i class="add"> </i>Jl. Haji Muhidin, Blok G no.69</li>
-				<li><i class="phone"> </i>025-2839341</li>
-				<li><a href="mailto:info@example.com"><i class="mail"> </i>info@sitename.com </a></li>
-			
-		</div>
-		<div class="clearfix"> </div>
-			<p>Copyrights © 2015 Gretong. All rights reserved | Template by <a href="http://w3layouts.com/">W3layouts</a></p>
-	</div>
-</div>
+<?php include_once 'footer.php';
+mysqli_close($con);
+ ?>
 </body>
 </html>

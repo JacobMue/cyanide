@@ -33,6 +33,7 @@ $rowCustomer=mysqli_num_rows($query);
 			$productID=$rs['ProductID'];
 			$ProductName=$rs['ProductName'];
 			$productImage=$rs['Picture'];
+      $productImage="../images/".$productImage;
       	echo '<div id="ProductDisplay">';
       	echo "<img class='img img-rounded' src='$productImage'>";
       	echo "<h3 id='hide' style='margin-top:-36px;display:none;'></h3>";

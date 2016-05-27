@@ -42,7 +42,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<span class="price-new">$110.00</span>
 						</div>
 					<div class="btn_form">
-						<a href="checkout.php">buy</a>
+						<a href="cartV2.php?id=$productID">buy</a>
 					</div>
 					<a href="#"><span>login to save in wishlist </span></a>
 					

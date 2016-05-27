@@ -2,8 +2,8 @@
 <?php session_start();  ?>
 <!DOCTYPE HTML>
 <html>
-<?php include 'header.php';?>
 <?php include 'title.php';?>
+<?php include 'header.php';?>
 <div class="arriv">
 	<div class="container">
 		<div class="arriv-top">
@@ -13,7 +13,7 @@
 					<h3>NEW ARRIVALS</h3>
 					<p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
 					<div class="crt-btn">
-						<a href="details.php">TAKE A LOOK</a>
+						<a href="viewProduct.php?category=Men">TAKE A LOOK</a>
 					</div>
 				</div>
 			</div>
@@ -23,7 +23,7 @@
 					<h3>Men</h3>
 					<p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
 					<div class="crt-btn">
-						<a href="details.php">SHOP NOW</a>
+						<a href="viewProduct.php?category=Men">SHOP NOW</a>
 					</div>
 				</div>
 			</div>
@@ -36,14 +36,14 @@
 					<h3>Women</h3>
 					<p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
 					<div class="crt-btn">
-						<a href="details.php">SHOP NOW</a>
+						<a href="viewProduct.php?category=Men">SHOP NOW</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4 arriv-right1">
 				<img src="../images/4.jpg" class="img-responsive" alt="">
 				<div class="arriv-info2">
-					<a href="details.php"><h3>Kids<i class="ars"></i></h3></a>
+					<a href="viewProduct.php?category=Men"><h3>Kids<i class="ars"></i></h3></a>
 				</div>
 			</div>
 			<div class="clearfix"> </div>
@@ -52,7 +52,7 @@
 			<div class="col-md-4 arriv-left2">
 				<img src="../images/5.jpg" class="img-responsive" alt="">
 				<div class="arriv-info2">
-					<a href="details.php"><h3>Just for Anyone<i class="ars"></i></h3></a>
+					<a href="viewProduct.php?category=Men"><h3>Just for Anyone<i class="ars"></i></h3></a>
 				</div>
 			</div>
 			<div class="col-md-4 arriv-middle">
@@ -60,14 +60,14 @@
 				<div class="arriv-info3">
 					<h3>FRESH LOOK T-SHIRT</h3>
 					<div class="crt-btn">
-						<a href="details.php">SHOP NOW</a>
+						<a href="viewProduct.php?category=Men">SHOP NOW</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4 arriv-right2">
 				<img src="../images/7.jpg" class="img-responsive" alt="">
 				<div class="arriv-info2">
-					<a href="details.php"><h3>Baby Overalls<i class="ars"></i></h3></a>
+					<a href="viewProduct.php?category=Men"><h3>Baby Overalls<i class="ars"></i></h3></a>
 				</div>
 			</div>
 			<div class="clearfix"> </div>

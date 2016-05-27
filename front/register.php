@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <?php require 'variables.php';?>
-<?php include 'header.php';?>
 <?php include 'title.php';?>
+<?php include 'header.php';?>
 					<div class="row">
 						<div class="col2"></div>
 						<div class="col1"></div>
@@ -23,13 +23,6 @@
 	<div class="registration">
 		<div class="registration_left">
 		<h2>new user? <span> create an account </span></h2>
-		<!-- [if IE] 
-		    < link rel='stylesheet' type='text/css' href='ie.css'/>  
-		 [endif] -->  
-		  
-		<!-- [if lt IE 7]>  
-		    < link rel='stylesheet' type='text/css' href='ie6.css'/>  
-		<! [endif] -->  
 		<script>
 			(function() {
 		
@@ -70,7 +63,25 @@
 		</script>
 		 <div class="registration_form">
 		 <!-- Form -->
-			<form id="registration_form" action="register.php" method="post">
+			<form id="registration_form" action="login.php" method="post">
+				<div>
+					<label>
+						<?php 
+							$title="SELECT * FROM `title`";
+							$qtitle=mysqli_query($con,$title);
+							$rowtitle=mysqli_num_rows($qtitle);
+							echo "<select name='title'>";
+							if($rowtitle!=0){
+								while ($rs=mysqli_fetch_assoc($qtitle)) {
+									$titleid=$rs['TitleID'];
+									$abb=$rs['Abbreviation'];
+									echo "<option>$abb</option>";
+								}
+							}	
+							echo "</select>";
+						 ?>
+					</label>
+				</div>
 				<div>
 					<label>
 						<input placeholder="first name:" type="text" name="F_Name" tabindex="1" required autofocus > 
@@ -102,19 +113,19 @@
 				</div>
 				<div>
 					<label>
-						<input placeholder="password" type="password" id="password" tabindex="4" required>
+						<input placeholder="password" type="password" id="password" name="fpass" tabindex="4" required>
 					</label>
 				</div>						
 				<div>
 					<label>
-						<input placeholder="retype password" type="password" tabindex="4" required>
+						<input placeholder="retype password" type="password" tabindex="4" name="spass" required>
 					</label>
 				</div>	
 				<div>
-					<input type="submit" value="create an account" id="register-submit">
+					<input type="submit" value="create an account" id="register-submit" name="submit">
 				</div>
 				<div class="sky-form">
-					<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>i agree to BotiKE.com &nbsp;<a class="terms" href="#"> terms of service</a> </label>
+					<label class="checkbox">By creating this account you agree to BotiKE.com &nbsp;<a class="terms" href="#"> terms of service</a> </label>
 				</div>
 			</form>
 			<!-- /Form -->
@@ -126,16 +137,29 @@
 		
 		if ( isset( $_POST['submit'] ) ) 
 		{
+
 			$fname=$_POST['F_Name'];
 			$lname=$_POST['L_Name'];
 			$email=$_POST['Uemail'];
-			$fpass=$_POST['Upassword'];
+			$email=strtolower($email);
+			$fpass=$_POST['fpass'];
+			$spass=$_POST['spass'];
+			$title=$_POST['title'];
+			if($spass==$fpass){
+			$fpass=md5($fpass);
+		
 			$phone=$_POST['UPhone'];
 			
-			$sql=$con->query("INSERT INTO customer (FirstName, LastName, Email, Password, Telephone) Values ('$fname','$lname','$email','$fpass','$phone')");
+			$sql="INSERT INTO customer (FirstName, LastName, Email, Password, Telephone, TitleID, active) Values ('$fname','$lname','$email','$fpass','$phone','$title','1')";
+			$query=mysqli_query($con,$sql);
+			header('Location:login.php');
+		}else{
+echo"<script>";
+echo "alert('Password dont match')";
+echo "</script>";
+		}
 		
 		}
-		echo $sql;
 	?>
 
 	<div class="clearfix"></div>

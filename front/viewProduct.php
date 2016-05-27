@@ -39,7 +39,7 @@ include_once'variables.php';
 	  <div class="w_sidebar">
 		<h3>filter by</h3>
 		<section  class="sky-form">
-					<h4>catogories</h4>
+					<h4>categories</h4>
 						<div class="row1 scroll-pane">
 							<div class="col col-4">
 								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>kurtas</label>
@@ -151,10 +151,10 @@ include_once'variables.php';
 			$productImg=$rs['Picture'];
 			$productImg = '../images/'.$productImg;
 			echo '<div class="viewProduct" style="text-align: center;width:23%;margin-right: 2%;margin-top: 10px;float: left;">';
-			echo  "<a id='linkImg' href='productDetails.php?id=$productID'>
+			echo  "<a id='linkImg' href='details.php?id=$productID'>
 			<img src='$productImg' class='img img-rounded' width='200' height='140'></a>";
 			echo "<a id='linkAnchor' href='productDetails.php?id=$productID'>$productName</a>";
-			echo "<a id='linkCart' href='cart.php'><button class='btn btn-info'>Add to Cart</button></a></div>";
+			echo "<a id='linkCart' href='cartV2.php?id=$productID'><button class='btn btn-info'>Add to Cart</button></a></div>";
 		}
 	}
 	else{

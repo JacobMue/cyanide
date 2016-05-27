@@ -51,8 +51,18 @@
 								
 		<?php
 			include_once'variables.php';
-			//mysqli_select_db("cyanide");
 
+
+			if(isset($_GET['po'])){
+echo"<script>";
+echo "alert('Your order was placed successfully')";
+echo "</script>";
+			}
+			
+			$customerID=1;
+			$sqlProducts="SELECT `CartID` FROM `cart` WHERE `CustomerID`='$customerID'";
+			$queryProducts=mysqli_query($con,$sqlProducts);
+			$products=mysqli_num_rows($queryProducts);
 			if ( isset( $_POST['Submit'] ) ) {
 			$email=$_POST['email'];
 			$password=$_POST['password'];
@@ -95,10 +105,7 @@
 					<a href="register.php">REGISTER</a>
 				</div>
 			<div class="cart box_1">
-				<a href="checkout.php">
-					<h3> <span class="simpleCart_total">KES 0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="../images/bag.png" alt=""></h3>
-				</a>	
-				<p><a href="javascript:;" class="simpleCart_empty">(empty card)</a></p>
+				<a href="checkout.php" title="View Cart" style="margin-right: 20px;float: right;text-decoration:none;color:black;"><i class="fa fa-shopping-cart"></i>  <?=$products;?> Item(s)</a>
 				<div class="clearfix"> </div>
 			</div>
 			<div class="create_btn">
