@@ -135,31 +135,7 @@
 		
 		//session_start();
 		
-		if ( isset( $_POST['submit'] ) ) 
-		{
-
-			$fname=$_POST['F_Name'];
-			$lname=$_POST['L_Name'];
-			$email=$_POST['Uemail'];
-			$email=strtolower($email);
-			$fpass=$_POST['fpass'];
-			$spass=$_POST['spass'];
-			$title=$_POST['title'];
-			if($spass==$fpass){
-			$fpass=md5($fpass);
-		
-			$phone=$_POST['UPhone'];
-			
-			$sql="INSERT INTO customer (FirstName, LastName, Email, Password, Telephone, TitleID, active) Values ('$fname','$lname','$email','$fpass','$phone','$title','1')";
-			$query=mysqli_query($con,$sql);
-			header('Location:login.php');
-		}else{
-echo"<script>";
-echo "alert('Password dont match')";
-echo "</script>";
-		}
-		
-		}
+	
 	?>
 
 	<div class="clearfix"></div>

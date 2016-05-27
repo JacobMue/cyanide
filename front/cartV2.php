@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 include_once'variables.php';
 
 $productID="";
@@ -8,8 +8,10 @@ $No_Of_Product=0;
 if(isset($_GET['id'])){
 	$productID=$_GET['id'];
 }
-$customerID=1;
-
+$customerID="";
+if(isset($_SESSION['fName'])){
+	$customerID=$_SESSION['CustomerID'];
+}
 $category="";
 if($productID!=""){
 $sqlCategory="SELECT `CategoryName` FROM `product` WHERE `ProductID`='$productID'";

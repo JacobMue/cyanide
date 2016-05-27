@@ -1,7 +1,12 @@
 <?php 
+session_start();
 include_once'variables.php';
 $productID="";
-$customerID=1;
+$customerID="";
+if(isset($_SESSION['fName'])){
+	$customerID=$_SESSION['CustomerID'];
+}
+
 if(isset($_GET['id'])){
 	$productID=$_GET['id'];
 }

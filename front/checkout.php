@@ -8,7 +8,11 @@
  include_once'variables.php';
 
 $productID="";
-$customerID=1;
+
+$customerID="";
+if(isset($_SESSION['fName'])){
+	$customerID=$_SESSION['CustomerID'];
+}
 // if(isset($_GET['id'])){
 // 	$productID=$_GET['id'];
 // }
@@ -106,7 +110,7 @@ if($total>10){
 	$delivery=$total*0.01;
 }
 
-$fTotal=$total-$delivery;
+$fTotal=$total+$delivery;
 echo "</div>";
 echo '<div class="col-md-3 cart-total">
 			 <div class="price-details">
@@ -128,7 +132,7 @@ echo '<div class="col-md-3 cart-total">
 			
 			 
 			 <div class="clearfix"></div>
-			 <a class="order" href="placeOrder.php?id=$cartID">Place Order</a>
+			 <a class="order" href="placeOrder.php?id=$customerID">Place Order</a>
 			 <a class="order" href="wishlist.php?id=$cartID">Add to Wishlist</a>
 			 
 			</div>';

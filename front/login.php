@@ -18,6 +18,7 @@
 			
 			$sql="INSERT INTO customer (FirstName, LastName, Email, Password, Telephone, TitleID, active) Values ('$fname','$lname','$email','$fpass','$phone','$title','1')";
 			$query=mysqli_query($con,$sql);
+					header("Location:index.php");
 		}else{
 echo"<script>";
 echo "alert('Password dont match')";
@@ -43,7 +44,7 @@ echo "</script>";
 				</div>
 				<div>
 					<label>
-						<input placeholder="password" type="password" name="email" tabindex="4" required>
+						<input placeholder="password" type="password" name="password" tabindex="4" required>
 					</label>
 				</div>						
 				<div>
@@ -66,7 +67,7 @@ echo "</script>";
 			$result=mysqli_query($con,$query);
 			$row=mysqli_num_rows($result);
 
-			if($row==1){
+			if($row!=0){
 				while($re=mysqli_fetch_assoc($result)){
 					$dbpass=$re['Password'];
 					$fname=$re['FirstName'];
@@ -75,7 +76,6 @@ echo "</script>";
 				if($dbpass==$password){
 					$_SESSION['fName']=$fname;
 					$_SESSION['CustomerID']=$customerID;
-					header('Location:../back/index.php');
 				}else{
 					echo "<script>";
 					echo "alert('Wrong Password')";

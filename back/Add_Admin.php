@@ -1,4 +1,4 @@
-<?php include_once'./iframeImporter.php'; ?>
+ <?php include_once'./iframeImporter.php'; ?>
 
 <form class="form-horizontal" name="addAdministrator" method="POST" action="Add_Admin.php" enctype="multipart/form-data">
 
