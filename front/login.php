@@ -18,7 +18,6 @@
 			
 			$sql="INSERT INTO customer (FirstName, LastName, Email, Password, Telephone, TitleID, active) Values ('$fname','$lname','$email','$fpass','$phone','$title','1')";
 			$query=mysqli_query($con,$sql);
-					header("Location:index.php");
 		}else{
 echo"<script>";
 echo "alert('Password dont match')";
