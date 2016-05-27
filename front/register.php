@@ -1,6 +1,6 @@
-
 <!DOCTYPE HTML>
 <html>
+<?php require 'variables.php';?>
 <?php include 'header.php';?>
 <?php include 'title.php';?>
 					<div class="row">
@@ -70,25 +70,25 @@
 		</script>
 		 <div class="registration_form">
 		 <!-- Form -->
-			<form id="registration_form" action="contact.php" method="post">
+			<form id="registration_form" action="register.php" method="post">
 				<div>
 					<label>
-						<input placeholder="first name:" type="text" tabindex="1" required autofocus>
+						<input placeholder="first name:" type="text" name="F_Name" tabindex="1" required autofocus > 
 					</label>
 				</div>
 				<div>
 					<label>
-						<input placeholder="last name:" type="text" tabindex="2" required autofocus>
+						<input placeholder="last name:" type="text" name="L_Name"tabindex="2" required autofocus>
 					</label>
 				</div>
 				<div>
 					<label>
-						<input placeholder="email address:" type="email" tabindex="3" required>
+						<input placeholder="email address:" type="email" name="Uemail" tabindex="3" required>
 					</label>
 				</div>
 				<div>
 					<label>
-						<input placeholder="telephone:" type="text" tabindex="3" required>
+						<input placeholder="telephone:" type="text" name="UPhone" tabindex="3" required>
 					</label>
 				</div>
 				<div class="sky-form">
@@ -102,7 +102,7 @@
 				</div>
 				<div>
 					<label>
-						<input placeholder="password" type="password" tabindex="4" required>
+						<input placeholder="password" type="password" id="password" tabindex="4" required>
 					</label>
 				</div>						
 				<div>
@@ -120,32 +120,24 @@
 			<!-- /Form -->
 		</div>
 	</div>
-	<!-- Exiting User -->
-	<!--<div class="registration_left">
-		<h2>existing user</h2>
-		 <div class="registration_form">-->
-		 <!-- Form -->
-			<!--<form id="registration_form" action="contact.php" method="post">
-				<div>
-					<label>
-						<input placeholder="email:" type="email" tabindex="3" required>
-					</label>
-				</div>
-				<div>
-					<label>
-						<input placeholder="password" type="password" tabindex="4" required>
-					</label>
-				</div>						
-				<div>
-					<input type="submit" value="sign in" id="register-submit">
-				</div>
-				<div class="forget">
-					<a href="#">forgot your password</a>
-				</div>
-			</form>-->
-			<!-- /Form -->
-			<!--</div>
-	</div>-->
+	<?php
+		
+		//session_start();
+		
+		if ( isset( $_POST['submit'] ) ) 
+		{
+			$fname=$_POST['F_Name'];
+			$lname=$_POST['L_Name'];
+			$email=$_POST['Uemail'];
+			$fpass=$_POST['Upassword'];
+			$phone=$_POST['UPhone'];
+			
+			$sql=$con->query("INSERT INTO customer (FirstName, LastName, Email, Password, Telephone) Values ('$fname','$lname','$email','$fpass','$phone')");
+		
+		}
+		echo $sql;
+	?>
+
 	<div class="clearfix"></div>
 	</div>
 	<!-- end registration -->
