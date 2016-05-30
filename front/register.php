@@ -102,7 +102,7 @@
 						<input placeholder="telephone:" type="text" name="UPhone" tabindex="3" required>
 					</label>
 				</div>
-				<div class="sky-form">
+				<!--<div class="sky-form">
 					<div class="sky_form1">
 						<ul>
 							<li><label class="radio left"><input type="radio" name="radio" checked=""><i></i>Male</label></li>
@@ -110,7 +110,7 @@
 							<div class="clearfix"></div>
 						</ul>
 					</div>
-				</div>
+				</div>-->
 				<div>
 					<label>
 						<input placeholder="password" type="password" id="password" name="fpass" tabindex="4" required>
