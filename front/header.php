@@ -134,12 +134,16 @@ echo "</script>";
 				<div class="reg">
 				<?php 
 				if(isset($_SESSION['fName'])){
-					if($_SESSION['fName']!=""){
+					if($_SESSION['fName']!="")
+					{
 						echo "<a href='logout.php'>Log out</a>";
-					}else{
+					}else
+					{
 						echo "<a href='register.php'>REGISTER</a>";
 					}
-					}else{
+					}
+					else
+					{
 						echo "<a href='register.php'>REGISTER</a>";
 					}
 				 ?>
