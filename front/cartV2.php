@@ -21,8 +21,7 @@ if($productID!=0){
 		$category=$rs['CategoryName'];
 	}
 }
-
-
+$sqlAddCart="";
 $sqlCheck="SELECT * FROM `cart` WHERE `ProductID`='$productID'";
 $queryCheckCart=mysqli_query($con,$sqlCheck);
 $row=mysqli_num_rows($queryCheckCart);
