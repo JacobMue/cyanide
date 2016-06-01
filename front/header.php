@@ -132,21 +132,26 @@ echo "</script>";
 					</div>
 				</div>
 				<div class="reg">
-				<?php 
-				if(isset($_SESSION['fName'])){
+				<?php
+				 
+				if(isset($_SESSION['fName']))
+				{
 					if($_SESSION['fName']!="")
 					{
 						echo "<a href='logout.php'>Log out</a>";
-					}else
-					{
-						echo "<a href='register.php'>REGISTER</a>";
-					}
 					}
 					else
 					{
 						echo "<a href='register.php'>REGISTER</a>";
 					}
+				}
+					else
+					{
+						echo "<a href='register.php'>REGISTER</a>";
+					}
+					
 				 ?>
+				 
 				</div>
 			<div class="cart box_1">
 				<a href="checkout.php" title="View Cart" style="margin-right: 20px;float: right;text-decoration:none;color:black;"><i class="fa fa-shopping-cart"></i>  <?=$products;?> Item(s)</a>
