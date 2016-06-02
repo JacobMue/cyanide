@@ -136,8 +136,10 @@ echo "</script>";
 				 
 				if(isset($_SESSION['fName']))
 				{
+					$st_name=$_SESSION['fName'];
 					if($_SESSION['fName']!="")
 					{
+						echo "$st_name";
 						echo "<a href='logout.php'>Log out</a>";
 					}
 					else
