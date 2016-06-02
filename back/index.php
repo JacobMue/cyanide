@@ -54,7 +54,8 @@ $image = '../images/'.$_SESSION['image'];
 <div class="container" id="navigation_drawer">
     <ul class="nav nav-list">
 		<li><a href="dashboard.php" target="contentViewer"><span class="glyphicon glyphicon-dashboard"></span><span1>Dashboard</span1></a></li><hr>
-		<li><a href="#"><i class="fa fa-list" aria-hidden="true"></i><span1>Categories</span1></a></li><hr>
+		<li><a href="addItem.php" target="contentViewer"><span class="fa fa-plus"></span><span1>Add Item</span1></a></li><hr>
+		<li><a href="category.php" target="contentViewer"><i class="fa fa-list" aria-hidden="true"></i><span1>Categories</span1></a></li><hr>
 		<li><a href="#" onclick="hidePages();"><i class="fa fa-eye" aria-hidden="true"></i><span1>Pages</span1></a></li><hr>
 		<div id="pageList" style="display:none;">
 			<a href="../front/index.php" target="blank">Homepage</a>
@@ -78,7 +79,7 @@ $image = '../images/'.$_SESSION['image'];
 <!--End of navigation drawer-->
 <div class="col-xs-12 col-sm-12 col-md-10" style="padding-left: 0px;">
 	<div class="container-fluid">
-		<div id="contentViewFilter">
+		<!-- <div id="contentViewFilter">
 			<a href="addItem.php" id="addButton" target="contentViewer"><button class="btn btn-primary">Add an Item</button></a>
 			<form class="form-search" method="POST" action="SearchResults.php">
   				<input type="text" class="input-medium search-query" name="searchInput" placeholder="Search...">
@@ -89,7 +90,7 @@ $image = '../images/'.$_SESSION['image'];
 				<a href="FilterResults.php" target="contentViewer"><button class="btn btn-default">All</button></a>
 				<a href="#" target="contentViewer">Most Bought</a>
 			</div>
-		</div>
+		</div> -->
     	<iframe name="contentViewer" id="contentView" src="./dashboard.php"></iframe>
 	</div>
 </div>

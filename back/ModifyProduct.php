@@ -53,14 +53,17 @@ if($row==1){
 	<div class="col-xs-12 col-sm-6 col-md-6">
 		<table class="table">
 			<tr><td>Name</td><td><input type="text" name="newName" value="<?=$name;?>"></td></tr>
-			<tr><td>Category</td><td><?=$Category;?></td></tr>
+			<tr><td>Category</td><td><select name="newCategory">
+			<option><?=$Category;?></option>
+			<option>Women</option>
+			<option>Kids</option></select></td></tr>
 			<tr><td>Price per Item </td><td><input type="number" name="newPrice" placeholder="Ksh <?=$price;?> /=" value="<?=$price?>"></td></tr>
 			<tr><td>Unit in Stock</td><td><input type="number" name="newStock" placeholder="<?=$stock;?>" value="<?=$stock;?>"></td></tr>
 		</table>
 	</div>
 	<div class="col-xs-12 col-sm-6 col-md-6">
 		<img class="img-rounded" src="<?=$picture;?>" style="width:480px;">
-		<input type="file" name="newImage" style="margin-top:-50px;font-size:25px;width:90px;">
+		<input type="file" name="newImage">
 	</div>
 	
 </div>

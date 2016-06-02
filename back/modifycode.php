@@ -9,11 +9,11 @@ if(isset($_POST['submit'])){
  $newPrice=$_POST['newPrice'];
  $newStock=$_POST['newStock'];
  $newDes=$_POST['newDes'];
-
+ $newCategory=$_POST['newCategory'];
 
     $name = $_FILES['newImage']['name'];
     if($name==""){
-    	$sqlupdate="UPDATE `product` SET `ProductName` = '$newName', `Description` = '$newDes', `UnitPrice` = '$newPrice', `UnitStock` = '$newStock' WHERE `product`.`ProductID` = '$productID';";
+    	$sqlupdate="UPDATE `product` SET `ProductName` = '$newName',`CategoryName`='$newCategory', `Description` = '$newDes', `UnitPrice` = '$newPrice', `UnitStock` = '$newStock' WHERE `product`.`ProductID` = '$productID';";
         mysqli_query($con,$sqlupdate);
 		header("Location: ViewProduct.php?id=$productID");
         echo "<script>";
@@ -33,7 +33,7 @@ if(isset($_POST['submit'])){
     if(move_uploaded_file($temp_name, $location.$name)){
 
         $path=$location.$name;
-        $sqlupdate="UPDATE `product` SET `ProductName` = '$newName', `Description` = '$newDes', `UnitPrice` = '$newPrice', `UnitStock` = '$newStock',`Picture` = '$path' WHERE `product`.`ProductID` = '$productID';";
+        $sqlupdate="UPDATE `product` SET `ProductName` = '$newName',`CategoryName`='$newCategory', `Description` = '$newDes', `UnitPrice` = '$newPrice', `UnitStock` = '$newStock',`Picture` = '$path' WHERE `product`.`ProductID` = '$productID';";
         mysqli_query($con,$sqlupdate);
         header("Location: ViewProduct.php?id=$productID");
         echo "<script>";
