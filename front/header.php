@@ -61,8 +61,10 @@ echo"<script>";
 echo "alert('Your order was placed successfully')";
 echo "</script>";
 			}
-			
-			$customerID=1;
+			$customerID="";
+if(isset($_SESSION['fName'])){
+	$customerID=$_SESSION['CustomerID'];
+}
 			$sqlProducts="SELECT `CartID` FROM `cart` WHERE `CustomerID`='$customerID'";
 			$queryProducts=mysqli_query($con,$sqlProducts);
 			$products=mysqli_num_rows($queryProducts);
@@ -132,27 +134,17 @@ echo "</script>";
 					</div>
 				</div>
 				<div class="reg">
-				<?php
-				 
-				if(isset($_SESSION['fName']))
-				{
-					$st_name=$_SESSION['fName'];
-					if($_SESSION['fName']!="")
-					{
-						echo "$st_name    <a href='logout.php'>Log out</a>";
-					}
-					else
-					{
+				<?php 
+				if(isset($_SESSION['fName'])){
+					if($_SESSION['fName']!=""){
+						echo "<a href='logout.php'>Log out</a>";
+					}else{
 						echo "<a href='register.php'>REGISTER</a>";
 					}
-				}
-					else
-					{
+					}else{
 						echo "<a href='register.php'>REGISTER</a>";
 					}
-					
 				 ?>
-				 
 				</div>
 			<div class="cart box_1">
 				<a href="checkout.php" title="View Cart" style="margin-right: 20px;float: right;text-decoration:none;color:black;"><i class="fa fa-shopping-cart"></i>  <?=$products;?> Item(s)</a>
