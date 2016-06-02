@@ -54,7 +54,7 @@ $image = '../images/'.$_SESSION['image'];
 <div class="container" id="navigation_drawer">
     <ul class="nav nav-list">
 		<li><a href="dashboard.php" target="contentViewer"><span class="glyphicon glyphicon-dashboard"></span><span1>Dashboard</span1></a></li><hr>
-		<li><a href="#" target="contentViewer"><i class="fa fa-list" aria-hidden="true"></i><span1>Categories</span1></a></li><hr>
+		<li><a href="#"><i class="fa fa-list" aria-hidden="true"></i><span1>Categories</span1></a></li><hr>
 		<li><a href="#" onclick="hidePages();"><i class="fa fa-eye" aria-hidden="true"></i><span1>Pages</span1></a></li><hr>
 		<div id="pageList" style="display:none;">
 			<a href="../front/index.php" target="blank">Homepage</a>

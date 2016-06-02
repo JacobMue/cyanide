@@ -3,8 +3,8 @@
 <html>
 <?php
 
- include 'header.php';
  include 'title.php';
+ include 'header.php';
  include_once'variables.php';
 
 $productID="";
@@ -13,9 +13,9 @@ $customerID="";
 if(isset($_SESSION['fName'])){
 	$customerID=$_SESSION['CustomerID'];
 }
-// if(isset($_GET['id'])){
-// 	$productID=$_GET['id'];
-// }
+ //if(isset($_GET['id'])){
+ //	$productID=$_GET['id'];
+ //}
 
 $name="";
 $Description="";
@@ -48,7 +48,7 @@ $cartID="";
 			 <h1>My Shopping Bag</h1>
 				
 ';
-$sqlPro="SELECT * FROM `cart` WHERE `customerID`=1";
+$sqlPro="SELECT * FROM `cart` WHERE `customerID`='$customerID'";
 $queryPro=mysqli_query($con,$sqlPro);
 if(mysqli_num_rows($queryPro)!=0){
 	while ($rs=mysqli_fetch_assoc($queryPro)) {
@@ -81,7 +81,7 @@ $row=mysqli_num_rows($query);
     margin-right: 40px;' title='Remove Product'><buttton class='btn btn-danger'><i class='fa fa-trash-o'></i></button></a><span>Model No: md$productID</span></h3>
 						<ul class='qty'>
 							<li><p>Stock : $stock</p></li>
-							<li><p>Qty : <input type='number' name='newQty' value=$no_of_products min='1' max='$stock'</p></li>
+							<li><p>Quantity : <input type='number' name='newQty' value=$no_of_products min='1' max='$stock'</p></li>
 						</ul>";
 						
 							 echo '<div class="delivery">

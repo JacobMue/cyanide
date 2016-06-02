@@ -39,7 +39,7 @@ if($row==0){
 	$sqlAddCart="UPDATE `cart` SET `No_Of_Product`='$No_Of_Product' WHERE `CartID`=$cartid";
 }
 
-
+echo $sqlAddCart;
 $queryAddCart=mysqli_query($con,$sqlAddCart);
 header("Location:viewProduct.php?category=$category");
 }else{

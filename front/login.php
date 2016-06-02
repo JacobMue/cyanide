@@ -57,46 +57,37 @@ echo "</script>";
 			<!--Experimental code-->
 			<?php
 				
-				if ( isset( $_POST['SUbmit'] ) ) 
-				{
-					$email=$_POST['email'];
-					$email=strtolower($email);
-					$password=$_POST['password'];
-					$password=md5($password);
-					$query="SELECT * FROM `customer` WHERE `Email`='$email'";
-					$result=mysqli_query($con,$query);
-					$row=mysqli_num_rows($result);
+				if ( isset( $_POST['SUbmit'] ) ) {
+			$email=$_POST['email'];
+			$email=strtolower($email);
+			$password=$_POST['password'];
+			$password=md5($password);
+			$query="SELECT * FROM `customer` WHERE `Email`='$email'";
+			$result=mysqli_query($con,$query);
+			$row=mysqli_num_rows($result);
 
-					if($row!=0){
-						while($re=mysqli_fetch_assoc($result))
-						{
-							$dbpass=$re['Password'];
-							$fname=$re['FirstName'];
-							$customerID=$re['CustomerID'];
-						}
-						
-						if($dbpass==$password)
-						{
-							$_SESSION['fName']=$fname;
-							$_SESSION['CustomerID']=$customerID;
-						}
-						else
-						{
-							echo "<script>";
-							echo "alert('Wrong Password')";
-							echo"</script>";
-						}
-						}
-						else
-						{
-							echo "<script>";
-							echo "alert('Unknown Email Address ')";
-							echo"</script>";
-						}
-						
-					mysqli_close($con);
-					//close the isset
+			if($row!=0){
+				while($re=mysqli_fetch_assoc($result)){
+					$dbpass=$re['Password'];
+					$fname=$re['FirstName'];
+					$customerID=$re['CustomerID'];
 				}
+				if($dbpass==$password){
+					$_SESSION['fName']=$fname;
+					$_SESSION['CustomerID']=$customerID;
+				}else{
+					echo "<script>";
+					echo "alert('Wrong Password')";
+					echo"</script>";
+				}
+			}else{
+				echo "<script>";
+				echo "alert('Unknown Email Address ')";
+				echo"</script>";
+			}
+			mysqli_close($con);
+			//close the isset
+			}
 			?>
 			<!-- End of experimenatl code-->
 			</div>
