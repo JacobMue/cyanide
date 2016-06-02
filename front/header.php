@@ -145,6 +145,7 @@ echo "</script>";
 					else
 					{
 						echo "<a id='registerButton' href='register.php'>REGISTER</a>";
+
 					}
 				}
 					else
