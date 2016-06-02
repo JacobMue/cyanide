@@ -405,7 +405,7 @@ span.item_price {
 .box_1 {
   float: left;
   margin: 0.55em 0.1em 0;
-  width:38%;
+  width:30%;
 }
 .box_1 h3 {
   color: #000;
@@ -624,7 +624,7 @@ input:focus {
 }
 .reg {
   float: left;
-  width: 20%;
+  width: 25%;
   margin: 5px 0;
 	font-weight: bold;
 	text-transform: capitalize;
