@@ -626,6 +626,7 @@ input:focus {
   float: left;
   width: 20%;
   margin: 5px 0;
+	font-weight: bold;
 }
 /* create_btn */
 .create_btn {
