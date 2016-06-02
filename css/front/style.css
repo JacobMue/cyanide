@@ -627,6 +627,7 @@ input:focus {
   width: 20%;
   margin: 5px 0;
 	font-weight: bold;
+	text-transform: capitalize;
 }
 /* create_btn */
 .create_btn {
