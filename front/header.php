@@ -2,6 +2,7 @@
 <?php 
 error_reporting(0);
 session_start(); ?>
+<body onload="loseLogin()">
 <div class="top_bg">
 	<div class="container">
 		<div class="header_top">
@@ -134,15 +135,24 @@ if(isset($_SESSION['fName'])){
 					</div>
 				</div>
 				<div class="reg">
-				<?php 
-				if(isset($_SESSION['fName'])){
-					if($_SESSION['fName']!=""){
-						echo "<a href='logout.php'>Log out</a>";
-					}else{
-						echo "<a href='register.php'>REGISTER</a>";
+				<?php
+				 
+				if(isset($_SESSION['fName']))
+				{
+					$st_name=$_SESSION['fName'];
+					if($_SESSION['fName']!="")
+					{
+						echo "$st_name    <a id='registerButton' href='logout.php'>Log out</a>";
 					}
-					}else{
-						echo "<a href='register.php'>REGISTER</a>";
+					else
+					{
+						echo "<a id='registerButton' href='register.php'>REGISTER</a>";
+					}
+				}
+					else
+					{
+						echo "<a id='registerButton' href='register.php'>REGISTER</a>";
+
 					}
 				 ?>
 				</div>
