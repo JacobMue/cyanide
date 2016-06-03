@@ -1,4 +1,14 @@
 <?php include_once'iframeImporter.php'; ?>
+<script type="text/javascript">
+function showcategory(){
+	var showCategory=document.getElementById('showCategory');
+	if(showCategory.style.display==""){
+		showCategory.style.display="none"
+	}else{
+		showCategory.style.display=""
+	}
+}
+</script>
 <div>
 
 	<h2 style="text-align:center;">Add a category </h2>
@@ -16,9 +26,8 @@
 			<tr><td><button class="btn btn-success" type="submit" name="addCategory">Add Category</button></td><td><button class="btn btn-warning" type="reset">Clear table</button></a></td></tr>
 		</table>
 	</form>
-	<button class="btn btn-info">View Categories</button>
-	<div id="showCategory" style="margin-top:10px;">
-	<form action="b " method="POST">
+	<button onclick="showcategory()" class="btn btn-info">View Categories</button>
+	<div id="showCategory" style="margin-top:10px;display:none;">
 		<table class="table table-stripped">
 			<tr><td>Main Category</td><td>Sub category</td><td>Description</td><td></td></tr>
 			<?php 
@@ -31,17 +40,30 @@
 						$mainCategory=$rs['mainCategory'];
 						$subCategory=$rs['subCategory'];
 						$Description=$rs['Description'];
-						echo "<tr><td>$mainCategory</td><td><input type='text' name='newCat' value=$subCategory></td><td><textarea name='newDes'>$Description</textarea></td><td>
-						<a href='backCategory.php?type=Modify' target='contentViewer'><button class='btn btn-warning'><i class='fa fa-pencil'></i></button></a>
-						<a href='backCategory.php?type=delete'><button class='btn btn-danger'><i class='fa fa-trash-o'></i></button></a></td></tr>";
+						$cateID=$rs['CategoryID'];	
+						echo "<form method='POST' action='backCategory.php?id=$cateID'>";
+						echo "<tr><td>$mainCategory</td><td><input type='text' name='newCat' value=$subCategory></td><td><textarea name='newDes'>$Description</textarea></td><td><button type='submit' class='btn btn-warning'><i class='fa fa-pencil'></i></button></form>
+						<a href='backCategory.php?id=$cateID&&type=delete'><button class='btn btn-danger'><i class='fa fa-trash-o'></i></button></a></td></tr>";
 					}
 				}
-				mysqli_close($con);
 			 ?>
 		</table>
-	</form>
 	</div>
 </div>
+<?php  
+
+if(isset($_POST['addCategory'])){
+$Des=$_POST['description'];
+$subCate=$_POST['subCategory'];
+$mainCate=$_POST['mainCategory'];
+
+
+$sql="INSERT INTO `category` (`CategoryID`, `mainCategory`, `subCategory`, `Description`) VALUES (NULL, '$mainCate', '$subCate', '$Des');";
+$query=mysqli_query($con,$sql);
+header("Location:category.php");
+}
+
+?>
 
 
 

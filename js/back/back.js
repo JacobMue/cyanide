@@ -55,3 +55,6 @@ function hidePages(){
 		page.style.display="none";
 	}
 }
+
+
+
