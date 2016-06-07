@@ -63,7 +63,10 @@ echo "alert('Your order was placed successfully')";
 echo "</script>";
 			}
 			
-			$customerID=1;
+			$customerID="";
+if(isset($_SESSION['fName'])){
+	$customerID=$_SESSION['CustomerID'];
+}
 			$sqlProducts="SELECT `CartID` FROM `cart` WHERE `CustomerID`='$customerID'";
 			$queryProducts=mysqli_query($con,$sqlProducts);
 			$products=mysqli_num_rows($queryProducts);
