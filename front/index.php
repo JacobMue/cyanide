@@ -13,7 +13,7 @@
 					<h3>NEW ARRIVALS</h3>
 					<p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
 					<div class="crt-btn">
-						<a href="viewProduct.php?category=Men">TAKE A LOOK</a>
+						<a href="viewProduct.php?category=Women">TAKE A LOOK</a>
 					</div>
 				</div>
 			</div>
@@ -21,7 +21,7 @@
 				<img src="../images/2.jpg" class="img-responsive" alt="">
 				<div class="arriv-info">
 					<h3>Men</h3>
-					<p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
+					<p>WANT THAT GENTLEMAN TOUCH?</p>
 					<div class="crt-btn">
 						<a href="viewProduct.php?category=Men">SHOP NOW</a>
 					</div>
@@ -36,14 +36,14 @@
 					<h3>Women</h3>
 					<p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
 					<div class="crt-btn">
-						<a href="viewProduct.php?category=Men">SHOP NOW</a>
+						<a href="viewProduct.php?category=Women">SHOP NOW</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4 arriv-right1">
 				<img src="../images/4.jpg" class="img-responsive" alt="">
 				<div class="arriv-info2">
-					<a href="viewProduct.php?category=Men"><h3>Kids<i class="ars"></i></h3></a>
+					<a href="viewProduct.php?category=Kids"><h3>Kids<i class="ars"></i></h3></a>
 				</div>
 			</div>
 			<div class="clearfix"> </div>
