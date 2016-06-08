@@ -32,7 +32,7 @@
 			// Create the supports object
 			var supports = {};
 			
-			supports.autofocus   = 'autofocus' in inputs;
+				supports.autofocus   = 'autofocus' in inputs;
 			supports.required    = 'required' in inputs;
 			supports.placeholder = 'placeholder' in inputs;
 		
@@ -94,7 +94,7 @@
 				</div>
 				<div>
 					<label>
-						<input placeholder="email address:" type="email" name="Uemail" tabindex="3" required>
+						<input placeholder="Email address:" type="email" name="Uemail" tabindex="3" required>
 					</label>
 				</div>
 				<div>
