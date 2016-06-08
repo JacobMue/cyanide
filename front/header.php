@@ -143,7 +143,7 @@ if(isset($_SESSION['fName'])){
 					$st_name=$_SESSION['fName'];
 					if($_SESSION['fName']!="")
 					{
-						echo "$st_name    <a id='registerButton' href='logout.php'>Log out</a>";
+						echo "$st_name    <a id='registerButton' href='logout.php'><button class='btn btn-danger'>Log out</button></a>";
 					}
 					else
 					{

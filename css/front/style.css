@@ -624,7 +624,7 @@ input:focus {
 }
 .reg {
   float: left;
-  width: 25%;
+  width: 30%;
   margin: 5px 0;
 	font-weight: bold;
 	text-transform: capitalize;

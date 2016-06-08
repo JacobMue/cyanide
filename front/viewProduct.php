@@ -149,12 +149,14 @@ include_once'variables.php';
 			$productID=$rs['ProductID'];
 			$productName=$rs['ProductName'];
 			$productImg=$rs['Picture'];
+			$price=number_format($rs['UnitPrice']);
 			$productImg = '../images/'.$productImg;
 			echo '<div class="viewProduct" style="text-align: center;width:31%;margin-top: 10px;float: left;">';
 			echo  "<a id='linkImg' href='details.php?id=$productID'>
 			<img src='$productImg' class='img img-rounded' width='250' height='200'></a>";
 			echo "<a id='linkAnchor' href='productDetails.php?id=$productID'>$productName</a>";
-			echo "<a id='linkCart' href='cartV2.php?id=$productID'><button class='btn btn-info'>Add to Cart</button></a></div>";
+			echo "<div><p style='float:left;width:80%;margin-top:10px;'>KES $price</p>";
+			echo "<a style='float:left;width:20%;' id='linkCart' href='cartV2.php?id=$productID'><button class='btn btn-info'><i class='fa fa-cart-plus'></i></button></a></div></div>";
 		}
 	}
 	else{
