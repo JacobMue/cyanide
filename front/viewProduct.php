@@ -156,7 +156,7 @@ include_once'variables.php';
 			<img src='$productImg' class='img img-rounded' width='250' height='200'></a>";
 			echo "<a id='linkAnchor' href='productDetails.php?id=$productID'>$productName</a>";
 			echo "<div><p style='float:left;width:80%;margin-top:10px;'>KES $price</p>";
-			echo "<a style='float:left;width:20%;' id='linkCart' href='cartV2.php?id=$productID'><button class='btn btn-info'><i class='fa fa-cart-plus'></i></button></a></div></div>";
+			echo "<a style='float:left;width:20%;' id='linkCart' href='cartV2.php?id=$productID'><button style='color:black;' class='btn btn-info'><i class='fa fa-cart-plus'></i></button></a></div></div>";
 		}
 	}
 	else{
