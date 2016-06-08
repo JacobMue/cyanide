@@ -39,10 +39,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<p>when an unknown printer took a galley of type and scrambled it to make</p>
 						<div class="price">
 							<span class="text">Price:</span>
-							<span class="price-new">$110.00</span>
+							<span class="price-new">KES. 110.00</span>
 						</div>
 					<div class="btn_form">
-						<a href="cartV2.php?id=$productID">buy</a>
+						<a href="cartV2.php?id=$productID">add to cart</a>
 					</div>
 					<a href="#"><span>login to save in wishlist </span></a>
 					
