@@ -14,7 +14,7 @@ session_start(); ?>
 				</ul>
 			</div>
 			<div class="top_left">
-				<h2><span></span> Call ME : +254 702 381 228</h2>
+				<h2><span><i class="fa fa-phone" aria-hidden="true">  BOTQ Customer care</i></span></h2>
 			</div>
 				<div class="clearfix"> </div>
 		</div>
