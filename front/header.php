@@ -126,11 +126,10 @@ if(isset($_SESSION['fName'])){
 				echo "alert('Unknown Email Address ')";
 				echo"</script>";
 			}
-			mysqli_close($con);
 			//close the isset
 			}
 		}
-		?>
+		?>					
 							</div>
 						</div>
 					</div>
@@ -143,7 +142,15 @@ if(isset($_SESSION['fName'])){
 					$st_name=$_SESSION['fName'];
 					if($_SESSION['fName']!="")
 					{
-						echo "$st_name    <a id='registerButton' href='logout.php'><button class='btn btn-danger'>Log out</button></a>";
+						echo '<div class="dropdown" id="registerButton">
+    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">'.$st_name.' 
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <button style="width:100%;" role="menuitem" tabindex="-1" class="btn btn-info" data-toggle="modal" data-target="#myModal">View Profile</button>
+      <a role="menuitem" tabindex="-1" href="logout.php"><button style="width:100%;" class="btn btn-danger">Log out</button></a>
+    </ul>
+  </div>';
+  //echo "<a id='registerButton' href='logout.php'><button class='btn btn-danger'>Log out</button></a>";
 					}
 					else
 					{
@@ -166,6 +173,64 @@ if(isset($_SESSION['fName'])){
 			<div class="create_btn">
 				<a href="checkout.php">CHECKOUT</a>
 			</div>
+			<!-- Single button -->
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog" ng-app="">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="opacity:0.9;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Edit your Profile</h4>
+        </div>
+        <div class="modal-body">
+<?php 
+
+$sql="SELECT * FROM `customer` WHERE `CustomerID`='$customerID'";
+$query=mysqli_query($con,$sql);
+$row=mysqli_num_rows($query);
+if($row==1){
+	while ($rs=mysqli_fetch_assoc($query)) {
+		$fname=$rs['FirstName'];
+		$lname=$rs['LastName'];
+		$email=$rs['Email'];
+		$password=$rs['Password'];
+		$telephone=$rs['Telephone'];
+		$deactivate=$rs['active'];
+		$title=$rs['TitleID'];
+
+		//action="editProfile.php?pass='.$password.'&&id='.$customerID.'" 
+
+		echo '<form name="myform" ng-model="myform" ng-controller="myformc" action="editProfile.php?pass='.$password.'&&id='.$customerID.'" method="POST"><table class="table table-hover">';
+		echo "<tr><td>Title</td><td>$title</td></tr>";
+		echo "<tr><td>First Name</td><td><input type='text' ng-model='ffname' name='newfname' value='$fname'></td></tr>";
+		echo "<tr><td>Last Name</td><td><input type='text' name='newlname' value='$lname'></td></tr>";
+		echo "<tr><td>Email</td><td>$email</td></tr>";
+		echo "<tr><td>Telephone</td><td><input type='number' name='newphone' value='$telephone'></td></tr>";
+		echo "<tr><td>change Password</td><td><input type='password' name='password' value='$password'></td></tr>";
+		echo "<tr><td>Confirm Password</td><td><input type='password' name='confirmpassword' value='$password'></td></tr>";
+		echo "<tr><td><button id='savechanges' type='submit' name='editsubmit' class='btn btn-warning'>Save changes</button></td><td><a href='viewOrders.php?id=$customerID' data-controls-modal='myModal' data-backdrop='static' data-keyboard='false'><button name='editsubmit' class='btn btn-info'>View Orders</button></a></td><td><a href='editProfile.php?id=$customerID'><button class='btn btn-danger'>Deactivate Account</button></a></td></tr>";
+		echo "</table></form>";
+
+	}
+}else{
+	echo "Please wait while loading";
+}
+mysqli_close($con);
+?>	
+		<div id="modalAjaxResponse"></div>
+        </div>
+
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
 			<div class="clearfix"> </div>
 		</div>
 		<div class="search">

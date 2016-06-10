@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
     <?php include 'header.php';?>
     <?php include 'title.php';?>
     <link href="../css/front/buy.css" rel='stylesheet' type='text/css' />
@@ -8,4 +8,6 @@
             <img src="../images/giphy.gif"> 
         </div>
      </body>
-</html>
+</html> -->
+
+<?php echo "okay"; ?>

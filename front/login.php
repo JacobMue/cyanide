@@ -28,28 +28,34 @@ echo "</script>";
 
 
     ?>
-
+<style type="text/css">
+.registration_form input,span{
+	float: left;
+	width: 45%;
+	margin-right: 1%;
+}
+</style>
    <!-- Exiting User -->
-   <div class="registration_left">
+   <div class="registration_left" onmouseenter="loginfocused()" onmouseout="loginfocused()">
 		<h2>Existing User</h2>
 		 <div class="registration_form">
 		 <!-- Form -->
          <!--experimenting-->
-			<form id="registration_form" action="login.php" method="post">
+			<form id="registration_form" style="margin-left:0px;" action="login.php" method="post">
 				<div>
 					<label>
-						<input placeholder="email:" type="email" name="email" tabindex="3" required>
+						<input style="width:50%;margin-bottom:10px;" id="loginemail" placeholder="email:" type="email" name="email" tabindex="3" required>
 					</label>
 				</div>
 				<div>
 					<label>
-						<input placeholder="password" type="password" name="password" tabindex="4" required>
+						<input style="width:50%;margin-bottom:15px;" id="loginpassword" placeholder="password" type="password" name="password" tabindex="4" required>
 					</label>
 				</div>						
 				<div>
-					<input type="submit" value="sign in" id="register-submit" name="SUbmit">
+					<button onclick="loginHome()" style="width:50%;" class="btn btn-success" type="submit" id="register-submit" name="SUbmit">Sign In</button>
 				</div>
-				<div class="forget">
+				<div class="forget" style="width:50%;">
 					<a href="#">forgot your password</a>
 				</div>
 			</form>

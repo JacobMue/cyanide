@@ -1,8 +1,17 @@
 <!DOCTYPE HTML>
 <html>
-<?php require 'variables.php';?>
-<?php include 'title.php';?>
-<?php include 'header.php';?>
+<?php 
+	  require 'variables.php';
+	  include 'title.php';
+	  include 'header.php';
+?>
+<style type="text/css">
+.registration_form input,span{
+	float: left;
+	width: 45%;
+	margin-right: 1%;
+}
+</style>
 					<div class="row">
 						<div class="col2"></div>
 						<div class="col1"></div>
@@ -22,7 +31,7 @@
 	<!-- start registration -->
 	<div class="registration">
 		<div class="registration_left">
-		<h2>new user? <span> create an account </span></h2>
+		<h2>new user? <span1> create an account </span1></h2>
 		<script>
 			(function() {
 		
@@ -61,9 +70,9 @@
 		
 		})();
 		</script>
-		 <div class="registration_form">
+		 <div class="registration_form" ng-app="appRegistration">
 		 <!-- Form -->
-			<form id="registration_form" action="login.php" method="post">
+			<form id="registration_form" action="login.php" method="post" name="register">
 				<div>
 					<label>
 						<?php 
@@ -84,22 +93,26 @@
 				</div>
 				<div>
 					<label>
-						<input placeholder="first name:" type="text" name="F_Name" tabindex="1" required autofocus > 
+						<input style="float:left;width:50%;margin-bottom:10px;" placeholder="first name:" type="text" name="F_Name" tabindex="1" required autofocus ng-model="fname"> 
+					
+						<span ng-show="register.F_Name.$invalid" style="float:left;width:45%; margin-left:2%;">The first name is required</span>
+						</label>
+				</div>
+				<div>
+					<label>
+						<input style="float:left;width:50%;margin-bottom:10px;"  placeholder="last name:" type="text" name="L_Name"tabindex="2" required autofocus>
 					</label>
 				</div>
 				<div>
 					<label>
-						<input placeholder="last name:" type="text" name="L_Name"tabindex="2" required autofocus>
+						<input style="float:left;width:50%;margin-bottom:10px;"  placeholder="Email address:" type="email" name="Uemail" tabindex="3" required>
+						<span ng-show="register.Uemail.$valid" style="float:left;width:45%; margin-left:2%;">iybhn</span>
 					</label>
 				</div>
 				<div>
 					<label>
-						<input placeholder="Email address:" type="email" name="Uemail" tabindex="3" required>
-					</label>
-				</div>
-				<div>
-					<label>
-						<input placeholder="telephone:" type="text" name="UPhone" tabindex="3" required>
+						<input style="float:left;width:50%;margin-bottom:10px;" placeholder="telephone:" type="text" name="UPhone" tabindex="3" required>
+						<span style="float:left;width:45%; margin-left:2%;">{{}}</span>
 					</label>
 				</div>
 				<!--<div class="sky-form">
@@ -113,19 +126,21 @@
 				</div>-->
 				<div>
 					<label>
-						<input placeholder="password" type="password" id="password" name="fpass" tabindex="4" required>
+						<input style="float:left;width:50%;margin-bottom:10px;" placeholder="password" type="password" id="password" name="fpass" tabindex="4" required>
+						<span style="float:left;width:45%; margin-left:2%;"></span>
 					</label>
 				</div>						
 				<div>
 					<label>
-						<input placeholder="retype password" type="password" tabindex="4" name="spass" required>
+						<input style="float:left;width:50%;margin-bottom:10px;" placeholder="retype password" type="password" tabindex="4" name="spass" required>
+						<span style="float:left;width:45%; margin-left:2%;"></span>
 					</label>
 				</div>	
 				<div>
-					<input type="submit" value="create an account" id="register-submit" name="submit">
+					<button style="float:left;width:50%;margin-bottom:10px;" id="register-submit" name="submit" class="btn btn-success" type="submit">Create an Account</button>
 				</div>
 				<div class="sky-form">
-					<label class="checkbox">By creating this account you agree to BotiKE.com &nbsp;<a class="terms" href="#"> terms of service</a> </label>
+					<label style="float:left;width:80%;margin-bottom:10px;" class="checkbox">By creating this account you agree to BotiKE.com &nbsp;<a class="terms" href="#"> terms of service</a> </label>
 				</div>
 			</form>
 			<!-- /Form -->
@@ -142,7 +157,7 @@
 	</div>
 	<!-- end registration -->
 </div>
-	<p>Already have an account? <a href="login.php">Log In</a> here.</p>
+	<p>Already have an account? <a href="login.php"><button class="btn btn-info">Log In</button></a> here.</p>
 </div>
 <div class="foot-top">
 	<div class="container">

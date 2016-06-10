@@ -67,7 +67,6 @@ $row=mysqli_num_rows($query);
 		$stock=$rs['UnitStock'];
 		$Category=$rs['CategoryName'];
 		$picture=$rs['Picture'];
-		$price=$rs['UnitPrice'];
 		$total+=$price;
 		$picture="../images/".$picture;
 		echo '<div class="cart-header">
