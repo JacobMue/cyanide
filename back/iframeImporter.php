@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="../css/back/back.css">
 
 <script type="text/javascript" src="../js/front/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="../js/back/bootstrap.js"></script>
+<script type="text/javascript" src="../js/front/jquery.min.js"></script>
 <script type="text/javascript" src="../js/back/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/back/back.js"></script>
 <?php include_once'variables.php'; ?>

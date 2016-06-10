@@ -208,8 +208,9 @@ if($row==1){
 		echo "<tr><td>Last Name</td><td><input type='text' name='newlname' value='$lname'></td></tr>";
 		echo "<tr><td>Email</td><td>$email</td></tr>";
 		echo "<tr><td>Telephone</td><td><input type='number' name='newphone' value='$telephone'></td></tr>";
-		echo "<tr><td>change Password</td><td><input type='password' name='password' value='$password'></td></tr>";
-		echo "<tr><td>Confirm Password</td><td><input type='password' name='confirmpassword' value='$password'></td></tr>";
+		echo "<tr><td>Old password</td><td><input type='password' name='oldpassword'></td></tr>";
+		echo "<tr><td>new Password</td><td><input type='password' name='password'></td></tr>";
+		echo "<tr><td>Confirm Password</td><td><input type='password' name='confirmpassword'></td></tr>";
 		echo "<tr><td><button id='savechanges' type='submit' name='editsubmit' class='btn btn-warning'>Save changes</button></td><td><a href='viewOrders.php?id=$customerID' data-controls-modal='myModal' data-backdrop='static' data-keyboard='false'><button name='editsubmit' class='btn btn-info'>View Orders</button></a></td><td><a href='editProfile.php?id=$customerID'><button class='btn btn-danger'>Deactivate Account</button></a></td></tr>";
 		echo "</table></form>";
 

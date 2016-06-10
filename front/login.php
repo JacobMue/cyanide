@@ -1,6 +1,8 @@
 <html>
-    <?php include 'title.php';
-    include 'header.php';
+    <?php include_once 'title.php';
+    include_once 'header.php';
+    include_once 'variables.php';
+
 	if ( isset( $_POST['submit'] ) ) 
 		{
 
@@ -63,15 +65,16 @@ echo "</script>";
 			<!--Experimental code-->
 			<?php
 				
-				if ( isset( $_POST['SUbmit'] ) ) {
+			if ( isset( $_POST['SUbmit'] ) ) {
 			$email=$_POST['email'];
 			$email=strtolower($email);
+			echo $email;
 			$password=$_POST['password'];
 			$password=md5($password);
 			$query="SELECT * FROM `customer` WHERE `Email`='$email'";
 			$result=mysqli_query($con,$query);
 			$row=mysqli_num_rows($result);
-
+			echo $row;
 			if($row!=0){
 				while($re=mysqli_fetch_assoc($result)){
 					$dbpass=$re['Password'];

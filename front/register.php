@@ -70,7 +70,7 @@
 		
 		})();
 		</script>
-		 <div class="registration_form" ng-app="appRegistration">
+		 <div class="registration_form" ng-app="">
 		 <!-- Form -->
 			<form id="registration_form" action="login.php" method="post" name="register">
 				<div>
@@ -93,7 +93,7 @@
 				</div>
 				<div>
 					<label>
-						<input style="float:left;width:50%;margin-bottom:10px;" placeholder="first name:" type="text" name="F_Name" tabindex="1" required autofocus ng-model="fname"> 
+						<input style="float:left;width:50%;margin-bottom:10px;" placeholder="first name:" type="text" name="F_Name" tabindex="1" required autofocus> 
 					
 						<span ng-show="register.F_Name.$invalid" style="float:left;width:45%; margin-left:2%;">The first name is required</span>
 						</label>
@@ -106,7 +106,7 @@
 				<div>
 					<label>
 						<input style="float:left;width:50%;margin-bottom:10px;"  placeholder="Email address:" type="email" name="Uemail" tabindex="3" required>
-						<span ng-show="register.Uemail.$valid" style="float:left;width:45%; margin-left:2%;">iybhn</span>
+						<span ng-show="register.Uemail.$invalid" style="float:left;width:45%; margin-left:2%;">Not valid</span>
 					</label>
 				</div>
 				<div>
