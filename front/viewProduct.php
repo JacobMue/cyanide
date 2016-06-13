@@ -131,6 +131,12 @@ include_once'variables.php';
 	</div>
    </div>
 	<!-- start content -->
+	<div class="pdf">
+		<div class="pdfmessage">
+			<p>Would you like a printed copy?</p>
+			<button>Download PDF</button>
+		</div>
+	</div>
 	<div class="col-md-9 w_content">
 		<div class="women">
 			<a href="#"><h4>Viewing - <span><?=$row;?> items</span> </h4></a>
