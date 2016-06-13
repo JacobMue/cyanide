@@ -20,6 +20,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome-4.6.2/css/font-awesome.min.css">
 <link href="../css/front/design.css" rel='stylesheet' type='text/css' />
 
+<!--PDF GENERATOR-->
+
+<script type="text/javascript" src="../js/pdfgen/jspdf.min.js"></script>
+<script type="text/javascript" src="../js/pdfgen/html2canvas.js"></script>
+
+
 <!-- start menu -->
 <link href="../css/front/megamenu.css" rel="stylesheet" type="text/css" media="all" />
 
