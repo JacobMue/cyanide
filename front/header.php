@@ -1,6 +1,6 @@
 <!-- header_top -->
 <?php 
-error_reporting(0);
+//error_reporting(0);
 session_start(); ?>
 <body onload="loseLogin()">
 <div class="top_bg">
@@ -218,7 +218,6 @@ if($row==1){
 }else{
 	echo "Please wait while loading";
 }
-mysqli_close($con);
 ?>	
 		<div id="modalAjaxResponse"></div>
         </div>

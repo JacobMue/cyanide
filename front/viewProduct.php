@@ -8,6 +8,7 @@ include_once'variables.php';
 	$category="";
 	if(isset($_GET['category'])){
 		$category=$_GET['category'];
+
 	}
 	$productID="";
 	$productName="";
@@ -16,6 +17,7 @@ include_once'variables.php';
 	$sqlProduct="SELECT * FROM `product` WHERE `CategoryName`='$category' AND `active`=1;";
 	$query=mysqli_query($con,$sqlProduct);
 	$row=mysqli_num_rows($query);
+	echo $row;
 
 ?>
 					<div class="row">

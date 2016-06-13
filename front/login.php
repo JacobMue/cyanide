@@ -64,19 +64,18 @@ echo "</script>";
 			<!-- /Form -->
 			<!--Experimental code-->
 			<?php
+    require_once 'variables.php';
 				
 			if ( isset( $_POST['SUbmit'] ) ) {
 			$email=$_POST['email'];
 			$email=strtolower($email);
-			echo $email;
 			$password=$_POST['password'];
 			$password=md5($password);
-			$query="SELECT * FROM `customer` WHERE `Email`='$email'";
-			$result=mysqli_query($con,$query);
-			$row=mysqli_num_rows($result);
-			echo $row;
+			$sql="SELECT * FROM `customer` WHERE `Email`='$email'";
+			$query=mysqli_query($con,$sql);
+			$row=mysqli_num_rows($query);
 			if($row!=0){
-				while($re=mysqli_fetch_assoc($result)){
+				while($re=mysqli_fetch_assoc($query)){
 					$dbpass=$re['Password'];
 					$fname=$re['FirstName'];
 					$customerID=$re['CustomerID'];
