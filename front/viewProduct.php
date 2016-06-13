@@ -33,6 +33,18 @@ include_once'variables.php';
 	</div>
 </div>
 </div>
+<!-- PDF-->
+<script type="text/javascript">
+	function genPDF()
+	{
+		var doc=new jsPDF();
+		doc.text(20,20,"BOTQ Online Clothing Store");
+		doc.addPage();
+		doc.text(20,20, "This is page no. 2");
+		doc.save("BOTQ Catalogue.pdf");
+	}
+</script>
+<!-- End of PDF-->
 <!-- content -->
 <div class="container">
 <div class="women_main">
@@ -131,12 +143,19 @@ include_once'variables.php';
 	</div>
    </div>
 	<!-- start content -->
+		<!-- DOWNLOAD PDF-->
 	<div class="pdf">
 		<div class="pdfmessage">
-			<p>Would you like a printed copy?</p>
-			<button>Download PDF</button>
+			<p>
+				Would you like a brochure?
+				<a href="javascript:genPDF()">
+					<button>Download PDF</button>
+				</href>
+			</p>
 		</div>
 	</div>
+	<!-- End of PDF Div-->
+
 	<div class="col-md-9 w_content">
 		<div class="women">
 			<a href="#"><h4>Viewing - <span><?=$row;?> items</span> </h4></a>

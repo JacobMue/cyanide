@@ -7,6 +7,8 @@
 
 <!-- Custom Theme files -->
 <link href="../css/front/style.css" rel='stylesheet' type='text/css' />
+<link href="../css/front/xtncv.css" rel='stylesheet' type='text/css' />
+
 <!-- Custom Theme files -->
 
 <!--//theme-style-->
