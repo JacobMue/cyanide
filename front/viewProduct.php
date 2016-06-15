@@ -148,7 +148,7 @@ include_once'variables.php';
 			<p>
 				Would you like a brochure?
 				<a href="javascript:genPDF()">
-					<button>Download PDF</button>
+					<button class="btn btn-success">Download PDF</button>
 				</href>
 			</p>
 		</div>

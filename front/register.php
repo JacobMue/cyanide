@@ -70,9 +70,9 @@
 		
 		})();
 		</script>
-		 <div class="registration_form" ng-app="">
+		 <div class="registration_form" ng-app="registration">
 		 <!-- Form -->
-			<form id="registration_form" action="login.php" method="post" name="register">
+			<form id="registration_form" action="login.php" method="post" name="register" ng-controller="ctrl">
 				<div>
 					<label>
 						<?php 
@@ -95,7 +95,6 @@
 					<label>
 						<input style="float:left;width:50%;margin-bottom:10px;" placeholder="first name:" type="text" name="F_Name" tabindex="1" required autofocus> 
 					
-						<span ng-show="register.F_Name.$invalid" style="float:left;width:45%; margin-left:2%;">The first name is required</span>
 						</label>
 				</div>
 				<div>
@@ -106,13 +105,11 @@
 				<div>
 					<label>
 						<input style="float:left;width:50%;margin-bottom:10px;"  placeholder="Email address:" type="email" name="Uemail" tabindex="3" required>
-						<span ng-show="register.Uemail.$invalid" style="float:left;width:45%; margin-left:2%;">Not valid</span>
 					</label>
 				</div>
 				<div>
 					<label>
 						<input style="float:left;width:50%;margin-bottom:10px;" placeholder="telephone:" type="text" name="UPhone" tabindex="3" required>
-						<span style="float:left;width:45%; margin-left:2%;">{{}}</span>
 					</label>
 				</div>
 				<!--<div class="sky-form">
@@ -127,13 +124,12 @@
 				<div>
 					<label>
 						<input style="float:left;width:50%;margin-bottom:10px;" placeholder="password" type="password" id="password" name="fpass" tabindex="4" required>
-						<span style="float:left;width:45%; margin-left:2%;"></span>
 					</label>
 				</div>						
 				<div>
 					<label>
 						<input style="float:left;width:50%;margin-bottom:10px;" placeholder="retype password" type="password" tabindex="4" name="spass" required>
-						<span style="float:left;width:45%; margin-left:2%;"></span>
+						<!-- <span style="float:left;width:45%; margin-left:2%;"></span> -->
 					</label>
 				</div>	
 				<div>
