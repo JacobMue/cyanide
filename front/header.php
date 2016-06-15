@@ -1,7 +1,7 @@
 <!-- header_top -->
 <?php 
 //error_reporting(0);
-session_start(); ?>
+//session_start(); ?>
 <body onload="loseLogin()">
 <div class="top_bg">
 	<div class="container">

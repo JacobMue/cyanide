@@ -17,7 +17,6 @@ include_once'variables.php';
 	$sqlProduct="SELECT * FROM `product` WHERE `CategoryName`='$category' AND `active`=1;";
 	$query=mysqli_query($con,$sqlProduct);
 	$row=mysqli_num_rows($query);
-	echo $row;
 
 ?>
 					<div class="row">

@@ -1,5 +1,5 @@
 <?php 
-session_start();
+//session_start();
 include_once'variables.php';
 $customerID="";
 if(isset($_SESSION['fName'])){

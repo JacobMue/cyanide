@@ -56,19 +56,7 @@ $image = '../images/'.$_SESSION['image'];
 		<li><a href="dashboard.php" target="contentViewer"><span class="glyphicon glyphicon-dashboard"></span><span1>Dashboard</span1></a></li><hr>
 		<li><a href="addItem.php" target="contentViewer"><span class="fa fa-plus"></span><span1>Add Item</span1></a></li><hr>
 		<li><a href="category.php" target="contentViewer"><i class="fa fa-list" aria-hidden="true"></i><span1>Categories</span1></a></li>
-	<div class="dropdown">
-  <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Dropdown
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div><hr>
+<hr>
 		<li><a href="#" onclick="hidePages();"><i class="fa fa-eye" aria-hidden="true"></i><span1>Pages</span1></a></li><hr>
 		<div id="pageList" style="display:none;">
 			<a href="../front/index.php" target="blank">Homepage</a>
