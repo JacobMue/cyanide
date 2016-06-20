@@ -1,7 +1,7 @@
 <!-- header_top -->
 <?php 
-//error_reporting(0);
-//session_start(); ?>
+error_reporting(0);
+session_start(); ?>
 <body onload="loseLogin()">
 <div class="top_bg">
 	<div class="container">
@@ -249,7 +249,7 @@ if($row==1){
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12" id="nav_container">
 						<a href="index.php">HOME</a>
-						<a href="">NEW ARRIVALS</a>
+						<a href="viewProduct.php?category=Arrival">NEW ARRIVALS</a>
 						<a href="viewProduct.php?category=Men">MEN</a>
 						<a href="viewProduct.php?category=Women">WOMEN</a>
 						<a href="viewProduct.php?category=Kids">KIDS</a>

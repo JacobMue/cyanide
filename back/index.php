@@ -58,7 +58,7 @@ $image = '../images/'.$_SESSION['image'];
 		<li><a href="category.php" target="contentViewer"><i class="fa fa-list" aria-hidden="true"></i><span1>Categories</span1></a></li>
 <hr>
 		<li><a href="#" onclick="hidePages();"><i class="fa fa-eye" aria-hidden="true"></i><span1>Pages</span1></a></li><hr>
-		<div id="pageList" style="display:none;">
+		<div id="pageList" style="display:none;margin-left:20%;width:80%;">
 			<a href="../front/index.php" target="blank">Homepage</a>
 			<a href="../front/viewProduct.php?category=Men" target="blank">Men</a>
 			<a href="../front/viewProduct.php?category=Women" target="blank">Women</a>

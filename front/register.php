@@ -1,17 +1,11 @@
 <!DOCTYPE HTML>
 <html>
 <?php 
-	  require 'variables.php';
 	  include 'title.php';
 	  include 'header.php';
+	  require 'variables.php';
 ?>
-<style type="text/css">
-.registration_form input,span{
-	float: left;
-	width: 45%;
-	margin-right: 1%;
-}
-</style>
+
 					<div class="row">
 						<div class="col2"></div>
 						<div class="col1"></div>
@@ -93,23 +87,23 @@
 				</div>
 				<div>
 					<label>
-						<input style="float:left;width:50%;margin-bottom:10px;" placeholder="first name:" type="text" name="F_Name" tabindex="1" required autofocus> 
+						<input style="float:left;width:52%;margin-bottom:10px;" placeholder="first name:" type="text" name="F_Name" tabindex="1" required autofocus> 
 					
 						</label>
 				</div>
 				<div>
 					<label>
-						<input style="float:left;width:50%;margin-bottom:10px;"  placeholder="last name:" type="text" name="L_Name"tabindex="2" required autofocus>
+						<input style="float:left;width:52%;margin-bottom:10px;"  placeholder="last name:" type="text" name="L_Name"tabindex="2" required autofocus>
 					</label>
 				</div>
 				<div>
 					<label>
-						<input style="float:left;width:50%;margin-bottom:10px;"  placeholder="Email address:" type="email" name="Uemail" tabindex="3" required>
+						<input style="float:left;width:52%;margin-bottom:10px;"  placeholder="Email address:" type="email" name="Uemail" tabindex="3" required>
 					</label>
 				</div>
 				<div>
 					<label>
-						<input style="float:left;width:50%;margin-bottom:10px;" placeholder="telephone:" type="text" name="UPhone" tabindex="3" required>
+						<input style="float:left;width:52%;margin-bottom:10px;" placeholder="telephone:" type="text" name="UPhone" tabindex="3" required>
 					</label>
 				</div>
 				<!--<div class="sky-form">
@@ -123,12 +117,12 @@
 				</div>-->
 				<div>
 					<label>
-						<input style="float:left;width:50%;margin-bottom:10px;" placeholder="password" type="password" id="password" name="fpass" tabindex="4" required>
+						<input style="float:left;width:52%;margin-bottom:10px;" placeholder="password" type="password" id="password" name="fpass" tabindex="4" required>
 					</label>
 				</div>						
 				<div>
 					<label>
-						<input style="float:left;width:50%;margin-bottom:10px;" placeholder="retype password" type="password" tabindex="4" name="spass" required>
+						<input style="float:left;width:52%;margin-bottom:10px;" placeholder="retype password" type="password" tabindex="4" name="spass" required>
 						<!-- <span style="float:left;width:45%; margin-left:2%;"></span> -->
 					</label>
 				</div>	

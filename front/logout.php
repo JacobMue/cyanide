@@ -1,7 +1,8 @@
 <?php
 
 session_start();
-session_unset();
+$_SESSION['fName']="";
+$_SESSION['CustomerID']="";
 session_destroy();
 header('Location:index.php');
 ?>

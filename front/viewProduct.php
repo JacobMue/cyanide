@@ -1,8 +1,9 @@
 
 <!DOCTYPE HTML>
 <html>
-<?php include 'header.php';?>
-<?php include 'title.php';
+<?php
+ include 'title.php';
+ include 'header.php';
 include_once'variables.php';
 
 	$category="";
@@ -10,11 +11,24 @@ include_once'variables.php';
 		$category=$_GET['category'];
 
 	}
+	$sqlProduct="";
+	if($category=="Arrival"){
+		$sqlProduct1="SELECT * FROM `product` WHERE `active`=1;";
+		$query1=mysqli_query($con,$sqlProduct1);
+		$row1=mysqli_num_rows($query1);
+		if($row1>5){
+		$arrivals=$row1-5;
+		}else{
+			echo "No new Arrivals";
+		}
+		$sqlProduct="SELECT * FROM `product` WHERE `active`=1 AND `ProductID`>'$arrivals';";
+	}else{	
+		$sqlProduct="SELECT * FROM `product` WHERE `CategoryName`='$category' AND `active`=1;";
+	}
 	$productID="";
 	$productName="";
 	$productImg="";
 
-	$sqlProduct="SELECT * FROM `product` WHERE `CategoryName`='$category' AND `active`=1;";
 	$query=mysqli_query($con,$sqlProduct);
 	$row=mysqli_num_rows($query);
 
@@ -36,10 +50,11 @@ include_once'variables.php';
 <script type="text/javascript">
 	function genPDF()
 	{
+		var i="<?php echo $category; ?>";
 		var doc=new jsPDF();
 		doc.text(20,20,"BOTQ Online Clothing Store");
-		doc.addPage();
-		doc.text(20,20, "This is page no. 2");
+		doc.text(40,40,i);
+		doc.text(100,30,"Thank you ");
 		doc.save("BOTQ Catalogue.pdf");
 	}
 </script>

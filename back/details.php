@@ -65,18 +65,18 @@ if($row==1){
 				<div class="col-md-12 det">
 				  <div class="single_left">
 					
-					<img <?php echo "src='$picture'"; ?>width="420" class="img img-rounded">
+					<img src="../images/1.jpg" width="420" class="img img-rounded">
 
 				  <div class="desc1 span_3_of_2">
-					<h3><?php echo $name; ?></h3>
+					<h3><?php=$name;?></h3>
 					<br>
-					<p>Hurry up while stocks last</p>
+					<p>Hurry up while stock last</p>
 						<div class="price">
 							<span class="text">Price:</span>
 							<span class="price-new">KES.<?php echo number_format($price);?></span>
 						</div>
 					<div class="btn_form">
-						<a <?php echo "href='cartV2.php?id=$productID'"; ?>>Add to cart</a>
+						<a href="cartV2.php?id=$productID">add to cart</a>
 					</div>
 					<a href="#"><span>login to save in wishlist </span></a>
 					
@@ -85,7 +85,7 @@ if($row==1){
           	   </div>
           	    <div class="single-bottom1">
 					<h6>Details</h6>
-					<?php echo $Description;?>
+					<?php=$Description;?>
 					</div>
 				<div class="single-bottom2">
 					<h6>Related Products</h6>
