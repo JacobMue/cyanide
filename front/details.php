@@ -6,8 +6,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE HTML>
 <html>
-<?php include 'header.php';?>
-<?php include 'title.php';?>
+<?php 
+include 'title.php';
+include 'header.php';
+include_once'variables.php';?>
 					<div class="row">
 						<div class="col2"></div>
 						<div class="col1"></div>
