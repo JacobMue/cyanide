@@ -62,7 +62,6 @@ echo"<script>";
 echo "alert('Your order was placed successfully')";
 echo "</script>";
 			}
-			
 			$customerID="";
 if(isset($_SESSION['fName'])){
 	$customerID=$_SESSION['CustomerID'];
@@ -74,7 +73,7 @@ if(isset($_SESSION['fName'])){
 			$email=$_POST['email'];
 			$password=$_POST['password'];
 			$password=md5($password);
-			$query="SELECT * FROM Administrators WHERE `Email`='$email'";
+			$query="SELECT * FROM administrators WHERE `Email`='$email'";
 			$result=mysqli_query($con,$query);
 			$row=mysqli_num_rows($result);
 
@@ -89,7 +88,8 @@ if(isset($_SESSION['fName'])){
 					$_SESSION['firstName']=$fname;
 					$_SESSION['lastName']=$lname;
 					$_SESSION['image']=$image;
-					header('Location:../back/index.php');
+					echo "<script> window.location.href='../back/index.php'; </script>";
+					//header('Location:../back/index.php');
 				}else{
 					echo "<script>";
 					echo "alert('Wrong Password')";
