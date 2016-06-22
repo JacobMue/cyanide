@@ -104,7 +104,6 @@ $row=mysqli_num_rows($query);
 	echo "Your Bag is Empty";
 }
 
-
 if($total>10){
 	$delivery=$total*0.01;
 }
@@ -131,7 +130,7 @@ echo '<div class="col-md-3 cart-total">
 			
 			 
 			 <div class="clearfix"></div>
-			 <a class="order" href="placeOrder.php?id=$customerID">Place Order</a>
+			 <a class="order" role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal" href="">Place Order</a>
 			 <a class="order" href="wishlist.php?id=$cartID">Add to Wishlist</a>
 			 
 			</div>';
@@ -145,6 +144,29 @@ echo '<div class="col-md-3 cart-total">
 			<div class="clearfix"> </div>
 	 </div>
 	 </div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog" ng-app="">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="opacity:0.9;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Edit your Profile</h4>
+        </div>
+        <div class="modal-body">
+        <div id="modalAjaxResponse"></div>
+
+        </div>
+
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 <?php include_once 'footer.php';
 mysqli_close($con);
  ?>
