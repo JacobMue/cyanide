@@ -38,7 +38,7 @@ $category=mysqli_num_rows(mysqli_query($con,"SELECT * FROM `category`"));
 <div id="viewDash">
 <div class="card small">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="../images/customers.png">
+      <img class="activator" src="../images/adminproducts.jpg">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Products<i class="material-icons right"></i></span>
@@ -54,7 +54,7 @@ $category=mysqli_num_rows(mysqli_query($con,"SELECT * FROM `category`"));
 <div id="viewDash">
 <div class="card small">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="../images/customers.png">
+      <img class="activator" src="../images/adminorder.jpg">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Orders<i class="material-icons right"></i></span>
@@ -70,7 +70,7 @@ $category=mysqli_num_rows(mysqli_query($con,"SELECT * FROM `category`"));
 <div id="viewDash">
 <div class="card small">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="../images/customers.png">
+      <img class="activator" src="../images/adminproducts2.jpg">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Sub Categories<i class="material-icons right"></i></span>
@@ -86,7 +86,7 @@ $category=mysqli_num_rows(mysqli_query($con,"SELECT * FROM `category`"));
 <div id="viewDash">
 <div class="card small">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="../images/customers.png">
+      <img class="activator" src="../images/administrators_lg.jpg">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Administrators<i class="material-icons right"></i></span>
