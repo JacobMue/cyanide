@@ -142,7 +142,7 @@ if(isset($_SESSION['fName'])){
 					$st_name=$_SESSION['fName'];
 					if($_SESSION['fName']!="")
 					{
-						echo '<div class="dropdown" id="registerButton">
+	echo '<div class="dropdown" id="registerButton">
     <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">'.$st_name.' 
     <span class="caret"></span></button>
     <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
