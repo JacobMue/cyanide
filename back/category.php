@@ -37,6 +37,7 @@ $mainCate=$_POST['mainCategory'];
 
 
 $sql="INSERT INTO `category` (`CategoryID`, `mainCategory`, `subCategory`, `Description`) VALUES (NULL, '$mainCate', '$subCate', '$Des');";
+echo "this does not work";
 $query=mysqli_query($con,$sql);
 header("Location:category.php");
 }
