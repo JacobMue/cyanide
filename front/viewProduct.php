@@ -45,7 +45,7 @@ include_once'variables.php';
 	$productID="";
 	$productName="";
 	$productImg="";
-
+	$logo="<?php <img src='../images/logo.jpg'/> ?>";
 	$query=mysqli_query($con,$sqlProduct);
 	$row=mysqli_num_rows($query);
 
@@ -67,11 +67,15 @@ include_once'variables.php';
 <script type="text/javascript">
 	function genPDF()
 	{
-		var i="<?php echo $category; ?>";
+		var cat="Category: <?php echo $category; ?>";
+		var prodname="Name: <?php echo $productName; ?>";
+		var prodprice="Price: <?php echo $price; ?>"
+		var logo="<?php echo $logo?>";
 		var doc=new jsPDF();
 		doc.text(20,20,"BOTQ Online Clothing Store");
-		doc.text(40,40,i);
-		doc.text(100,30,"Thank you ");
+		doc.text(20,50,cat);
+		doc.text(20,60,prodname);
+		doc.text(20,70,prodprice);
 		doc.save("BOTQ Catalogue.pdf");
 	}
 </script>
