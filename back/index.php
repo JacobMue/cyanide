@@ -11,26 +11,34 @@ $image = '../images/'.$_SESSION['image'];
 	<meta charset="utf-8">
 	<title>Administration Panel</title>
 	<link rel="icon" href="../images/webLogo.jpg" type="image/jpg" sizes="16x16"><!--Logo in the tab-->
+	<link rel="stylesheet" type="text/css" href="../css/back/materialize.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../css/back/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="../css/back/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome-4.6.2/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome-4.6.2/css/font-awesome.css">
-
-
 	<link rel="stylesheet" type="text/css" href="../css/back/back.css">
+<style type="text/css">
+
+#newNav{
+	width:20%;
+	float: left;
+}
+#newNav ul{
+	list-style: none;
+}
+#newNav a{
+	width: 100%;
+	margin-top: 5px;
+}
+
+</style>
 </head>
 
 <body>
 <!-- Start  The header part -->
 <div class="container-fluid">
 	<div class="row" id="adm_header">
-		<div class="col-xs-12 col-sm-1 col-md-1" id="header_navigation">
-			<button type="button" class="btn btn-primary btn-lg" id="header_navigation_toggle" onclick="navigationDrawerToggle()">
-  				<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-			</button>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-9" id="header_heading">
+		<div class="col-xs-12 col-sm-6 col-md-10" id="header_heading">
 			<h3>Administration Panel</h3>
 		</div>
 		<div class="col-xs-6 col-sm-2 col-md-1" id="header_user_image">
@@ -50,52 +58,57 @@ $image = '../images/'.$_SESSION['image'];
 <div class="row" style="width:100%;">
 <!-- Start of the naviagtion drawer-->
 
-<div class="col-xs-12 col-sm-12 col-md-2" style="padding-right: 0px;">
-<div class="container" id="navigation_drawer">
-    <ul class="nav nav-list">
-		<li><a href="dashboard.php" target="contentViewer"><span class="glyphicon glyphicon-dashboard"></span><span1>Dashboard</span1></a></li><hr>
-		<li><a href="addItem.php" target="contentViewer"><span class="fa fa-plus"></span><span1>Add Item</span1></a></li><hr>
-		<li><a href="category.php" target="contentViewer"><i class="fa fa-list" aria-hidden="true"></i><span1>Categories</span1></a></li>
-<hr>
-		<li><a href="#" onclick="hidePages();"><i class="fa fa-eye" aria-hidden="true"></i><span1>Pages</span1></a></li><hr>
-		<div id="pageList" style="display:none;margin-left:20%;width:80%;">
-			<a href="../front/index.php" target="blank">Homepage</a>
-			<a href="../front/viewProduct.php?category=Men" target="blank">Men</a>
-			<a href="../front/viewProduct.php?category=Women" target="blank">Women</a>
-			<a href="../front/viewProduct.php?category=Kids" target="blank">Kids</a>
-		</div>
-
-		<li><a href="DisplayProduct.php?category=Men" target="contentViewer"><i class="fa fa-male" aria-hidden="true"></i><span1>Men</span1></a></li><hr>
-		<li><a href="DisplayProduct.php?category=Women" target="contentViewer"><i class="fa fa-female" aria-hidden="true"></i><span1>Women</span1></a></li><hr>
-		<li><a href="DisplayProduct.php?category=Kids" target="contentViewer"><i class="fa fa-truck" aria-hidden="true"></i><span1>Kids</span1></a></li><hr>	
-		<li><a href="Orders.php" target="contentViewer"><i class="fa fa-area-chart" aria-hidden="true"></i><span1>Orders</span1></a></li><hr>
-		<li><a href="Customers.php" target="contentViewer"><i class="fa fa-users" aria-hidden="true"></i><span1>Customers</span1></a></li><hr>
-		<li><a href="Trash.php" target="contentViewer"><i class="fa fa-trash" aria-hidden="true"></i><span1>Recycle Bin</span1></a></li><hr>
-		<li><a href="Add_Admin.php" target="contentViewer"><i class="fa fa-user-plus" aria-hidden="true"></i><span1>Add Administrator</span1></a></li><hr>	
-		<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span><span1>Log Out</span1></a></li><hr>
+<div class="container" id="newNav">
+	<ul>
+		<a class="waves-effect waves-light btn" href="dashboard.php" target="contentViewer"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a>
+		<li class="dropdown">
+          <a href="#" class="dropdown-toggle waves-effect waves-light btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="addItem.php" target="contentViewer">Add Product</a></li>
+            <li><a href="DisplayProduct.php?category=Men" target="contentViewer"><i class="fa fa-male" aria-hidden="true"></i> Men</a></li>
+            <li><a href="DisplayProduct.php?category=Women" target="contentViewer"><i class="fa fa-female" aria-hidden="true"></i> Women</a></li>
+            <li><a href="DisplayProduct.php?category=Kids" target="contentViewer"><i class="fa fa-truck" aria-hidden="true"></i> Kids</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle waves-effect waves-light btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="category.php" target="contentViewer">Add Category</a></li>
+            <li><a href="ViewCategory.php" target="contentViewer">View Category</a></li>
+          </ul>
+        </li>
+		<a class="waves-effect waves-light btn" href="Orders.php" target="contentViewer">Orders</a>
+		<li class="dropdown">
+          <a href="#" class="dropdown-toggle waves-effect waves-light btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="View the website as a Customer">Pages <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+			<li><a href="../front/index.php" target="blank">Homepage</a></li>
+			<li><a href="../front/viewProduct.php?category=Men" target="blank">Men</a></li>
+			<li><a href="../front/viewProduct.php?category=Women" target="blank">Women</a></li>
+			<li><a href="../front/viewProduct.php?category=Kids" target="blank">Kids</a></li>
+          </ul>
+        </li>
+		<a class="waves-effect waves-light btn" href="Customers.php" target="contentViewer">Customers</a>
+		<li class="dropdown">
+          <a href="#" class="dropdown-toggle waves-effect waves-light btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrator<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="Add_Admin.php" target="contentViewer">Add Administrator</a></li>
+            <li><a href="deleteAdministrator.php" target="contentViewer">Delete Admministrator</a></li>
+          </ul>
+        </li>
+		<a class="waves-effect waves-light btn" href="Trash.php" target="contentViewer">Recycle Bin</a>
+		<a class="waves-effect waves-light btn" href="logout.php">Log Out</a>
 	</ul>
+</div>
 
-</div>
-</div>
 <!--End of navigation drawer-->
-<div class="col-xs-12 col-sm-12 col-md-10" style="padding-left: 0px;">
-	<div class="container-fluid">
-		<!-- <div id="contentViewFilter">
-			<a href="addItem.php" id="addButton" target="contentViewer"><button class="btn btn-primary">Add an Item</button></a>
-			<form class="form-search" method="POST" action="SearchResults.php">
-  				<input type="text" class="input-medium search-query" name="searchInput" placeholder="Search...">
-  				<button type="submit" class="btn" formtarget="contentViewer">Search</button>
-			</form>
-			<div id="filter">
-				<p>View</p>
-				<a href="FilterResults.php" target="contentViewer"><button class="btn btn-default">All</button></a>
-				<a href="#" target="contentViewer">Most Bought</a>
-			</div>
-		</div> -->
+
+	<div class="container" style="float:left;width:78%;margin-left:1%;">
     	<iframe name="contentViewer" id="contentView" src="./dashboard.php"></iframe>
 	</div>
-</div>
-<script type="text/javascript" src="../js/back/bootstrap.js"></script>
+
+<script type="text/javascript" src="../js/front/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/front/jquery.min.js"></script>
+<script type="text/javascript" src="../js/back/materialize.js"></script>
 <script type="text/javascript" src="../js/back/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/back/back.js"></script>
 </body>

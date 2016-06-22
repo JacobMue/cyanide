@@ -15,7 +15,6 @@
 </table>
 </form>
 
-<button class="btn btn-danger" style="float:right;">Delete an Administrator</button>
 <?php
 include_once("variables.php");
 if ( isset( $_POST['Submit'] ) ) {

@@ -79,9 +79,9 @@ echo '<tr><td>Id</td><td>Title</td><td>First Name</td><td>Last Name</td><td>Emai
     $title=$rs['TitleID'];
 
     echo "<tr><td>$id</td><td>$title</td><td>$fname</td><td>$lname</td><td>$email</td><td>$phone</td><td>
-    <a href='restore.php?pid=$id'><button class='btn btn-success'><i class='fa fa-plus'></i></button></a>
+    <a href='restore.php?pid=$id'><button class='btn btn-success' title='Restore the customer'><i class='fa fa-plus'></i></button></a>
     
-    <a href='permanent.php?pid=$id'><button class='btn btn-danger'><i class='fa fa-trash-o'></i></button></a>
+    <a href='permanent.php?pid=$id'><button class='btn btn-danger' title='Delete Permanently'><i class='fa fa-trash-o'></i></button></a>
     </td></tr>";
 
     

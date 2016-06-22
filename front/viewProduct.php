@@ -11,9 +11,16 @@ include_once'variables.php';
 		$category=$_GET['category'];
 
 	}
+	$sort="";
 	$sqlProduct="";
+	$sqlProduct1="";
+	if(isset($_GET['sort'])){
+		$sort=$_GET['sort'];
+		$sqlProduct1="SELECT * FROM `product` WHERE `active`=1 ORDER BY";
+	}else{
+		$sqlProduct1="SELECT * FROM `product` WHERE `active`=1; ";
+	}
 	if($category=="Arrival"){
-		$sqlProduct1="SELECT * FROM `product` WHERE `active`=1;";
 		$query1=mysqli_query($con,$sqlProduct1);
 		$row1=mysqli_num_rows($query1);
 		if($row1>5){
@@ -21,9 +28,19 @@ include_once'variables.php';
 		}else{
 			echo "No new Arrivals";
 		}
-		$sqlProduct="SELECT * FROM `product` WHERE `active`=1 AND `ProductID`>'$arrivals';";
-	}else{	
-		$sqlProduct="SELECT * FROM `product` WHERE `CategoryName`='$category' AND `active`=1;";
+		if(isset($_GET['sort'])){
+			$sort=$_GET['sort'];
+			$sqlProduct="SELECT * FROM `product` WHERE `active`=1 AND `ProductID`>'$arrivals' ORDER BY `$sort`";
+		}else{
+			$sqlProduct="SELECT * FROM `product` WHERE `active`=1 AND `ProductID`>'$arrivals'; ";
+		}
+	}else{
+	if(isset($_GET['sort'])){
+		$sort=$_GET['sort'];
+		$sqlProduct="SELECT * FROM `product` WHERE `CategoryName`='$category' AND `active`=1 ORDER BY `$sort`";
+	}else{
+		$sqlProduct="SELECT * FROM `product` WHERE `CategoryName`='$category' AND `active`=1; ";
+	}	
 	}
 	$productID="";
 	$productName="";
@@ -67,50 +84,22 @@ include_once'variables.php';
 	  <div class="w_sidebar">
 		<h3>filter by</h3>
 		<section  class="sky-form">
-					<h4>categories</h4>
+					<h4>Sub categories</h4>
 						<div class="row1 scroll-pane">
 							<div class="col col-4">
-								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>kurtas</label>
-							</div>
-							<div class="col col-4">
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>kutis</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>churidar kurta</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>salwar</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>printed sari</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>shree</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Anouk</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>biba</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>	
-							</div>
-						</div>
-		</section>
-		<section  class="sky-form">
-					<h4>brand</h4>
-						<div class="row1 scroll-pane">
-							<div class="col col-4">
-								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>shree</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Anouk</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>biba</label>
-							</div>
-							<div class="col col-4">
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>vishud</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>amari</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>shree</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Anouk</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>biba</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>shree</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Anouk</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>biba</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>shree</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Anouk</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>biba</label>																								
+<?php 
+	$sql="SELECT `subCategory` FROM `category` WHERE `mainCategory`='$category' ORDER BY `subCategory`;";
+	$queryCat=mysqli_query($con,$sql);
+	$rowCat=mysqli_num_rows($queryCat);
+	if($rowCat!=0){
+		while($cats=mysqli_fetch_assoc($queryCat)){
+			$subcategory=$cats['subCategory'];
+			echo '<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>'.$subcategory.'</label>';
+		}
+	}else{
+		echo "No Sub categories Available";
+	}
+?>
 							</div>
 						</div>
 		</section>
@@ -139,21 +128,6 @@ include_once'variables.php';
 				<li><a class="color10" href="#"></a></li>
 			</ul>
 		</section>
-		<section class="sky-form">
-						<h4>discount</h4>
-						<div class="row1 scroll-pane">
-							<div class="col col-4">
-								<label class="radio"><input type="radio" name="radio" checked=""><i></i>60 % and above</label>
-								<label class="radio"><input type="radio" name="radio"><i></i>50 % and above</label>
-								<label class="radio"><input type="radio" name="radio"><i></i>40 % and above</label>
-							</div>
-							<div class="col col-4">
-								<label class="radio"><input type="radio" name="radio"><i></i>30 % and above</label>
-								<label class="radio"><input type="radio" name="radio"><i></i>20 % and above</label>
-								<label class="radio"><input type="radio" name="radio"><i></i>10 % and above</label>
-							</div>
-						</div>						
-		</section>
 	</div>
    </div>
 	<!-- start content -->
@@ -174,11 +148,10 @@ include_once'variables.php';
 		<div class="women">
 			<a href="#"><h4>Viewing - <span><?=$row;?> items</span> </h4></a>
 			<ul class="w_nav">
-						<li>Sort : </li>
-		     			<li><a class="active" href="#">popular</a></li> |
-		     			<li><a href="#">new </a></li> |
-		     			<li><a href="#">discount</a></li> |
-		     			<li><a href="#">price: Low High </a></li> 
+						<li>Sort By: </li>
+		     			<li><a href="viewProduct.php?category=<?php echo $category; ?>&sort=ProductName"><button class="btn btn-default">Name</button></a></li> |
+		     			<li><a href="viewProduct.php?category=<?php echo $category; ?>&sort=UnitPrice"><button class="btn btn-default">Price</button></a></li> |
+		     			<li><a href="viewProduct.php?category=<?php echo $category; ?>&sort=Description"><button class="btn btn-default">Latest Update</button></a></li> 
 		     			<div class="clear"></div>	
 		     </ul>
 		     <div class="clearfix"></div>	
@@ -194,7 +167,7 @@ include_once'variables.php';
 			$productImg = '../images/'.$productImg;
 			echo '<div class="viewProduct" style="text-align: center;width:31%;margin-top: 10px;float: left;">';
 			echo  "<a id='linkImg' href='details.php?id=$productID'>
-			<img src='$productImg' class='img img-rounded' width='250' height='200'></a>";
+			<img src='$productImg' class='img img-rounded' width='250' height='150'></a>";
 			echo "<a id='linkAnchor' href='productDetails.php?id=$productID'>$productName</a>";
 			echo "<div><p style='float:left;width:80%;margin-top:10px;'>KES $price</p>";
 			echo "<a style='float:left;width:20%;' id='linkCart' href='cartV2.php?id=$productID'><button style='color:black;' class='btn btn-info'><i class='fa fa-cart-plus'></i></button></a></div></div>";

@@ -16,14 +16,14 @@ if($id!=""){
 	$newDes=$_POST['newDes'];
 	$sqlupdate="UPDATE `category` SET `subCategory` = '$newCat', `Description` = '$newDes' WHERE `CategoryID` = '$id';";
 	$query=mysqli_query($con,$sqlupdate);
-	header("Location:category.php");
+	header("Location:ViewCategory.php");
 }
 }
 else{
 	if($type=="delete"){
 		$sql="DELETE FROM `category` WHERE `CategoryID` = '$id'";
 		$query=mysqli_query($con,$sql);
-		header("Location:category.php");
+		header("Location:ViewCategory.php");
 	}
 }
 
