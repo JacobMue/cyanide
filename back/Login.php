@@ -1,4 +1,9 @@
-<?php session_start();?>
+<?php 
+session_start();
+if($_SESSION['firstName']!=""){
+	die("<script>window.location.href='index.php'</script>");
+}
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -78,6 +83,8 @@
 					echo "alert('Wrong Password')";
 					echo"</script>";
 				}
+			}else{
+				echo "Unknown identity";
 			}
 		}
 			?>

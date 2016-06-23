@@ -235,7 +235,7 @@ if($row==1){
           <h4 class="modal-title">This are Your Orders made in this Website </h4>
         </div>
         <div class="modal-body">
-        <table class="table table-hover">
+        <table class="table table-bordered">
         	<p>Ordered by Date</p>
         	<tr><td>Date of Order</td><td>Total Amount</td><td>Address</td><td>Delivery cost</td><td>Mode of Payment</td><td>Shipping Company</td></tr>
 <?php 

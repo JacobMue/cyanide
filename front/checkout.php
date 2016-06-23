@@ -170,7 +170,7 @@ echo '<div class="modal fade" id="orderModal" role="dialog">
      	</select></td></tr>";
      	echo "<tr><td>Shipping Address</td><td><input type='text' name='shipAdd'></td></tr>";
      	echo "<tr><td>Delivery total cost in KES</td><td><input type='text' name='shipbill' value='$delivery' readonly></td></tr>";
-     	echo "<tr><td><button type='submit' name='porder' class='btn btn-success'>Confirm Order</button></td><td></td><td><button type='submit' class='btn btn-danger'>Delete Order</button></td></tr>";
+     	echo "<tr><td><button type='submit' name='porder' class='btn btn-success'>Confirm Order</button></td><td></td><td><button class='btn btn-danger' data-dismiss='modal'>Cancel Order</button></td></tr>";
      	echo '</table>
         	</form>
         </div>
