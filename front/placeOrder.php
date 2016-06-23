@@ -15,9 +15,10 @@ if(isset($_GET['amt'])){
 	$amount=$_GET['amt'];
 }
 $add=$_POST['shipAdd'];
+$shipper=$_POST['shipper'];
 $paymethod=$_POST['payment'];
 $date=date("Y-m-d");
-$sqlo="INSERT INTO `customerorder` VALUES (NULL, '$customerID', '$date', '$amount', '$add', '$shipamt','$paymethod', '1');";
+$sqlo="INSERT INTO `customerorder` VALUES (NULL, '$customerID', '$date', '$amount', '$add', '$shipamt','$paymethod', '$shipper');";
 $quer=mysqli_query($con,$sqlo);
 $sql="DELETE FROM `cart` WHERE `CustomerID`='$customerID'";
 $query=mysqli_query($con,$sql);

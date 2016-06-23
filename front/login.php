@@ -77,6 +77,7 @@ echo "</script>";
 				if($dbpass==$password){
 					$_SESSION['fName']=$fname;
 					$_SESSION['CustomerID']=$customerID;
+					echo"<script>window.location.href='index.php'</script>";
 				}else{
 					echo "<script>";
 					echo "alert('Wrong Password')";

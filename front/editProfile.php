@@ -24,19 +24,22 @@ if(isset($_POST['editsubmit'])){
 				$pass=md5($password);
 				$sql="UPDATE `customer` SET `FirstName` = '$newfname', `LastName` = '$newlname', `Password` = '$pass', `        Telephone` = '$newphone' WHERE `CustomerID` = '$customerID';";
 		        $query=mysqli_query($con,$sql);
-		        $message="Changes saved successful";
 		        header("Location:index.php");
-		        echo $message;
 
 		    }
 		}
 	}else{
 
-		$message="Passwords do not match";
+		echo "Passwords do not match";
 	}
-	mysqli_close($con);
 }
-echo "<script>";
-echo alert($message);
-echo "</script>";
+
+if(isset($_GET['delete'])){
+	if($_GET['delete']=='yes'){
+		mysqli_query($con,"DELETE FROM `customer` WHERE `CustomerID`='$customerID';");
+		header("Location:index.php");
+	}
+}
+mysqli_close($con);
+
 ?>

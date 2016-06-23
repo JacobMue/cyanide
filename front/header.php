@@ -205,7 +205,7 @@ if($row==1){
 		echo "<tr><td>Old password</td><td><input type='password' name='oldpassword'></td></tr>";
 		echo "<tr><td>new Password</td><td><input type='password' name='password'></td></tr>";
 		echo "<tr><td>Confirm Password</td><td><input type='password' name='confirmpassword'></td></tr>";
-		echo "<tr><td><button id='savechanges' type='submit' name='editsubmit' class='btn btn-warning'>Save changes</button></td><td><a href='viewOrders.php?id=$customerID' data-controls-modal='myModal' data-backdrop='static' data-keyboard='false'><button name='editsubmit' class='btn btn-info'>View Orders</button></a></td><td><a href='editProfile.php?id=$customerID'><button class='btn btn-danger'>Deactivate Account</button></a></td></tr>";
+		echo "<tr><td><button id='savechanges' type='submit' name='editsubmit' class='btn btn-warning'>Save changes</button></td></tr>";
 		echo "</table></form>";
 
 	}
@@ -217,6 +217,53 @@ if($row==1){
         </div>
 
         <div class="modal-footer">
+<button role='menuitem' tabindex='-1' class='btn btn-info' data-toggle='modal' data-target='#myOrders' data-dismiss="modal">View Orders</button><button role='menuitem' tabindex='-1' class='btn btn-danger' data-toggle='modal' data-target='#deleteAcc' data-dismiss="modal">Deactivate Account</button></a>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+   <div class="modal fade" id="myOrders" role="dialog">
+    <div class="modal-dialog" ng-app="">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="opacity:0.9;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">This are Your Orders made in this Website </h4>
+        </div>
+        <div class="modal-body">
+        <table class="table table-hover">
+        	<p>Ordered by Date</p>
+        	<tr><td>Date of Order</td><td>Total Amount</td><td>Address</td><td>Delivery cost</td><td>Mode of Payment</td><td>Shipping Company</td></tr>
+<?php 
+
+$sql1="SELECT * FROM `customerorder` WHERE `CustomerID`='$customerID' ORDER BY `OrderDate`";
+$query1=mysqli_query($con,$sql1);
+$row1=mysqli_num_rows($query1);
+if($row1!=0){
+	while ($rs=mysqli_fetch_assoc($query1)) {
+		$orderId=$rs['OrderID'];
+		$date=$rs['OrderDate'];
+		$amount=$rs['OrderAmount'];
+		$address=$rs['BillingAddress'];
+		$delivery=$rs['shippingAmount'];
+		$payment=$rs['PaymentMethod'];
+		$shipper=$rs['ShipperID'];
+		echo "<tr><td>$date</td><td>$amount</td><td>$address</td><td>$delivery</td><td>$payment</td><td>$shipper</td></tr>";
+
+	}
+}else{
+	echo "Please wait while loading";
+}
+?>	
+		</table>
+		<div id="modalAjaxResponse"></div>
+        </div>
+
+        <div class="modal-footer">
 
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
@@ -224,6 +271,26 @@ if($row==1){
       
     </div>
   </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="deleteAcc" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Account Deletion</h4>
+        </div>
+        <div class="modal-body">
+          <p>You Will not be able to login again after your Session Expires</p>
+          <a href='editProfile.php?id=<?php echo $customerID; ?>&delete=yes'><button style="background-color:red;">Yes Delete Me Permanently</button></a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   
 			<div class="clearfix"> </div>
 		</div>
