@@ -35,15 +35,15 @@
   <div class="row">
   <h2 class="title">Admin Login</h2>
   <form action="Login.php" method="post">
-    <div class="input-field col s6">
-      <input 	 id="first_name2" name="email" type="email" class="validate">
-      <label class="active" for="first_name2">Email</label>
+    <div class="input-field col s5">
+      <input id="first_name2" name="email" type="email" class="validate">
+      <label class="active" for="first_name2">Username or Email</label>
     </div>
-    <div class="input-field col s6">
+    <div class="input-field col s5">
       <input  id="first_name2" name="Passw" type="password" class="validate">
       <label class="active" for="first_name2">Password</label>
     </div>
-    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <button class="btn waves-effect waves-light" type="submit" name="action" style="margin-top:25px;">Submit
     <!-- <i class="material-icons right">send</i> -->
   </button>
   </form>
