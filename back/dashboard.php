@@ -2,7 +2,7 @@
 <?php
 
 $customer=mysqli_num_rows(mysqli_query($con,"SELECT * FROM `customer`"));
-$order=mysqli_num_rows(mysqli_query($con,"SELECT * FROM `order`"));
+$order=mysqli_num_rows(mysqli_query($con,"SELECT * FROM `customerorder`"));
 $admins=mysqli_num_rows(mysqli_query($con,"SELECT * FROM `administrators`"));
 $product=mysqli_num_rows(mysqli_query($con,"SELECT * FROM `product`"));
 $category=mysqli_num_rows(mysqli_query($con,"SELECT * FROM `category`"));

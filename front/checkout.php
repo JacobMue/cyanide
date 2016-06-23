@@ -7,6 +7,12 @@
  include 'header.php';
  include_once'variables.php';
 
+
+			if(isset($_GET['po'])){
+echo"<script>";
+echo "alert('Your order was placed successfully')";
+echo "</script>";
+			}
 $productID="";
 
 $customerID="";
@@ -148,14 +154,18 @@ echo '<div class="modal fade" id="orderModal" role="dialog">
           <h4 class="modal-title">Finalize your Order</h4>
         </div>
        	<div class="modal-body">';
-        echo "<form action='placeOrder.php' method='POST'>";
+        echo "<form action='placeOrder.php?del=$delivery&amt=$fTotal' method='POST'>";
         		echo'<table class="table table-hover">';
      	
      	echo "<tr><td>Total Cost of Order in KES</td><td><input type='text' name='total' value='$fTotal' readonly></td></tr>";
-     	echo "<tr><td>Choose a method of payment</td><td><input type='radio' name='payment'>MPesa</td><td><input type='radio' name='payment'>Credit Cards</td></tr>";
+     	echo "<tr><td>Choose a method of payment</td><td><select name='payment'>
+     	<option>MPesa</option>
+     	<option>Credit Card</option>
+     	<option>Pay on Delivery</option>
+     	</select></td></tr>";
      	echo "<tr><td>Shipping Address</td><td><input type='text' name='shipAdd'></td></tr>";
      	echo "<tr><td>Delivery total cost in KES</td><td><input type='text' name='shipbill' value='$delivery' readonly></td></tr>";
-     	echo "<tr><td><button type='submit' class='btn btn-success'>Confirm Order</button></td><td></td><td><button type='submit' class='btn btn-danger'>Delete Order</button></td></tr>";
+     	echo "<tr><td><button type='submit' name='porder' class='btn btn-success'>Confirm Order</button></td><td></td><td><button type='submit' class='btn btn-danger'>Delete Order</button></td></tr>";
      	echo '</table>
         	</form>
         </div>

@@ -50,14 +50,14 @@ $image = '../images/'.$_SESSION['image'];
 					$lname=$_SESSION['lastName'];
 					echo $fname;
 					echo " ";
-					echo $lname; ?></p>
+					echo $lname;?></p>
+
 		</div>
 	</div>
 </div>
 <!--End The header Part-->
 <div class="row" style="width:100%;">
 <!-- Start of the naviagtion drawer-->
-
 <div class="container" id="newNav">
 	<ul>
 		<a class="waves-effect waves-light btn" href="dashboard.php" target="contentViewer"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a>
@@ -111,5 +111,6 @@ $image = '../images/'.$_SESSION['image'];
 <script type="text/javascript" src="../js/back/materialize.js"></script>
 <script type="text/javascript" src="../js/back/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/back/back.js"></script>
+
 </body>
 </html>

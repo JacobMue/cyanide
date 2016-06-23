@@ -56,12 +56,6 @@ session_start(); ?>
 		<?php
 			include_once'variables.php';
 
-
-			if(isset($_GET['po'])){
-echo"<script>";
-echo "alert('Your order was placed successfully')";
-echo "</script>";
-			}
 			$customerID="";
 if(isset($_SESSION['fName'])){
 	$customerID=$_SESSION['CustomerID'];
