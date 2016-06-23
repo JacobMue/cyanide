@@ -1,7 +1,7 @@
 <?php
 session_start();
 if($_SESSION['firstName']==null){
-	header('Location:../front/index.php');
+	header('Location:login.php');
 }
 $image = '../images/'.$_SESSION['image'];
 ?>
