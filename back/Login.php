@@ -1,76 +1,87 @@
 <!DOCTYPE HTML>
 <html>
-<link href="../css/front/bootstrap.css" rel='stylesheet' type='text/css' />
-<script type='text/javascript' src="../js/front/jquery-1.11.1.min.js"></script>
-<link rel="stylesheet" type="text/css" href="../css/back/materialize.min.css">
-<link href="../css/front/style.css" rel='stylesheet' type='text/css' />
-<link href="../css/front/xtncv.css" rel='stylesheet' type='text/css' />
-<link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome-4.6.2/css/font-awesome.css">
-<link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome-4.6.2/css/font-awesome.min.css">
-<link href="../css/front/design.css" rel='stylesheet' type='text/css' />
+<head>
+	<!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+            <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 
-<?php
-
-
-
-?>
+</head>
 
 <style type="text/css">
 	*
 	{
-		background-color:#00BCD4;
+		background-color: #F5F5F5;
 	}
-	.registration_form
+	.title
 	{
-		
-		margin:10%;
-		margin-left: 28%;
-		margin-bottom: 0px;
-	}
-	h2
-	{
+		margin-left: 38%;
 		font-family: "algerian";
-		margin:12%;
-		margin-left: 25%;
-		margin-bottom: 0px;
+		font-size: 50px;
+		font-weight: 20px;
 	}
-	#loginemail
+	.row
 	{
-		font-size: 20px;
-		font-family: "segoe ui";
-		height: 20px;
-		width: 20px;
+		margin-left: 2%;
+		margin-top: 15%;
 	}
-	#loginpassword
-	{
-		font-size: 20px;
-		height: 20px;
-		width: 20px;
-	}
+
 </style>
+  <div class="row">
+  <h2 class="title">Admin Login</h2>
+  <form action="Login.php" method="post">
+    <div class="input-field col s6">
+      <input 	 id="first_name2" name="email" type="email" class="validate">
+      <label class="active" for="first_name2">Email</label>
+    </div>
+    <div class="input-field col s6">
+      <input  id="first_name2" name="Passw" type="password" class="validate">
+      <label class="active" for="first_name2">Password</label>
+    </div>
+    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <!-- <i class="material-icons right">send</i> -->
+  </button>
+  </form>
+  </div>
 
- <div class="registration_left" onmouseenter="loginfocused()" onmouseout="loginfocused()">
-		 <div class="registration_form">	
-		 <h2>ADMIN</h2>
-<form id="registration_form" style="margin-left:0px;" action="login.php" method="post">
-				<div>
-					<label>
-						<input style="width:52%;margin-bottom:10px; margin-left:80px;" id="loginemail" placeholder="email:" type="email" name="email" tabindex="3" required>
-					</label>
-				</div>
-				<div>
-					<label>
-						<input style="width:52%;margin-bottom:15px;margin-left:80px;" id="loginpassword" placeholder="password" type="password" name="password" tabindex="4" required>
-					</label>
-				</div>						
-				<div>
-					<button onclick="loginHome()" style="width:52%;margin-left:80px;" class="btn btn-success" type="submit" id="register-submit" name="SUbmit">Sign In</button>
-				</div>
-				<div class="forget" style="width:50%;">
-					<a href="#">forgot your password?</a>
-				</div>
-			</form>
-			</div>
-			</div>	
+  <?php
+    require_once 'variables.php';
+				
+			if ( isset( $_POST['action'] ) ) {
+			$email=$_POST['email'];
+			$password=$_POST['Passw'];
+			$password=md5($password);
+			$query="SELECT * FROM administrators WHERE `Email`='$email'";
+			$result=mysqli_query($con,$query);
+			$row=mysqli_num_rows($result);
 
-</html>
+			if($row==1){
+				while($re=mysqli_fetch_assoc($result)){
+					$dbpass=$re['Password'];
+					$fname=$re['FirstName'];
+					$lname=$re['LastName'];
+					$image=$re['image'];
+				}
+				if($dbpass==$password){
+					$_SESSION['firstName']=$fname;
+					$_SESSION['lastName']=$lname;
+					$_SESSION['image']=$image;
+					echo "<script> window.location.href='../back/index.php'; </script>";
+					//header('Location:../back/index.php');
+				}else{
+					echo "<script>";
+					echo "alert('Wrong Password')";
+					echo"</script>";
+				}
+			}
+		}
+			?>
+  		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  </html>
