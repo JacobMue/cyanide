@@ -67,6 +67,7 @@ $row=mysqli_num_rows($query);
 		$stock=$rs['UnitStock'];
 		$Category=$rs['CategoryName'];
 		$picture=$rs['Picture'];
+		$price=$rs['UnitPrice'];
 		$total+=$price;
 		$picture="../images/".$picture;
 		echo '<div class="cart-header">
@@ -93,35 +94,7 @@ $row=mysqli_num_rows($query);
 				  </div>
 
 		</div>';
-echo '<div class="modal fade" id="orderModal" role="dialog">
-    <div class="modal-dialog" ng-app="">
-    
-      <!-- Modal content-->
-      <div class="modal-content" style="opacity:0.9;">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Confirm Order</h4>
-        </div>
-        <div class="modal-body">
-        	<form>
-        		<table class="table table-hover">
-        			<tr><td></td><td>Name</td><td>Quantity</td><td>Total Price</td></tr>';
-     	echo "<tr><td><img src='$picture' style='width: 100px;' class='img-responsive'></td><td>$name</td><td>$stock</td><td>$total</td></tr>";
-     }
-     	echo "<tr><td>Choose a method of payment</td><td><input type='radio' name='payment'>MPesa</td><td><input type='radio' name='payment'>Credit Cards</td></tr>";
-     	echo "<tr><td><button type='submit' class='btn btn-success'>Finalize your Order</button></td><td><button type='submit' class='btn btn-danger'>Delete Order</button></td></tr>";
-     	echo '</table>
-        	</form>
-        </div>
-        <div class="modal-footer">
-
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>';
-	
+}
 
 }else{
 	echo "Database under service Try Again Later";
@@ -129,7 +102,9 @@ echo '<div class="modal fade" id="orderModal" role="dialog">
 
 }
 }else{
-	echo "Your Bag is Empty";
+	echo '<div class="panel panel-warning">
+  <div class="panel-heading">Your shoping bag is empty</div>
+</div>';
 }
 
 if($total>10){
@@ -163,9 +138,37 @@ echo '<div class="col-md-3 cart-total">
 			 
 			</div>';
 
+echo '<div class="modal fade" id="orderModal" role="dialog">
+    <div class="modal-dialog" ng-app="">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="opacity:0.9;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Finalize your Order</h4>
+        </div>
+       	<div class="modal-body">';
+        echo "<form action='placeOrder.php' method='POST'>";
+        		echo'<table class="table table-hover">';
+     	
+     	echo "<tr><td>Total Cost of Order in KES</td><td><input type='text' name='total' value='$fTotal' readonly></td></tr>";
+     	echo "<tr><td>Choose a method of payment</td><td><input type='radio' name='payment'>MPesa</td><td><input type='radio' name='payment'>Credit Cards</td></tr>";
+     	echo "<tr><td>Shipping Address</td><td><input type='text' name='shipAdd'></td></tr>";
+     	echo "<tr><td>Delivery total cost in KES</td><td><input type='text' name='shipbill' value='$delivery' readonly></td></tr>";
+     	echo "<tr><td><button type='submit' class='btn btn-success'>Confirm Order</button></td><td></td><td><button type='submit' class='btn btn-danger'>Delete Order</button></td></tr>";
+     	echo '</table>
+        	</form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>';
 
 ?>
-			 		
+	 		
 		 </div>
 		 
 		
