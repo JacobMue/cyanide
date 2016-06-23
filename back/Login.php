@@ -42,7 +42,7 @@ if($_SESSION['firstName']!=""){
   <form action="Login.php" method="post">
     <div class="input-field col s5">
       <input id="first_name2" name="email" type="email" class="validate">
-      <label class="active" for="first_name2">Username or Email</label>
+      <label class="active" for="first_name2">Email</label>
     </div>
     <div class="input-field col s5">
       <input  id="first_name2" name="Passw" type="password" class="validate">
