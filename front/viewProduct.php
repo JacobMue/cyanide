@@ -64,21 +64,7 @@ include_once'variables.php';
 </div>
 </div>
 <!-- PDF-->
-<script type="text/javascript">
-	function genPDF()
-	{
-		var cat="Category: <?php echo $category; ?>";
-		var prodname="Name: <?php echo $productName; ?>";
-		var prodprice="Price: <?php echo $price; ?>"
-		var logo="<?php echo $logo?>";
-		var doc=new jsPDF();
-		doc.text(20,20,"BOTQ Online Clothing Store");
-		doc.text(20,50,cat);
-		doc.text(20,60,prodname);
-		doc.text(20,70,prodprice);
-		doc.save("BOTQ Catalogue.pdf");
-	}
-</script>
+
 <!-- End of PDF-->
 <!-- content -->
 <div class="container">
@@ -161,7 +147,7 @@ include_once'variables.php';
 		     <div class="clearfix"></div>	
 		</div>
 <?php 
-	
+	$rs="";
 	if($row!=0){
 		while($rs=mysqli_fetch_assoc($query)){
 			$productID=$rs['ProductID'];
@@ -172,7 +158,7 @@ include_once'variables.php';
 			echo '<div class="viewProduct" style="text-align: center;width:31%;margin-top: 10px;float: left;">';
 			echo  "<a id='linkImg' href='details.php?id=$productID'>
 			<img src='$productImg' class='img img-rounded' width='250' height='150'></a>";
-			echo "<a id='linkAnchor' href='productDetails.php?id=$productID'>$productName</a>";
+			echo "<a id='linkAnchor' href='details.php?id=$productID'>$productName</a>";
 			echo "<div><p style='float:left;width:80%;margin-top:10px;'>KES $price</p>";
 			echo "<a style='float:left;width:20%;' id='linkCart' href='cartV2.php?id=$productID'><button style='color:black;' class='btn btn-info'><i class='fa fa-cart-plus'></i></button></a></div></div>";
 		}
@@ -180,7 +166,6 @@ include_once'variables.php';
 	else{
 		echo "No Products in this Category";
 	}
-	mysqli_close($con);
 ?>
 <!-- 
 		<div class="viewProduct" style="
@@ -198,6 +183,22 @@ include_once'variables.php';
 	</div>
 </div>
 </div>
-<?php include_once'footer.php'; ?>
+<script type="text/javascript">
+	function genPDF()
+	{
+		var cat="Category: <?php echo $category; ?>";
+		var prodname="Name: <?php echo $productName; ?>";
+		var prodprice="Price: <?php echo $price; ?>"
+		var logo="<?php echo $logo?>";
+		var doc=new jsPDF();
+		doc.text(20,20,"BOTQ Online Clothing Store");
+		doc.text(20,40,cat);
+		doc.text(20,50,prodname);
+		doc.text(20,60,prodprice);
+		doc.save("BOTQ Catalogue.pdf");
+	}
+</script>
+<?php include_once'footer.php';
+	mysqli_close($con); ?>
 </body>
 </html>
