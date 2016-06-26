@@ -45,7 +45,6 @@ include_once'variables.php';
 	$productID="";
 	$productName="";
 	$productImg="";
-	$logo="<?php <img src='../images/logo.jpg'/> ?>";
 	$query=mysqli_query($con,$sqlProduct);
 	$row=mysqli_num_rows($query);
 
@@ -63,9 +62,6 @@ include_once'variables.php';
 	</div>
 </div>
 </div>
-<!-- PDF-->
-
-<!-- End of PDF-->
 <!-- content -->
 <div class="container">
 <div class="women_main">
@@ -183,6 +179,9 @@ include_once'variables.php';
 	</div>
 </div>
 </div>
+
+
+<!-- PDF-->
 <script type="text/javascript">
 	function genPDF()
 	{
@@ -198,6 +197,9 @@ include_once'variables.php';
 		doc.save("BOTQ Catalogue.pdf");
 	}
 </script>
+
+
+<!-- End of PDF-->
 <?php include_once'footer.php';
 	mysqli_close($con); ?>
 </body>
