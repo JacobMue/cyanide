@@ -1,6 +1,6 @@
 <?php 
 session_start();
-if($_SESSION['firstName']!=""){
+if(isset($_SESSION['firstName'])!=""){
 	die("<script>window.location.href='index.php'</script>");
 }
 ?>
