@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include'variables.php';
 
 $orpass="";

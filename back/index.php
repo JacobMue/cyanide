@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SESSION['firstName']==null){
+if($_SESSION['admName']==null){
 	header('Location:login.php');
 }
 $image = '../images/'.$_SESSION['image'];
@@ -46,8 +46,8 @@ $image = '../images/'.$_SESSION['image'];
 			
 		</div>
 		<div class="col-xs-6 col-sm-2 col-md-1" id="header_user_name" style="padding: 0px;">
-			<p><?php $fname=$_SESSION['firstName'];
-					$lname=$_SESSION['lastName'];
+			<p><?php $fname=$_SESSION['admName'];
+					$lname=$_SESSION['admlName'];
 					echo $fname;
 					echo " ";
 					echo $lname;?></p>

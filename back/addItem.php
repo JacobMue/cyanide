@@ -8,7 +8,9 @@
 			<option>Men</option>
 			<option>Women</option>
 			<option>Kids</option>
-		</select></td>
+		</select>
+		<button class="btn btn-info">Choose a sub category</button>
+		</td>
 	</tr>
 	<tr><td>Name</td><td><input type="text" name="itemName" placeholder="Like V neck"></td></tr>
 	<tr><td>Description</td><td><input type="text" name="itemDes" placeholder="Like new Polo design v neck shirts"></td></tr>

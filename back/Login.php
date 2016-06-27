@@ -1,6 +1,6 @@
 <?php 
 session_start();
-if(isset($_SESSION['firstName'])!=""){
+if(isset($_SESSION['admName'])!=""){
 	die("<script>window.location.href='index.php'</script>");
 }
 ?>
@@ -73,8 +73,8 @@ if(isset($_SESSION['firstName'])!=""){
 					$image=$re['image'];
 				}
 				if($dbpass==$password){
-					$_SESSION['firstName']=$fname;
-					$_SESSION['lastName']=$lname;
+					$_SESSION['admName']=$fname;
+					$_SESSION['admlName']=$lname;
 					$_SESSION['image']=$image;
 					echo "<script> window.location.href='../back/index.php'; </script>";
 					//header('Location:../back/index.php');
