@@ -96,21 +96,6 @@ echo "</table>";
       ?></div>
     </div>
   </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-        Orders</a>
-      </h4>
-    </div>
-    <div id="collapse3" class="panel-collapse collapse">
-      <div class="panel-body">
-        
-        <?php echo "Please Wait Loading ... "; ?>
-
-      </div>
-    </div>
-  </div>
 </div>
 
 
