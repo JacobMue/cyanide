@@ -22,30 +22,26 @@
 	<div class="container">
 		<div class="col-md-3 cust">
 			<h4>CUSTOMER CARE</h4>
-				<li><a href="#">Help Center</a></li>
-				<li><a href="#">FAQ</a></li>
+				<li><a href="faq.php">Help Center</a></li>
+				<li><a href="faq.php">FAQ</a></li>
 				<li><a href="buy.php">How To Buy</a></li>
-				<li><a href="#">Delivery</a></li>
+				<li><a href="buy.php">Delivery</a></li>
 		</div>
 		<div class="col-md-2 abt">
 			<h4>ABOUT US</h4>
-				<li><a href="#">Our Stories</a></li>
-				<li><a href="#">Press</a></li>
-				<li><a href="#">Career</a></li>
 				<li><a href="contact.php">Contact</a></li>
 		</div>
 		<div class="col-md-2 myac">
 			<h4>MY ACCOUNT</h4>
+				<li><a href="login.php">Log In</a></li>
 				<li><a href="register.php">Register</a></li>
-				<li><a href="#">My Cart</a></li>
-				<li><a href="#">Order History</a></li>
-				<li><a href="buy.php">Payment</a></li>
+				<li><a href="checkout.php">My Cart</a></li>
 		</div>
 		<div class="col-md-5 our-st">
 			<div class="clearfix"> </div>
-				<li><i class="add"> </i>Michael Omoyo Ondieki</li>
-				<li><i class="phone"> </i>+254702381228</li>
-				<li><a href="mailto:info@example.com"><i class="mail"> </i>info@sitename.com </a></li>
+				<li><i class="add"> </i>Cyanide</li>
+				<li><i class="phone"> </i>+254722453467</li>
+				<li><a href="mailto:cyanide.botq@gmail.com"><i class="mail"> </i>cyanide.botq@gmail.com</a></li>
 			
 		</div>
 		<div class="clearfix"> </div>

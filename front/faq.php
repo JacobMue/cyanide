@@ -1,7 +1,13 @@
 <html>
+<?php include 'title.php';?>
 <?php include 'header.php';?>
 <div class="contact-form">
     <h2>Contact Us</h2>
+		<p>
+			Have any questions that are bugging you?
+			Leave us an email.
+		</p>
+		 
 	    <form method="post" action="contact-post.html">
 		    <div>
 			    <span><label>Name</label></span>
@@ -24,4 +30,6 @@
 			</div>
 		</form>
 </div>
+<?php include_once'footer.php'; ?>
+
 </html>
