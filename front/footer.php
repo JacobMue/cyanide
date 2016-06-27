@@ -45,6 +45,7 @@
 			
 		</div>
 		<div class="clearfix"> </div>
+			<p>We are Cyanide.<i class="fa fa-users" aria-hidden="true"></i> Be Smart. Shop Smart.</p>		
 			<p>Copyrights © BOTQ Solutions. All rights reserved</p>
 	</div>
 </div>

@@ -8,7 +8,7 @@
 			Leave us an email.
 		</p>
 		 
-	    <form method="post" action="contact-post.html">
+	    <form method="post" action="#">
 		    <div>
 			    <span><label>Name</label></span>
 				<span><input name="userName" type="text" class="textbox"></span>
