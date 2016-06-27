@@ -8,13 +8,13 @@ session_start(); ?>
 		<div class="header_top">
 			<div class="top_right">
 				<ul>
-					<li><a href="#">help</a></li>|
+					<li><a href="mailto:cyanide.botq@gmail.com">help</a></li>|
 					<li><a href="contact.php">Contact</a></li>|
-					<li><a href="#">Delivery information</a></li>
+					<li><a href="mailto:cyanide.botq@gmail.com">Delivery information</a></li>
 				</ul>
 			</div>
 			<div class="top_left">
-				<h2><span><i class="fa fa-phone" aria-hidden="true">CALL US</i></span></h2>
+				<h2><span><i class="fa fa-phone" aria-hidden="true"><a href="https://www.microsoft.com/en-us/store/apps/lync/9wzdncrfhvhm">CALL US</a></i></span></h2>
 			</div>
 				<div class="clearfix"> </div>
 		</div>
