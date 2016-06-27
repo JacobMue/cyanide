@@ -182,8 +182,7 @@ include_once'variables.php';
 
 
 <!-- PDF-->
-<?php  
-echo '
+
 <script type="text/javascript">
 	function genPDF()
 	{
@@ -214,9 +213,9 @@ echo '
 		doc.text(20,100,prodprice);
 		doc.save("BOTQ Catalogue.pdf");
 	}
-</script>';
+</script>;
 
-?>
+
 <!-- End of PDF-->
 <?php include_once'footer.php';
 	mysqli_close($con); ?>
