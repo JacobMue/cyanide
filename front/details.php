@@ -88,38 +88,38 @@ if($row==1){
 					<?php echo $Description;?>
 					</div>
 				<div class="single-bottom2">
-					<h6>Related Products</h6>
+					<h6>View Our Other Products</h6>
 						<div class="product">
 						   <div class="product-desc">
 								<div class="product-img">
-		                           <img src="../images/w8.jpg" class="img-responsive " alt=""/>
+		                           <img src="../images/2.jpg" class="img-responsive " alt=""/>
 		                       </div>
 		                       <div class="prod1-desc">
-		                           <h5><a class="product_link" href="#">Excepteur sint</a></h5>
-		                           <p class="product_descr"> Vivamus ante lorem, eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>									
+		                           <h5><a class="product_link" href="viewProduct.php?category=Men">Men's Blazers</a></h5>
+		                           <p class="product_descr">Shop our blazers and vests for men! Available in colors from navy, red, gray, and black to casual or business styles.</p>									
 							   </div>
 							  <div class="clearfix"></div>
 					      </div>
 						  <div class="product_price">
-								<span class="price-access">$597.51</span>								
-								<button class="button1"><span>Add to cart</span></button>
+								<span class="price-access">KES. 1500</span>								
+								<button class="button1"><a class="product_link" href="viewProduct.php?category=Men"><span>Shop Now</span></a></button>
 		                  </div>
 						 <div class="clearfix"></div>
 				     </div>
 				     <div class="product">
 						   <div class="product-desc">
 								<div class="product-img">
-		                           <img src="../images/w10.jpg" class="img-responsive " alt=""/>
+		                           <img src="../images/rs.jpe" class="img-responsive " alt=""/>
 		                       </div>
 		                       <div class="prod1-desc">
-		                           <h5><a class="product_link" href="#">Excepteur sint</a></h5>
-		                           <p class="product_descr"> Vivamus ante lorem, eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>									
+		                           <h5><a class="product_link" href="viewProduct.php?category=Women">Skirts</a></h5>
+		                           <p class="product_descr">Shop a great selection of Women's Skirts here. Find designer Skirts for Women up to 70% off and get free shipping on orders over KES.5800.</p>									
 							   </div>
 							   <div class="clearfix"></div>
 					      </div>
 						  <div class="product_price">
-								<span class="price-access">$597.51</span>								
-								<button class="button1"><span>Add to cart</span></button>
+								<span class="price-access">KES. 800</span>								
+								<button class="button1"><a class="product_link" href="viewProduct.php?category=Women"><span>Shop Now</span></a></button>
 		                  </div>
 						 <div class="clearfix"></div>
 				     </div>
