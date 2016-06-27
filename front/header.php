@@ -240,7 +240,7 @@ if($row==1){
         	<tr><td>Date of Order</td><td>Total Amount</td><td>Address</td><td>Delivery cost</td><td>Mode of Payment</td><td>Shipping Company</td></tr>
 <?php 
 
-$sql1="SELECT * FROM `customerorder` WHERE `CustomerID`='$customerID' ORDER BY `OrderDate`";
+$sql1="SELECT * FROM `customerorders` WHERE `CustomerID`='$customerID' ORDER BY `OrderDate`";
 $query1=mysqli_query($con,$sql1);
 $row1=mysqli_num_rows($query1);
 if($row1!=0){
@@ -251,7 +251,7 @@ if($row1!=0){
 		$address=$rs['BillingAddress'];
 		$delivery=$rs['shippingAmount'];
 		$payment=$rs['PaymentMethod'];
-		$shipper=$rs['ShipperID'];
+		$shipper=$rs['Shipper'];
 		echo "<tr><td>$date</td><td>$amount</td><td>$address</td><td>$delivery</td><td>$payment</td><td>$shipper</td></tr>";
 
 	}
@@ -295,9 +295,9 @@ if($row1!=0){
 			<div class="clearfix"> </div>
 		</div>
 		<div class="search">
-		    <form>
-		    	<input type="text" value="" placeholder="search...">
-				<input type="submit" value="">
+		    <form action="viewProduct.php?search=yes" method="POST">
+		    	<input type="text" name="term" placeholder="search...">
+				<button type="submit" name="btnsearch" class="btn btn-info"><i class="fa fa-search"></i></button>
 			</form>
 		</div>
 		<div class="clearfix"> </div>
