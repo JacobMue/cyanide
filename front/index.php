@@ -11,9 +11,9 @@
 				<img src="../images/1.jpg" class="img-responsive" alt="">
 				<div class="arriv-info">
 					<h3>NEW ARRIVALS</h3>
-					<p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
+					<p>KEEP UP WITH THE LATEST TRENDS AND CLOTHES</p>
 					<div class="crt-btn">
-						<a href="viewProduct.php?category=Women">TAKE A LOOK</a>
+						<a href="viewProduct.php?category=Arrival">TAKE A LOOK</a>
 					</div>
 				</div>
 			</div>
@@ -41,7 +41,7 @@
 				</div>
 			</div>
 			<div class="col-md-4 arriv-right1">
-				<img src="../images/4.jpg" class="img-responsive" alt="">
+				<img src="../images/kidclothes2.jpg" class="img-responsive" alt="">
 				<div class="arriv-info2">
 					<a href="viewProduct.php?category=Kids"><h3>Kids<i class="ars"></i></h3></a>
 				</div>
@@ -65,9 +65,9 @@
 				</div>
 			</div>
 			<div class="col-md-4 arriv-right2">
-				<img src="../images/7.jpg" class="img-responsive" alt="">
+				<img src="../images/babypic.jpg" class="img-responsive" alt="">
 				<div class="arriv-info2">
-					<a href="viewProduct.php?category=Men"><h3>Baby Overalls<i class="ars"></i></h3></a>
+					<a href="viewProduct.php?category=Kids"><h3>Baby Overalls<i class="ars"></i></h3></a>
 				</div>
 			</div>
 			<div class="clearfix"> </div>
