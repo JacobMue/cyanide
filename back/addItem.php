@@ -8,8 +8,24 @@
 			<option>Men</option>
 			<option>Women</option>
 			<option>Kids</option>
+		</select></td></tr>
+		<tr><td>Sub Category</td><td>
+		<select >
+			<?php
+				$sql="SELECT * FROM `category`";
+				$query=mysqli_query($con,$sql);
+				$row=mysqli_num_rows($query);
+				if($row!=0){
+					while($rs=mysqli_fetch_assoc($query)){
+						$mainCategory=$rs['mainCategory'];
+						$subCategory=$rs['subCategory'];
+						$Description=$rs['Description'];
+						$cateID=$rs['CategoryID'];
+						echo "<option>$subCategory</option>";
+					}
+				}
+			?>
 		</select>
-		<button class="btn btn-info">Choose a sub category</button>
 		</td>
 	</tr>
 	<tr><td>Name</td><td><input type="text" name="itemName" placeholder="Like V neck"></td></tr>
@@ -54,6 +70,10 @@ $Quantity=$_POST['itemQuantity'];
 		echo "</script>";
 
     }
+}else{
+	echo "<script>";
+	echo "alert('Choose a good image format')";
+	echo "</script>";
 }
 }else{
 	echo "<script>";

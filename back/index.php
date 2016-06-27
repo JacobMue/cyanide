@@ -38,8 +38,20 @@ $image = '../images/'.$_SESSION['image'];
 <!-- Start  The header part -->
 <div class="container-fluid">
 	<div class="row" id="adm_header">
-		<div class="col-xs-12 col-sm-6 col-md-10" id="header_heading">
+		<div class="col-xs-12 col-sm-4 col-md-8" id="header_heading">
 			<h3>Administration Panel</h3>
+		</div>
+		<div class="col-xs-6 col-sm-2 col-md-2" id="header_user_image">
+			<form style="margin-top:10px;" action="searchResults.php" target="contentViewer" method="POST"> 
+				<input style="
+    width: 80%;
+    margin-top: 5px;
+    font-size: 18px;
+    background-color: white;
+    float: left;
+" type="text" name="term" placeholder="Search ...">
+				<button type="submit" name="btnSearch" class="btn btn-info"><i class="fa fa-search"></i></button>
+			</form>			
 		</div>
 		<div class="col-xs-6 col-sm-2 col-md-1" id="header_user_image">
 			<img class="img-circle" width="80px" height="60px" src="<?php echo $image; ?>">
