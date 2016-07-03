@@ -16,7 +16,9 @@ else{
 		$image=$rs['Picture'];
 		$image = '../images/'.$image;
 		$id=$rs['ProductID'];
+		$productName = $rs ['ProductName'];
 		echo '<div id="ProductDisplay">';
+		echo  "<div class=name>$productName</div>";
 		echo "<img src='$image' class='img-rounded'>";
 		echo "<a href='./ViewProduct.php?id={$id}'><button class='btn btn-primary'>View</button></a>";
 		echo "<a href='./ModifyProduct.php?id={$id}'><button class='btn btn-info'>Modify</button></a>";

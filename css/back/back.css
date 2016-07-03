@@ -250,8 +250,17 @@ position: absolute;
 
 /*MOdify product end*/
 
-
-
+/*name of product backend*/
+.name
+{
+	font-family:"" ;
+	font-size: 20px;
+	position:absolute;
+	opacity: 0.8;
+	background-color: grey;
+	/*width:100%;*/
+}
+/*end of name of product backend*/
 
 
 
